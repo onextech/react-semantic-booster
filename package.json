@@ -46,11 +46,20 @@
   "keywords": [
     "generator-nod"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@onextech/react-apollo-utils": "^0.3.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "semantic-ui-react": "^0.77.1",
+    "styled-components": "^2.4.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^8.0.0",
     "babel-jest": "^21.0.2",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.1.8",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-stage-2": "^6.18.0",
@@ -60,6 +69,7 @@
     "eslint-plugin-flowtype": "^2.29.2",
     "eslint-plugin-flowtype-errors": "^3.0.0",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^7.5.1",
     "flow-bin": "^0.54.1",
     "jest-cli": "^21.1.0",
     "npm-watch": "^0.2.0",
