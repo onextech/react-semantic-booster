@@ -1,4 +1,5 @@
 // @flow
+export { ButtonLink } from './components/atoms/ButtonLink';
 
 /**
  * This function says hello.
