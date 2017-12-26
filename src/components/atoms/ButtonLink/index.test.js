@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow, render } from 'enzyme';
 import { MemoryRouter as Router, Link } from 'react-router-dom';
-import ButtonLink from './index';
+import ButtonLink from '.';
 
 
 describe('<ButtonLink>', () => {

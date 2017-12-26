@@ -32,7 +32,9 @@
     "minor": "npm version minor && npm publish --access=public",
     "major": "npm version major && npm publish --access=public",
     "prepublish": "npm run lint && npm test && npm run build",
-    "postpublish": "git push origin master --follow-tags"
+    "postpublish": "git push origin master --follow-tags",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "watch": {
     "test": "{src,test}/*.js",
@@ -56,8 +58,12 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
+    "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.77.1",
-    "styled-components": "^2.4.0"
+    "styled-components": "^2.4.0",
+    "@storybook/addon-actions": "^3.2.19",
+    "@storybook/addon-links": "^3.2.19",
+    "@storybook/react": "^3.2.19"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
