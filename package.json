@@ -1,14 +1,14 @@
 {
-  "name": "generator-nod",
+  "name": "@onextech/react-semantic-booster",
   "version": "0.0.1",
-  "description": "My node module",
+  "description": "Extended components for react-semantic-ui",
   "license": "MIT",
-  "repository": "diegohaz/nod",
+  "repository": "onextech/react-semantic-booster",
   "main": "index.js",
   "author": {
-    "name": "Diego Haz",
-    "email": "hazdiego@gmail.com",
-    "url": "github.com/diegohaz"
+    "name": "One X Tech",
+    "email": "hello@onextech.co",
+    "url": "github.com/onextech"
   },
   "engines": {
     "node": ">=6"
@@ -28,9 +28,9 @@
     "prebuild": "npm run docs && npm run clean",
     "build": "babel src -d dist",
     "watch": "npm-watch",
-    "patch": "npm version patch && npm publish",
-    "minor": "npm version minor && npm publish",
-    "major": "npm version major && npm publish",
+    "patch": "npm version patch && npm publish --access=public",
+    "minor": "npm version minor && npm publish --access=public",
+    "major": "npm version major && npm publish --access=public",
     "prepublish": "npm run lint && npm test && npm run build",
     "postpublish": "git push origin master --follow-tags"
   },
