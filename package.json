@@ -1,6 +1,6 @@
 {
   "name": "@onextech/react-semantic-booster",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Extended components for react-semantic-ui",
   "license": "MIT",
   "repository": "onextech/react-semantic-booster",
@@ -54,16 +54,16 @@
   ],
   "dependencies": {
     "@onextech/react-apollo-utils": "^0.3.0",
+    "@storybook/addon-actions": "^3.2.19",
+    "@storybook/addon-links": "^3.2.19",
+    "@storybook/react": "^3.2.19",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.77.1",
-    "styled-components": "^2.4.0",
-    "@storybook/addon-actions": "^3.2.19",
-    "@storybook/addon-links": "^3.2.19",
-    "@storybook/react": "^3.2.19"
+    "styled-components": "^2.4.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
