@@ -6,15 +6,7 @@ import MenuLink from '.';
 storiesOf('MenuLink', module)
   .add('Default', () => (
     <Menu>
-      <Menu.Item link fitted>
-        <MenuLink to="/">
-          Home
-        </MenuLink>
-      </Menu.Item>
-      <Menu.Item link fitted>
-        <MenuLink to="/about">
-          About
-        </MenuLink>
-      </Menu.Item>
+      <MenuLink to="/">Home</MenuLink>
+      <MenuLink to="/">About</MenuLink>
     </Menu>
   ));
