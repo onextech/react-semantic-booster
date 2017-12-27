@@ -8,18 +8,18 @@ import ButtonLink from '.';
 describe('<ButtonLink>', () => {
   it('renders correctly', () => {
     const tree = renderer
-      .create(<Router><ButtonLink to="http://www.facebook.com">Facebook</ButtonLink></Router>)
+      .create(<Router><ButtonLink to="/">Facebook</ButtonLink></Router>)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('has link child', () => {
-    const wrapper = shallow(<ButtonLink to="/url" />);
+    const wrapper = shallow(<ButtonLink to="/" />);
     expect(wrapper.find(Link).length).toBe(1);
   });
 
   it('has semantic button class', () => {
-    const wrapper = render(<Router><ButtonLink to="/url" /></Router>);
+    const wrapper = render(<Router><ButtonLink to="/" /></Router>);
     expect(wrapper.hasClass('ui')).toBe(true);
   });
 });

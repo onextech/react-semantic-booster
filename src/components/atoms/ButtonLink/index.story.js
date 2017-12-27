@@ -4,13 +4,13 @@ import { action } from '@storybook/addon-actions';
 import ButtonLink from '.';
 
 storiesOf('ButtonLink', module)
-  .add('Basic', () => (
+  .add('Default', () => (
     <ButtonLink
       content="Hello World"
       to="/"
       onClick={action('clicked')} />
   ))
-  .add('Default', () => (
+  .add('Primary', () => (
     <ButtonLink
       content="Hello World"
       primary

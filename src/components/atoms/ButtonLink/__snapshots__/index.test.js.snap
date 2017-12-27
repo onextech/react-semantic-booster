@@ -9,7 +9,7 @@ exports[`<ButtonLink> renders correctly 1`] = `
   tabIndex={undefined}
 >
   <a
-    href="http://www.facebook.com"
+    href="/"
     onClick={[Function]}
   />
 </button>

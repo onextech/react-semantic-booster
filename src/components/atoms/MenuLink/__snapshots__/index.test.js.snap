@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuLink> renders correctly 1`] = `
+<div
+  className="link fitted item"
+  onClick={[Function]}
+>
+  <a
+    className="sc-bdVaJa jvlPXD"
+    href="/"
+    onClick={[Function]}
+  >
+    Home
+  </a>
+</div>
+`;
