@@ -6,7 +6,7 @@ exports[`<MenuLink> renders correctly 1`] = `
   onClick={[Function]}
 >
   <a
-    className="sc-bdVaJa jvlPXD"
+    className="sc-bdVaJa gDaJBK"
     href="/"
     onClick={[Function]}
   >

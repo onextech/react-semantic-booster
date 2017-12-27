@@ -7,6 +7,6 @@ storiesOf('MenuLink', module)
   .add('Default', () => (
     <Menu>
       <MenuLink to="/">Home</MenuLink>
-      <MenuLink to="/">About</MenuLink>
+      <MenuLink to="#about">About</MenuLink>
     </Menu>
   ));
