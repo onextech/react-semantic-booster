@@ -1,18 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import styled, { injectGlobal } from 'styled-components';
+import styled from 'styled-components';
 import { Menu } from 'semantic-ui-react';
-
-injectGlobal`
-  .ui.secondary.pointing.menu .item.link.fitted {
-    padding: 0;
-  }
-  .ui.menu.vertical .item.link.fitted:not([role="option"]) a {
-    display: flex;
-    justify-content: space-between;
-  }
-`;
 
 const StyledMenuLink = styled(Link)`
   width: 100%;
