@@ -18,7 +18,8 @@ export const menuProps = {
   inverted: false,
   pointing: false,
   secondary: false,
-  customProps: {
+  // Custom props not defined in semantic-ui
+  custom: {
     float: false,
     container: false, // only applied when float = true
   },

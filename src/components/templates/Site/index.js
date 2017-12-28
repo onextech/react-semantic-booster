@@ -27,10 +27,10 @@ class Site extends React.Component {
   }
 
   renderDesktopMenu = () => {
-    const { menuProps } = this.props;
-    const { customProps, ...frameworkProps } = menuProps;
+    const { menuProps: allMenuProps } = this.props;
+    const { custom, ...menuProps } = allMenuProps;
     return (
-      <Menu attached {...frameworkProps}>
+      <Menu attached {...menuProps}>
         <Responsive maxWidth={768} as={Menu.Menu}>
           <Menu.Item><Button onClick={this.toggleVisibility} icon="content" basic /></Menu.Item>
         </Responsive>
@@ -67,10 +67,10 @@ class Site extends React.Component {
         </Sidebar>
         <Sidebar.Pusher>
           {
-            menuProps.customProps.float ?
+            menuProps.custom.float ?
               <FloatingMenu
                 menu={this.renderDesktopMenu()}
-                container={menuProps.customProps.container} /> :
+                container={menuProps.custom.container} /> :
               this.renderDesktopMenu()
           }
           {children}
