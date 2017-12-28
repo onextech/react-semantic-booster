@@ -32,7 +32,7 @@ class Site extends React.Component {
     return (
       <Menu attached {...menuProps}>
         <Responsive maxWidth={768} as={Menu.Menu}>
-          <Menu.Item><Button onClick={this.toggleVisibility} icon="content" basic /></Menu.Item>
+          <Dropdown item icon="content" onClick={this.toggleVisibility} />
         </Responsive>
         <Responsive minWidth={768} as={Menu.Menu}>
           {this.renderMenuItems()}

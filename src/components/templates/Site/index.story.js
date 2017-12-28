@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Container, Header } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 import Block from '../../atoms/Block';
 import Site from './index';
 
