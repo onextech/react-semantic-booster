@@ -22,7 +22,7 @@ const MenuLink = ({ to, children, ...props }) => {
   `;
 
   return (
-    <Menu.Item link fitted {...props}>
+    <Menu.Item link fitted {...props} style={{ padding: 0 }}>
       <StyledLink to={to}>{children}</StyledLink>
     </Menu.Item>
   );
