@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumbs> renders correctly 1`] = `
+<div
+  className="ui breadcrumb"
+  style={
+    Object {
+      "margin": "0.75em auto",
+    }
+  }
+>
+  <div
+    className="section"
+    href={undefined}
+    onClick={[Function]}
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+  </div>
+  <i
+    aria-hidden="true"
+    className="right angle icon divider"
+  />
+  <div
+    className="section"
+    href={undefined}
+    onClick={[Function]}
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      
+    </a>
+  </div>
+</div>
+`;

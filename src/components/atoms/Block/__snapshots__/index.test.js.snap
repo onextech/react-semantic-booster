@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Block> renders correctly 1`] = `
+<div
+  className="ui segment block sc-bdVaJa iRfCIs"
+>
+  Hello World
+</div>
+`;

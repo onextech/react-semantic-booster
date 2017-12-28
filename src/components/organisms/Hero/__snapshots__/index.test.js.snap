@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hero> renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jAsZWk"
+  height={700}
+  src="/"
+>
+  <div
+    className="ui text container"
+  >
+    <h1
+      className="sc-bwzfXH TFpGQ"
+    >
+      Header
+    </h1>
+    <p
+      className="sc-htpNat ebaRZE"
+    >
+      Subheader
+    </p>
+    <a
+      className="ui big primary button"
+      href="#"
+      onClick={[Function]}
+      role="button"
+      style={
+        Object {
+          "margin": "1em 0 0",
+        }
+      }
+    >
+      Btn.Content
+        
+      <i
+        aria-hidden="true"
+        className="arrow circle outline down icon"
+      />
+    </a>
+  </div>
+</div>
+`;
