@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Site> renders correctly 1`] = `
+<div
+  className="ui segment pushable"
+>
+  <div
+    className="ui inverted vertical labeled icon ui push left thin sidebar menu"
+  >
+    <div
+      className="link fitted item"
+      onClick={[Function]}
+    >
+      <a
+        className="sc-bwzfXH gIZcxn"
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+    </div>
+    <div
+      className="link fitted item"
+      onClick={[Function]}
+    >
+      <a
+        className="sc-htpNat gacHpk"
+        href="/about"
+        onClick={[Function]}
+      >
+        About
+      </a>
+    </div>
+  </div>
+  <div
+    className="pusher"
+  >
+    <div
+      className="ui attached menu"
+    >
+      <div
+        className="menu"
+      >
+        <div
+          className="item"
+          onClick={[Function]}
+        >
+          <button
+            className="ui basic icon button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            <i
+              aria-hidden="true"
+              className="content icon"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        className="right menu"
+      >
+        <div
+          aria-busy={undefined}
+          aria-disabled={undefined}
+          aria-expanded={false}
+          aria-multiselectable={undefined}
+          className="ui item dropdown"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          role="listbox"
+          tabIndex={0}
+        >
+          <div
+            aria-live="polite"
+            className="text"
+            role="alert"
+          >
+            Language
+          </div>
+          <i
+            aria-hidden="true"
+            className="dropdown icon"
+            onClick={[Function]}
+          />
+          <div
+            className="menu transition"
+          >
+            <div
+              aria-checked={undefined}
+              aria-disabled={undefined}
+              aria-selected={undefined}
+              className="item"
+              onClick={[Function]}
+              role="option"
+            >
+              English
+            </div>
+            <div
+              aria-checked={undefined}
+              aria-disabled={undefined}
+              aria-selected={undefined}
+              className="item"
+              onClick={[Function]}
+              role="option"
+            >
+              Russian
+            </div>
+            <div
+              aria-checked={undefined}
+              aria-disabled={undefined}
+              aria-selected={undefined}
+              className="item"
+              onClick={[Function]}
+              role="option"
+            >
+              Spanish
+            </div>
+          </div>
+        </div>
+        <div
+          className="item"
+          onClick={[Function]}
+        >
+          <button
+            className="ui button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Log In
+          </button>
+        </div>
+        <div
+          className="item"
+          onClick={[Function]}
+        >
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </div>
+    Hello World
+  </div>
+</div>
+`;

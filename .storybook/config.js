@@ -2,6 +2,7 @@ import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { MemoryRouter } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
+import './style.css';
 
 
 const req = require.context('../src/components', true, /\.story\.js$/)
