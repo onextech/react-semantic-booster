@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Dropdown } from 'semantic-ui-react';
-import './style.scss';
 
 
 const StyledDropdownLink = styled(Link)`

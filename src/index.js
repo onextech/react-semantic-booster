@@ -19,5 +19,5 @@ export { default as Breadcrumbs } from './components/atoms/Breadcrumbs';
 export { default as Hero } from './components/organisms/Hero';
 
 // templates
-export { default as Site } from './components/templates/Site';
+export { default as SiteNav } from './components/templates/SiteNav';
 export { default as HomeTemplate } from './components/templates/HomeTemplate';

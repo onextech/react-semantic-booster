@@ -2,20 +2,31 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Container } from 'semantic-ui-react';
 import Block from '../../atoms/Block';
-import Site from './index';
+import SiteNav from './index';
 
 
 export const menu = [ // eslint-disable-line import/prefer-default-export
-  { name: 'Home', to: '/' },
-  { name: 'About', to: '/about' },
   {
-    name: 'Support',
-    dropdown: {
-      items: [
-        { name: 'Phone', to: '/phone' },
-        { name: 'Email', to: '/email' },
-      ],
-    },
+    position: 'left',
+    content: [
+      { name: 'Home', to: '/' },
+      { name: 'About', to: '/about' },
+    ],
+  },
+  {
+    position: 'right',
+    content: [
+      {
+        name: 'Support',
+        dropdown: {
+          items: [
+            { name: 'Phone', to: '/phone' },
+            { name: 'Email', to: '/email' },
+          ],
+        },
+      },
+      { name: 'Contact Us', to: '/contact', button: { primary: true } },
+    ],
   },
 ];
 
@@ -30,9 +41,9 @@ export const menuProps = {
   },
 };
 
-storiesOf('Site', module)
+storiesOf('SiteNav', module)
   .add('Default', () => (
-    <Site menu={menu} menuProps={menuProps}>
+    <SiteNav menu={menu} menuProps={menuProps}>
       <Block attached inverted textAlign="center">
         <Container>
           <div style={{ padding: '8em 0' }}>
@@ -40,5 +51,5 @@ storiesOf('Site', module)
           </div>
         </Container>
       </Block>
-    </Site>
+    </SiteNav>
   ));

@@ -27,7 +27,7 @@ const ButtonLinkFactory = styled(Button)`
 
 const ButtonLink = ({
   to, icon, content, ...props
-}) => (<ButtonLinkFactory {...props}>
+}) => (<ButtonLinkFactory className="custom" {...props}>
   <Link to={to}>
     {icon && <Icon name={icon} />}
     {content}
