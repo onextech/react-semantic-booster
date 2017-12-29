@@ -44,10 +44,13 @@
   "jest": {
     "testEnvironment": "node",
     "testPathIgnorePatterns": [
-      "./dist/",
-      "./node_modules/"
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
     ],
-    "setupTestFrameworkScriptFile": "./test/init.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/test/init.js",
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/test/__mocks__/styleMock.js"
+    }
   },
   "keywords": [
     "generator-nod"

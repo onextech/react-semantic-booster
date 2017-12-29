@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Site> renders correctly 1`] = `
+exports[`<SiteNav> renders correctly 1`] = `
 <div
   className="ui segment pushable"
 >
@@ -10,9 +10,14 @@ exports[`<Site> renders correctly 1`] = `
     <div
       className="link fitted item"
       onClick={[Function]}
+      style={
+        Object {
+          "padding": 0,
+        }
+      }
     >
       <a
-        className="sc-bwzfXH gIZcxn"
+        className="sc-ifAKCX YYbpb"
         href="/"
         onClick={[Function]}
       >
@@ -22,14 +27,101 @@ exports[`<Site> renders correctly 1`] = `
     <div
       className="link fitted item"
       onClick={[Function]}
+      style={
+        Object {
+          "padding": 0,
+        }
+      }
     >
       <a
-        className="sc-htpNat gacHpk"
+        className="sc-EHOje fafhJU"
         href="/about"
         onClick={[Function]}
       >
         About
       </a>
+    </div>
+    <div
+      aria-busy={undefined}
+      aria-disabled={undefined}
+      aria-expanded={false}
+      aria-multiselectable={undefined}
+      className="ui item dropdown"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="listbox"
+      tabIndex={0}
+    >
+      <div
+        aria-live="polite"
+        className="text"
+        role="alert"
+      >
+        Support
+      </div>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        className="menu transition"
+      >
+        <div
+          aria-checked={undefined}
+          aria-disabled={undefined}
+          aria-selected={undefined}
+          className="item fitted link"
+          onClick={[Function]}
+          role="option"
+        >
+          <a
+            className="sc-bwzfXH cBTmMw"
+            href="/phone"
+            onClick={[Function]}
+          >
+            Phone
+          </a>
+        </div>
+        <div
+          aria-checked={undefined}
+          aria-disabled={undefined}
+          aria-selected={undefined}
+          className="item fitted link"
+          onClick={[Function]}
+          role="option"
+        >
+          <a
+            className="sc-bwzfXH cBTmMw"
+            href="/email"
+            onClick={[Function]}
+          >
+            Email
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="item"
+      onClick={[Function]}
+    >
+      <button
+        className="ui primary button custom sc-htpNat cnXOeu"
+        disabled={undefined}
+        onClick={[Function]}
+        role="button"
+        tabIndex={undefined}
+      >
+        <a
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
+      </button>
     </div>
   </div>
   <div
@@ -40,27 +132,6 @@ exports[`<Site> renders correctly 1`] = `
     >
       <div
         className="menu"
-      >
-        <div
-          className="item"
-          onClick={[Function]}
-        >
-          <button
-            className="ui basic icon button"
-            disabled={undefined}
-            onClick={[Function]}
-            role="button"
-            tabIndex={undefined}
-          >
-            <i
-              aria-hidden="true"
-              className="content icon"
-            />
-          </button>
-        </div>
-      </div>
-      <div
-        className="right menu"
       >
         <div
           aria-busy={undefined}
@@ -80,76 +151,15 @@ exports[`<Site> renders correctly 1`] = `
             aria-live="polite"
             className="text"
             role="alert"
-          >
-            Language
-          </div>
+          />
           <i
             aria-hidden="true"
-            className="dropdown icon"
+            className="content icon"
             onClick={[Function]}
           />
           <div
             className="menu transition"
-          >
-            <div
-              aria-checked={undefined}
-              aria-disabled={undefined}
-              aria-selected={undefined}
-              className="item"
-              onClick={[Function]}
-              role="option"
-            >
-              English
-            </div>
-            <div
-              aria-checked={undefined}
-              aria-disabled={undefined}
-              aria-selected={undefined}
-              className="item"
-              onClick={[Function]}
-              role="option"
-            >
-              Russian
-            </div>
-            <div
-              aria-checked={undefined}
-              aria-disabled={undefined}
-              aria-selected={undefined}
-              className="item"
-              onClick={[Function]}
-              role="option"
-            >
-              Spanish
-            </div>
-          </div>
-        </div>
-        <div
-          className="item"
-          onClick={[Function]}
-        >
-          <button
-            className="ui button"
-            disabled={undefined}
-            onClick={[Function]}
-            role="button"
-            tabIndex={undefined}
-          >
-            Log In
-          </button>
-        </div>
-        <div
-          className="item"
-          onClick={[Function]}
-        >
-          <button
-            className="ui primary button"
-            disabled={undefined}
-            onClick={[Function]}
-            role="button"
-            tabIndex={undefined}
-          >
-            Sign Up
-          </button>
+          />
         </div>
       </div>
     </div>

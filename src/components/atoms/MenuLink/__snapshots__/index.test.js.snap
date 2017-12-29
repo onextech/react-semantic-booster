@@ -4,6 +4,11 @@ exports[`<MenuLink> renders correctly 1`] = `
 <div
   className="link fitted item"
   onClick={[Function]}
+  style={
+    Object {
+      "padding": 0,
+    }
+  }
 >
   <a
     className="sc-bdVaJa gDaJBK"
