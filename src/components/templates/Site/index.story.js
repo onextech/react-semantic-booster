@@ -6,11 +6,16 @@ import Site from './index';
 
 
 export const menu = [ // eslint-disable-line import/prefer-default-export
+  { name: 'Home', to: '/' },
+  { name: 'About', to: '/about' },
   {
-    key: 'home', name: 'Home', to: '/',
-  },
-  {
-    key: 'about', name: 'About', to: '/about',
+    name: 'Support',
+    dropdown: {
+      items: [
+        { name: 'Phone', to: '/phone' },
+        { name: 'Email', to: '/email' },
+      ],
+    },
   },
 ];
 
