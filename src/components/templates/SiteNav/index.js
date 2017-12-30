@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-import { Sidebar, Segment, Dropdown, Responsive, Menu } from 'semantic-ui-react';
+import { Sidebar, Segment, Dropdown, Responsive, Menu, Dimmer } from 'semantic-ui-react';
 import FloatingMenu from '../../atoms/FloatingMenu';
 import MenuLink from '../../atoms/MenuLink';
 import DropdownLink from '../../atoms/DropdownLink';
@@ -12,7 +12,9 @@ import './style.scss';
 class SiteNav extends React.Component {
   state = {}
 
-  toggleVisibility = () => this.setState({ visible: !this.state.visible })
+  toggleSidebar = () => this.setState({ showSidebar: !this.state.showSidebar })
+
+  handleDimmerClick = () => this.setState({ showSidebar: false });
 
   renderMenuItems = (items) => {
     const result = [];
@@ -58,7 +60,7 @@ class SiteNav extends React.Component {
     return (
       <Menu attached {...menuProps}>
         <Responsive maxWidth={768} as={Menu.Menu}>
-          <Dropdown item icon="content" onClick={this.toggleVisibility} />
+          <Dropdown item icon="content" onClick={this.toggleSidebar} />
         </Responsive>
         {menu.map((submenu, i) => (
           <Responsive
@@ -85,7 +87,7 @@ class SiteNav extends React.Component {
 
   render() {
     const { children, menuProps } = this.props;
-    const { visible } = this.state;
+    const { showSidebar } = this.state;
 
     return (
       <Sidebar.Pushable as={Segment}>
@@ -93,7 +95,7 @@ class SiteNav extends React.Component {
           as={Menu}
           animation='push'
           width='thin'
-          visible={visible}
+          visible={showSidebar}
           icon='labeled'
           vertical
           inverted>
@@ -107,6 +109,7 @@ class SiteNav extends React.Component {
                 container={menuProps.custom.container} /> :
               this.renderDesktopMenu()
           }
+          <Dimmer active={showSidebar} onClick={this.handleDimmerClick} />
           {children}
         </Sidebar.Pusher>
       </Sidebar.Pushable>
