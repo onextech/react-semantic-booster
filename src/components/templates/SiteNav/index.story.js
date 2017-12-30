@@ -41,15 +41,35 @@ export const menuProps = {
   },
 };
 
+export const floatedMenuProps = {
+  inverted: true,
+  pointing: true,
+  secondary: true,
+  // Custom props not defined in semantic-ui
+  custom: {
+    float: true,
+    container: true, // only applied when float = true
+  },
+};
+
+const ExampleContent = () => (
+  <Block attached inverted textAlign="center">
+    <Container>
+      <div style={{ padding: '8em 0' }}>
+        <h1>Hello World</h1>
+      </div>
+    </Container>
+  </Block>
+);
+
 storiesOf('SiteNav', module)
   .add('Default', () => (
     <SiteNav menu={menu} menuProps={menuProps}>
-      <Block attached inverted textAlign="center">
-        <Container>
-          <div style={{ padding: '8em 0' }}>
-            <h1>Hello World</h1>
-          </div>
-        </Container>
-      </Block>
+      <ExampleContent />
+    </SiteNav>
+  ))
+  .add('Floated', () => (
+    <SiteNav menu={menu} menuProps={floatedMenuProps}>
+      <ExampleContent />
     </SiteNav>
   ));
