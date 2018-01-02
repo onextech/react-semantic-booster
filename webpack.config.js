@@ -1,9 +1,14 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const LIBRARY_NAME = 'react-semantic-booster';
+const extractPlugin = new ExtractTextPlugin({
+  filename: `${LIBRARY_NAME}.min.css`,
+});
 
 module.exports = {
   entry: './src/index.js',
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
@@ -20,8 +25,16 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['css-loader', 'sass-loader'],
+        use: extractPlugin.extract({
+          use: [
+            { loader: 'css-loader', options: { minimize: true } },
+            'sass-loader',
+          ],
+        }),
       },
     ],
   },
+  plugins: [
+    extractPlugin,
+  ],
 };
