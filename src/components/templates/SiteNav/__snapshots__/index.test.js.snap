@@ -163,6 +163,10 @@ exports[`<SiteNav> renders correctly 1`] = `
         </div>
       </div>
     </div>
+    <div
+      className="ui dimmer"
+      onClick={[Function]}
+    />
     Hello World
   </div>
 </div>
