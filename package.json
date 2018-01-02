@@ -4,7 +4,7 @@
   "description": "Extended components for react-semantic-ui",
   "license": "MIT",
   "repository": "onextech/react-semantic-booster",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": {
     "name": "One X Tech",
     "email": "hello@onextech.co",

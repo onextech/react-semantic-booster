@@ -1,11 +1,15 @@
 const path = require('path');
 
+const LIBRARY_NAME = 'react-semantic-booster';
+
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
-    library: 'rsb',
+    library: LIBRARY_NAME,
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
   },
   module: {
     rules: [

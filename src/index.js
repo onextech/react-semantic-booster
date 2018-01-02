@@ -5,9 +5,7 @@
  * @param name Some name to say hello for.
  * @returns The hello.
  */
-const sayHello = (name: string = 'Haz'): string => `Hello, ${name}!`;
-
-export default sayHello;
+export const sayHello = (name: string = 'Haz'): string => `Hello, ${name}!`;
 
 // atoms
 export { default as ButtonLink } from './components/atoms/ButtonLink';
