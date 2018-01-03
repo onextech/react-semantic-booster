@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-import { Sidebar, Segment, Dropdown, Responsive, Menu, Dimmer } from 'semantic-ui-react';
+import { Sidebar, Segment, Dropdown, Responsive, Menu, Dimmer, Image } from 'semantic-ui-react';
 import FloatingMenu from '../../atoms/FloatingMenu';
 import MenuLink from '../../atoms/MenuLink';
 import DropdownLink from '../../atoms/DropdownLink';
@@ -26,6 +26,11 @@ class SiteNav extends React.Component {
       </MenuLink>;
       // render other menu item types
       switch (true) {
+        case Boolean(item.image):
+          jsx = <MenuLink to={item.to} key={kebabCase(item.name)} linkProps={{ basic: true }}>
+            <Image {...item.image} />
+          </MenuLink>;
+          break;
         case Boolean(item.button):
           jsx = <Menu.Item key={kebabCase(item.name)}>
             <ButtonLink to={item.to} content={item.name} {...item.button} />

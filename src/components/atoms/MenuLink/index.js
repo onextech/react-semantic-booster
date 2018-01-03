@@ -5,13 +5,15 @@ import styled from 'styled-components';
 import { Menu } from 'semantic-ui-react';
 import { HashLink } from 'react-router-hash-link';
 
-const MenuLink = ({ to, children, ...props }) => {
+const MenuLink = ({
+  to, children, linkProps, ...props
+}) => {
   const isHashLink = to.charAt(0) === '#';
 
   const StyledLink = styled(isHashLink ? HashLink : Link)`
     width: 100%;
     display: flex;
-    padding: .92857143em 1.14285714em;
+    padding: ${p => (p.custom && p.custom.basic ? 0 : '.92857143em 1.14285714em')};
     color: inherit;
     &:hover {
       color: inherit;
@@ -23,7 +25,7 @@ const MenuLink = ({ to, children, ...props }) => {
 
   return (
     <Menu.Item link fitted {...props} style={{ padding: 0 }}>
-      <StyledLink to={to}>{children}</StyledLink>
+      <StyledLink to={to} custom={linkProps}>{children}</StyledLink>
     </Menu.Item>
   );
 };
@@ -35,6 +37,11 @@ MenuLink.propTypes = {
     PropTypes.array,
   ]).isRequired,
   to: PropTypes.string.isRequired,
+  linkProps: PropTypes.object,
+};
+
+MenuLink.defaultProps = {
+  linkProps: undefined,
 };
 
 export default MenuLink;

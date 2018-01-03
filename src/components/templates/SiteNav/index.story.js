@@ -9,7 +9,8 @@ export const menu = [ // eslint-disable-line import/prefer-default-export
   {
     position: 'left',
     content: [
-      { name: 'Home', to: '/' },
+      { name: 'Logo', to: '/', image: { height: 60, src: 'https://s3-ap-southeast-1.amazonaws.com/storage.api.merrymaker.com/images/merrymaker_mascot_head_side.svg' } },
+      { name: 'Home', to: '/home' },
       { name: 'About', to: '/about' },
     ],
   },
