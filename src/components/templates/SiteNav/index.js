@@ -55,8 +55,7 @@ class SiteNav extends React.Component {
   }
 
   renderDesktopMenu = () => {
-    const { menuProps: allMenuProps, menu } = this.props;
-    const { custom, ...menuProps } = allMenuProps;
+    const { menuProps, menu } = this.props;
     return (
       <Menu attached {...menuProps}>
         <Responsive maxWidth={768} as={Menu.Menu}>
@@ -103,7 +102,7 @@ class SiteNav extends React.Component {
         </Sidebar>
         <Sidebar.Pusher>
           {
-            menuProps.custom.float ?
+            menuProps && menuProps.custom && menuProps.custom.float ?
               <FloatingMenu
                 menu={this.renderDesktopMenu()}
                 container={menuProps.custom.container} /> :

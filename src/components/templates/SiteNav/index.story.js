@@ -64,7 +64,12 @@ const ExampleContent = () => (
 
 storiesOf('SiteNav', module)
   .add('Default', () => (
-    <SiteNav menu={menu} menuProps={menuProps}>
+    <SiteNav menu={menu}>
+      <ExampleContent />
+    </SiteNav>
+  ))
+  .add('Inverted', () => (
+    <SiteNav menu={menu} menuProps={{ inverted: true }}>
       <ExampleContent />
     </SiteNav>
   ))
