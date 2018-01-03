@@ -12,6 +12,7 @@ exports[`<MenuLink> renders correctly 1`] = `
 >
   <a
     className="sc-bdVaJa gDaJBK"
+    custom={undefined}
     href="/"
     onClick={[Function]}
   >

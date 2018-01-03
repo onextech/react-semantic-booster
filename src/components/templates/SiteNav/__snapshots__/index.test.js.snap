@@ -17,8 +17,35 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-ifAKCX YYbpb"
+        className="sc-ifAKCX gPFwxH"
+        custom={
+          Object {
+            "basic": true,
+          }
+        }
         href="/"
+        onClick={[Function]}
+      >
+        <img
+          className="ui image"
+          height={50}
+          src="https://s3-ap-southeast-1.amazonaws.com/storage.api.merrymaker.com/images/merrymaker_mascot_head_side.svg"
+        />
+      </a>
+    </div>
+    <div
+      className="link fitted item"
+      onClick={[Function]}
+      style={
+        Object {
+          "padding": 0,
+        }
+      }
+    >
+      <a
+        className="sc-EHOje fafhJU"
+        custom={undefined}
+        href="/home"
         onClick={[Function]}
       >
         Home
@@ -34,7 +61,8 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-EHOje fafhJU"
+        className="sc-bZQynM hnksPx"
+        custom={undefined}
         href="/about"
         onClick={[Function]}
       >
@@ -129,6 +157,12 @@ exports[`<SiteNav> renders correctly 1`] = `
   >
     <div
       className="ui attached menu"
+      custom={
+        Object {
+          "container": false,
+          "float": false,
+        }
+      }
     >
       <div
         className="menu"
