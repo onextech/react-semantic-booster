@@ -37,4 +37,11 @@ module.exports = {
   plugins: [
     extractPlugin,
   ],
+  externals: {
+    react: 'react',
+    'prop-types': 'prop-types',
+    'react-router-dom': 'react-router-dom',
+    'styled-components': 'styled-components',
+    'semantic-ui-react': 'semantic-ui-react',
+  },
 };
