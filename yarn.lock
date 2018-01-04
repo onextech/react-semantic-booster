@@ -6,9 +6,9 @@
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@hypnosphi/fuse.js/-/fuse.js-3.0.9.tgz#ea99f6121b4a8f065b4c71f85595db2714498807"
 
-"@onextech/react-apollo-utils@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@onextech/react-apollo-utils/-/react-apollo-utils-0.3.0.tgz#a55615b275a51dd8102be9c51dc718aa87f40fd5"
+"@onextech/react-apollo-utils@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@onextech/react-apollo-utils/-/react-apollo-utils-0.3.1.tgz#fe14e7e76a139c24fd662c4e3db482ce5b1d8e85"
 
 "@storybook/addon-actions@^3.2.19":
   version "3.2.19"

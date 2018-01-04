@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'enzyme';
-import { sayHello, Block } from '../dist/index';
+import { sayHello, Block } from '../dist';
 
 
 describe('Distribution', () => {
