@@ -15,7 +15,7 @@ describe('Distribution', () => {
     expect(wrapper.hasClass('ui segment')).toBe(true);
   });
 
-  it('imports media utils', () => {
+  it('imports responsive utils', () => {
     expect(MediaCss).toBeTruthy();
     expect(Desktop).toBeTruthy();
   });

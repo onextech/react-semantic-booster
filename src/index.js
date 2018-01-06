@@ -21,4 +21,4 @@ export { default as SiteNav } from './components/templates/SiteNav';
 export { default as HomeTemplate } from './components/templates/HomeTemplate';
 
 // utils
-export * from './utils/media';
+export * from './utils/responsive';

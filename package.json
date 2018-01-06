@@ -60,6 +60,7 @@
     "@storybook/addon-actions": "^3.2.19",
     "@storybook/addon-links": "^3.2.19",
     "@storybook/react": "^3.2.19",
+    "ismobilejs": "^0.4.1",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
