@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'enzyme';
-import { sayHello, Block } from '../dist';
+import { sayHello, Block, MediaCss, Desktop } from '../dist';
 
 
 describe('Distribution', () => {
@@ -13,5 +13,10 @@ describe('Distribution', () => {
     const wrapper = render(<Block>Hello World</Block>);
     expect(wrapper.is('div')).toBe(true);
     expect(wrapper.hasClass('ui segment')).toBe(true);
+  });
+
+  it('imports media utils', () => {
+    expect(MediaCss).toBeTruthy();
+    expect(Desktop).toBeTruthy();
   });
 });
