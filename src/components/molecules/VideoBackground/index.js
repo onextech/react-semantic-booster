@@ -63,7 +63,10 @@ const VideoBackground = ({ video }) => {
 };
 
 VideoBackground.propTypes = {
-  video: PropTypes.object.isRequired,
+  video: PropTypes.shape({
+    src: PropTypes.string,
+    poster: PropTypes.string,
+  }).isRequired,
 };
 
 export default VideoBackground;

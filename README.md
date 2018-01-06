@@ -77,6 +77,8 @@ Set custom routes on certain params
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+### autoPlay
+
 ### sayHello
 
 This function says hello.

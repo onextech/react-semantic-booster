@@ -1,0 +1,467 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GoalCards> renders correctly 1`] = `
+<div
+  className="ui doubling stackable three cards sc-bdVaJa dxmbKJ"
+>
+  <div
+    className="ui card"
+    href={undefined}
+    onClick={[Function]}
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Disrupt with game-changing strategies
+      </div>
+      <ul
+        className="list-links"
+      >
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/home"
+            onClick={[Function]}
+          >
+            Data & Analytics
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/about"
+            onClick={[Function]}
+          >
+            Digital Strategy
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/work"
+            onClick={[Function]}
+          >
+            Internet of Things
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/contact"
+            onClick={[Function]}
+          >
+            Robotics & Automation
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="ui card"
+    href={undefined}
+    onClick={[Function]}
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Build a digital culture
+      </div>
+      <ul
+        className="list-links"
+      >
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/home"
+            onClick={[Function]}
+          >
+            Digital Culture & Capabilities
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/about"
+            onClick={[Function]}
+          >
+            Digital Organization
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/work"
+            onClick={[Function]}
+          >
+            Full-Scale Transformation
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="ui card"
+    href={undefined}
+    onClick={[Function]}
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Modernize core technology
+      </div>
+      <ul
+        className="list-links"
+      >
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/home"
+            onClick={[Function]}
+          >
+            Cybersecurity
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/about"
+            onClick={[Function]}
+          >
+            Application Management
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/work"
+            onClick={[Function]}
+          >
+            Enterprise Architecture
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/work"
+            onClick={[Function]}
+          >
+            Infrastructure & Cloud
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/work"
+            onClick={[Function]}
+          >
+            IT Sourcing & Service Providers
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="ui card"
+    href={undefined}
+    onClick={[Function]}
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Create stunning digital experiences
+      </div>
+      <ul
+        className="list-links"
+      >
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/home"
+            onClick={[Function]}
+          >
+            End-To-End Journey Redesign
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/about"
+            onClick={[Function]}
+          >
+            Experience Design
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="ui card"
+    href={undefined}
+    onClick={[Function]}
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Turbo-charge marketing & sales
+      </div>
+      <ul
+        className="list-links"
+      >
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/home"
+            onClick={[Function]}
+          >
+            Digital Marketing Operations
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/about"
+            onClick={[Function]}
+          >
+            Digital Sales
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/work"
+            onClick={[Function]}
+          >
+            Dynamic eCommerce Pricing
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/work"
+            onClick={[Function]}
+          >
+            Personalization at Scale
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="ui card"
+    href={undefined}
+    onClick={[Function]}
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Optimize your operations
+      </div>
+      <ul
+        className="list-links"
+      >
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/home"
+            onClick={[Function]}
+          >
+            Corporate Functions
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/about"
+            onClick={[Function]}
+          >
+            Enterprise Resource Planning
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/work"
+            onClick={[Function]}
+          >
+            IT Project Optimization
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/work"
+            onClick={[Function]}
+          >
+            Lean IT
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+        <li
+          className="list-item"
+        >
+          <a
+            className="list-link icon"
+            href="/work"
+            onClick={[Function]}
+          >
+            Service Operations
+            <i
+              aria-hidden="true"
+              className="long right arrow icon list-link-icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

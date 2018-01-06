@@ -13,6 +13,10 @@ export { default as MenuLink } from './components/atoms/MenuLink';
 export { default as Block } from './components/atoms/Block';
 export { default as Breadcrumbs } from './components/atoms/Breadcrumbs';
 
+// molecules
+export { default as VideoBackground } from './components/molecules/VideoBackground';
+export { default as GoalCards } from './components/molecules/GoalCards';
+
 // organisms
 export { default as Hero } from './components/organisms/Hero';
 
