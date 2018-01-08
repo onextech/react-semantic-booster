@@ -5,7 +5,10 @@ import VideoBackground from '.';
 
 export const demoVideo = { // eslint-disable-line import/prefer-default-export
   src: 'https://s3-ap-southeast-1.amazonaws.com/storage.onextech.com/web/site/home/24251288.mp4',
-  poster: 'https://s3-ap-southeast-1.amazonaws.com/storage.onextech.com/web/site/home/bluenet.jpg',
+  poster: {
+    src: 'https://s3-ap-southeast-1.amazonaws.com/storage.onextech.com/web/site/home/bluenet.jpg',
+    bgPos: '140% 50%',
+  },
 };
 
 storiesOf('VideoBackground', module)

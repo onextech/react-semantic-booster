@@ -2,7 +2,13 @@
 
 exports[`<VideoBackground> renders correctly 1`] = `
 <div
-  className="sc-bdVaJa kBFIu"
+  className="sc-bdVaJa iDOixQ"
+  poster={
+    Object {
+      "bgPos": "140% 50%",
+      "src": "https://s3-ap-southeast-1.amazonaws.com/storage.onextech.com/web/site/home/bluenet.jpg",
+    }
+  }
 >
   <div
     className="overlay"
@@ -11,7 +17,7 @@ exports[`<VideoBackground> renders correctly 1`] = `
     autoPlay={true}
     loop={true}
     muted={true}
-    poster="https://s3-ap-southeast-1.amazonaws.com/storage.onextech.com/web/site/home/bluenet.jpg"
+    poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
   >
     <source
       src="https://s3-ap-southeast-1.amazonaws.com/storage.onextech.com/web/site/home/24251288.mp4"

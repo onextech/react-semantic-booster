@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import isMobile from 'ismobilejs';
+import { MediaCss } from '../../../utils/responsive';
 
 
 const VideoContainer = styled.div`
@@ -17,6 +18,19 @@ const VideoContainer = styled.div`
     min-height: 100%;
     position: relative;
     z-index: 1;
+    // poster-related css
+    object-fit: cover;
+    ${MediaCss.max.sm`
+      ${(props) => {
+    if (props.poster) {
+      return `
+            background-image: url(${props.poster.src});
+            ${props.poster.bgPos && `background-position: ${props.poster.bgPos}`}
+      `;
+    }
+    return false;
+  }}
+  `}
   }
   
   .overlay {
@@ -29,7 +43,7 @@ const VideoContainer = styled.div`
     background: black;
     opacity: 0.5;
   }
-`;
+  `;
 
 const VideoBackground = ({ video }) => {
   const defaultVideoProps = {
@@ -48,12 +62,17 @@ const VideoBackground = ({ video }) => {
     defaultVideoProps.autoPlay = true;
   }
 
-  const { src, ...videoProps } = video;
+  const { src, poster, ...videoProps } = video;
+
+  const transparentBase64Image = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
   return (
-    <VideoContainer>
+    <VideoContainer poster={poster}>
       <div className="overlay" />
-      <video {...defaultVideoProps} {...videoProps}>
+      <video
+        {...defaultVideoProps}
+        {...videoProps}
+        poster={transparentBase64Image}>
         <source src={src} type="video/ogg" />
         <source src={src} type="video/webm" />
         <source src={src} type="video/mp4" />
@@ -65,7 +84,10 @@ const VideoBackground = ({ video }) => {
 VideoBackground.propTypes = {
   video: PropTypes.shape({
     src: PropTypes.string,
-    poster: PropTypes.string,
+    poster: PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      bgPos: PropTypes.string,
+    }).isRequired,
   }).isRequired,
 };
 
