@@ -2,7 +2,8 @@
 
 exports[`<Block> renders correctly 1`] = `
 <div
-  className="ui segment block sc-bdVaJa iRfCIs"
+  className="ui segment sc-bdVaJa bSbPbx"
+  spacer={1}
 >
   Hello World
 </div>
