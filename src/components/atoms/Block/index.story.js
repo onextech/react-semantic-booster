@@ -18,6 +18,7 @@ storiesOf('Block', module)
       <Block attached secondary textAlign="center" spacer={1}>Hello World</Block>
       <Block attached textAlign="center" spacer={2}>Hello World</Block>
       <Block attached inverted textAlign="center" spacer={3}>Hello World</Block>
+      <Block attached inverted textAlign="center" spacer={{ top: 3 }}>Hello World</Block>
     </div>
   ))
   .add('Angular', () => (
