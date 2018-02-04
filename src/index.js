@@ -16,6 +16,7 @@ export { default as Breadcrumbs } from './components/atoms/Breadcrumbs';
 // molecules
 export { default as VideoBackground } from './components/molecules/VideoBackground';
 export { default as GoalCards } from './components/molecules/GoalCards';
+export { default as PhotoCard } from './components/molecules/PhotoCard';
 
 // organisms
 export { default as Hero } from './components/organisms/Hero';
