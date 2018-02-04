@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Segment } from 'semantic-ui-react';
 
+const backgroundClassName = 'background';
 
 const StyledBlock = styled(Segment)`
   // spacer
@@ -12,7 +13,7 @@ const StyledBlock = styled(Segment)`
     const baseEmPadding = 5;
     return `padding: ${baseEmPadding * props.spacer}em 0`;
   }}
-  }
+    }
   
   // background
   ${(props) => {
@@ -33,18 +34,27 @@ const StyledBlock = styled(Segment)`
       const linearFrom = fromColor || defaultLinearColor;
       const linearTo = toColor || defaultLinearColor;
       return `
-      &.ui.segment {
-        background: linear-gradient(${linearFrom}, ${linearTo}), url('${src}');
-        background-position: ${position || 'center'};
-        background-repeat: ${repeat || 'no-repeat'};
-        background-size: ${size || 'cover'};
-      }`;
+        &.ui.segment.${backgroundClassName} {
+          background: linear-gradient(${linearFrom}, ${linearTo}), url('${src}');
+          background-position: ${position || 'center'};
+          background-repeat: ${repeat || 'no-repeat'};
+          background-size: ${size || 'cover'};
+        }`;
     }
     return false;
   }}
   `;
 
-const Block = ({ ...props }) => (<StyledBlock {...props} />);
+const Block = ({ ...props }) => {
+  const getClassName = () => {
+    const className = [];
+    if (props.background) {
+      className.push(backgroundClassName);
+    }
+    return className.join(' ');
+  };
+  return (<StyledBlock className={getClassName()} {...props} />);
+};
 
 Block.propTypes = {
   spacer: PropTypes.number,
