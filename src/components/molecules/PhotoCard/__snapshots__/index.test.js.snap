@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PhotoCard> renders correctly 1`] = `
+<button
+  card="hello-world"
+  className="ui fluid button sc-bdVaJa hlZLEZ"
+  disabled={undefined}
+  onClick={[Function]}
+  role="button"
+  tabIndex={undefined}
+  to="#"
+>
+  <div
+    className="sc-bwzfXH crJjvc"
+  >
+    <h4
+      className="ui large inverted header"
+    >
+      <div
+        className="sub header"
+        style={
+          Object {
+            "opacity": "0.8",
+          }
+        }
+      >
+        foo
+      </div>
+      hello world
+    </h4>
+  </div>
+  <img
+    className="ui image animated scale sc-htpNat btySty"
+    src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
+  />
+</button>
+`;
