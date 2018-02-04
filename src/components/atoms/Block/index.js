@@ -24,6 +24,7 @@ const StyledBlock = styled(Segment)`
         opacity,
         fromColor,
         toColor,
+        size,
       } = props.background;
       const defaultOpacity = 0.8;
       const linearOpacity = opacity || defaultOpacity;
@@ -36,6 +37,7 @@ const StyledBlock = styled(Segment)`
         background: linear-gradient(${linearFrom}, ${linearTo}), url('${src}');
         background-position: ${position || 'center'};
         background-repeat: ${repeat || 'no-repeat'};
+        background-size: ${size || 'cover'};
       }`;
     }
     return false;
@@ -53,6 +55,7 @@ Block.propTypes = {
     opacity: PropTypes.number,
     fromColor: PropTypes.string, // 'rgba(0,0,0,0.5)'
     toColor: PropTypes.string, // 'rgba(0,0,0,0.8)'
+    size: PropTypes.string,
   }),
 };
 
