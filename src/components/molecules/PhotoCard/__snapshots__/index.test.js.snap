@@ -3,7 +3,7 @@
 exports[`<PhotoCard> renders correctly 1`] = `
 <button
   card="hello-world"
-  className="ui fluid button sc-bdVaJa hlZLEZ"
+  className="ui fluid button sc-bdVaJa liaItL"
   disabled={undefined}
   onClick={[Function]}
   role="button"

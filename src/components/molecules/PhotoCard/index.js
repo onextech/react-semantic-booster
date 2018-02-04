@@ -15,7 +15,7 @@ const PhotoCard = ({
   onClick,
 }) => {
   const CardContainer = styled(onClick ? Button : Link)`
-    &.ui.button, & {e
+    &.ui.button, & {
       width: 100%;
       height: 260px;
       display: flex;

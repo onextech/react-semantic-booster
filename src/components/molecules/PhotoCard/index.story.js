@@ -49,7 +49,7 @@ storiesOf('PhotoCard', module)
       onClick={action('clicked')}
       animated="scale"
       content={firstPhotoCard.content}
-      cardProps={{ card: firstPhotoCard.key, fluid: true }}
+      cardProps={{ card: firstPhotoCard.key }}
       headerProps={{ inverted: true, size: 'large' }}
       imgProps={firstPhotoCard.imgProps} />
   ))
