@@ -20,6 +20,13 @@ storiesOf('Block', module)
       <Block attached inverted textAlign="center" spacer={3}>Hello World</Block>
     </div>
   ))
+  .add('Angular', () => (
+    <div>
+      <Block vertical inverted textAlign="center" spacer={2}>Hello World</Block>
+      <Block vertical textAlign="center" spacer={2} angular={{ top: true, bottom: true }}>Hello World</Block>
+      <Block vertical inverted textAlign="center" spacer={2}>Hello World</Block>
+    </div>
+  ))
   .add('Image background', () => (
     <div>
       <Block background={{

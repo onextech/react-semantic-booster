@@ -2,6 +2,7 @@
 
 exports[`<Block> renders correctly 1`] = `
 <div
+  angular={undefined}
   background={undefined}
   className="ui segment sc-bdVaJa edqNUO"
   spacer={1}
