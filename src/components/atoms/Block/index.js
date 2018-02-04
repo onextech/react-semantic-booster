@@ -9,25 +9,38 @@ const StyledBlock = styled(Segment)`
   &.ui.segment {
     &.attached { border: 0; }
     ${(props) => {
-      const baseEmPadding = 5;
-      return `padding: ${baseEmPadding * props.spacer}em 0`;
-    }}
+    const baseEmPadding = 5;
+    return `padding: ${baseEmPadding * props.spacer}em 0`;
+  }}
   }
   
   // background
   ${(props) => {
-  if (props.background) {
-    const bg = props.background;
-    const { src, repeat, position, fromColor, toColor, opacity } = bg;
-    return `
+    if (props.background) {
+      const {
+        src,
+        repeat,
+        position,
+        opacity,
+        fromColor,
+        toColor,
+      } = props.background;
+      const defaultOpacity = 0.8;
+      const linearOpacity = opacity || defaultOpacity;
+      // eslint-disable-next-line
+      const defaultLinearColor = 'rgba(0,0,0,' + linearOpacity + ')';
+      const linearFrom = fromColor || defaultLinearColor;
+      const linearTo = toColor || defaultLinearColor;
+      return `
       &.ui.segment {
-        background: linear-gradient(${fromColor || `rgba(0,0,0,${opacity || '0.8'})`}, ${toColor || `rgba(0,0,0,${opacity || '0.8'})`}), url('${src}');
+        background: linear-gradient(${linearFrom}, ${linearTo}), url('${src}');
         background-position: ${position || 'center'};
         background-repeat: ${repeat || 'no-repeat'};
       }`;
     }
+    return false;
   }}
-`;
+  `;
 
 const Block = ({ ...props }) => (<StyledBlock {...props} />);
 
