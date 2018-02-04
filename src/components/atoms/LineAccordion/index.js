@@ -36,7 +36,7 @@ const StyledAccordion = styled(Accordion)`
     if (props.size) {
       const found = sizes.indexOf(props.size);
       return found && `
-        .title {
+        .title:not(.ui) {
           padding: ${(found + 0.5) * 0.5}em 0 ${(found + 0.3) * 0.5}em;
           font-size: ${(found + 0.5) * 0.5}em;
         }
