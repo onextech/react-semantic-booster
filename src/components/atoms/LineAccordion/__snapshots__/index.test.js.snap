@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LineAccordion> renders correctly 1`] = `
+<div
+  className="accordion ui sc-bdVaJa ftDjUA"
+  defaultindex={undefined}
+  size={undefined}
+>
+  <div
+    className="container"
+  >
+    <div
+      className="title"
+      onClick={[Function]}
+    >
+      Residencies
+      <i
+        aria-hidden="true"
+        className="plus icon"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <ul>
+        <li>
+          Resident DJ - Peaches Club, Singapore (former Cherry Disco) (2017 - 2018)
+        </li>
+        <li>
+          Resident DJ - PLAY Club since 2010
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="title"
+      onClick={[Function]}
+    >
+      Venues Played
+      <i
+        aria-hidden="true"
+        className="plus icon"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <ul>
+        <li>
+          Attica Club, Singapore
+        </li>
+        <li>
+          Avalon Club, Singapore
+        </li>
+        <li>
+          Filter Club, Singapore
+        </li>
+        <li>
+          New Asia Bar, Singapore
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

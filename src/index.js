@@ -12,6 +12,7 @@ export { default as ButtonLink } from './components/atoms/ButtonLink';
 export { default as MenuLink } from './components/atoms/MenuLink';
 export { default as Block } from './components/atoms/Block';
 export { default as Breadcrumbs } from './components/atoms/Breadcrumbs';
+export { default as LineAccordion } from './components/atoms/LineAccordion';
 
 // molecules
 export { default as VideoBackground } from './components/molecules/VideoBackground';
