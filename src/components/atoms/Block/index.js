@@ -26,6 +26,7 @@ const StyledBlock = styled(Segment)`
         fromColor,
         toColor,
         size,
+        attachment,
       } = props.background;
       const defaultOpacity = 0.8;
       const linearOpacity = opacity || defaultOpacity;
@@ -39,6 +40,7 @@ const StyledBlock = styled(Segment)`
           background-position: ${position || 'center'};
           background-repeat: ${repeat || 'no-repeat'};
           background-size: ${size || 'cover'};
+          background-attachment: ${attachment || 'scroll'};
         }`;
     }
     return false;
@@ -66,6 +68,7 @@ Block.propTypes = {
     fromColor: PropTypes.string, // 'rgba(0,0,0,0.5)'
     toColor: PropTypes.string, // 'rgba(0,0,0,0.8)'
     size: PropTypes.string,
+    attachment: PropTypes.string,
   }),
 };
 
