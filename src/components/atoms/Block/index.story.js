@@ -19,4 +19,13 @@ storiesOf('Block', module)
       <Block attached textAlign="center" spacer={2}>Hello World</Block>
       <Block attached inverted textAlign="center" spacer={3}>Hello World</Block>
     </div>
+  ))
+  .add('Image background', () => (
+    <div>
+      <Block background={{
+        src: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG',
+      }} attached inverted textAlign="center" spacer={3}>
+        Hello World
+      </Block>
+    </div>
   ));
