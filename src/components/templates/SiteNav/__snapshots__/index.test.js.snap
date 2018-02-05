@@ -2,7 +2,7 @@
 
 exports[`<SiteNav> renders correctly 1`] = `
 <div
-  className="ui segment pushable"
+  className="pushable"
 >
   <div
     className="ui inverted vertical labeled icon ui push left thin sidebar menu"

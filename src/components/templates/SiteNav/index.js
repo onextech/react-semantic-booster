@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-import { Sidebar, Segment, Dropdown, Responsive, Menu, Dimmer, Image } from 'semantic-ui-react';
+import { Sidebar, Dropdown, Responsive, Menu, Dimmer, Image } from 'semantic-ui-react';
 import FloatingMenu from '../../atoms/FloatingMenu';
 import MenuLink from '../../atoms/MenuLink';
 import DropdownLink from '../../atoms/DropdownLink';
@@ -94,7 +94,7 @@ class SiteNav extends React.Component {
     const { showSidebar } = this.state;
 
     return (
-      <Sidebar.Pushable as={Segment}>
+      <Sidebar.Pushable>
         <Sidebar
           as={Menu}
           animation='push'
