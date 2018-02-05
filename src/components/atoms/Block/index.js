@@ -73,6 +73,10 @@ const Block = ({ ...props }) => {
     return className.join(' ');
   };
   if (props.angular) {
+    /**
+     * Create an angular block
+     * @link https://css-tricks.com/creating-non-rectangular-headers/
+     */
     const AngularSvg = styled.svg`
       position: absolute;
       left: 0;
