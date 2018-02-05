@@ -6,19 +6,19 @@ import SocialLinkGroup from '.';
 export const itemsExample = [
   {
     name: 'facebook',
-    link: { to: 'http://www.facebook.com' },
+    link: { href: 'http://www.facebook.com', target: '_blank' },
     icon: { name: 'facebook f' },
     btn: { color: 'facebook' },
   },
   {
     name: 'instagram',
-    link: { to: 'http://www.instagram.com' },
+    link: { href: 'http://www.instagram.com', target: '_blank' },
     icon: { name: 'instagram' },
     btn: { color: 'instagram' },
   },
   {
     name: 'twitter',
-    link: { to: 'http://www.twitter.com' },
+    link: { href: 'http://www.twitter.com', target: '_blank' },
     icon: { name: 'twitter' },
     btn: { color: 'twitter' },
   },

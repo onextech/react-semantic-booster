@@ -6,7 +6,7 @@ exports[`<SocialLinkGroup> renders correctly 1`] = `
 >
   <a
     href="http://www.facebook.com"
-    onClick={[Function]}
+    target="_blank"
   >
     <button
       className="ui facebook button"
@@ -23,7 +23,7 @@ exports[`<SocialLinkGroup> renders correctly 1`] = `
   </a>
   <a
     href="http://www.instagram.com"
-    onClick={[Function]}
+    target="_blank"
   >
     <button
       className="ui instagram button"
@@ -40,7 +40,7 @@ exports[`<SocialLinkGroup> renders correctly 1`] = `
   </a>
   <a
     href="http://www.twitter.com"
-    onClick={[Function]}
+    target="_blank"
   >
     <button
       className="ui twitter button"

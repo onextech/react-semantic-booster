@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { Button, Icon } from 'semantic-ui-react';
 import { kebabCase } from 'lodash';
 
@@ -40,11 +39,11 @@ const SocialLinkGroup = ({ items, groupProps }) => {
   return (
     <StyledButtonGroup className={getClassName()} icon {...btnGroupProps}>
       {
-        items.map(item => <Link {...item.link} key={kebabCase(item.name)}>
+        items.map(item => <a {...item.link} key={kebabCase(item.name)}>
           <Button {...item.btn}>
             <Icon {...item.icon} />
           </Button>
-        </Link>)
+        </a>)
       }
     </StyledButtonGroup>
   );
@@ -53,7 +52,7 @@ const SocialLinkGroup = ({ items, groupProps }) => {
 SocialLinkGroup.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    link: PropTypes.object, // react-router-dom link props
+    link: PropTypes.object, // <a> props
     btn: PropTypes.object, // semantic-ui button props
     icon: PropTypes.object, // semantic-ui icon props
   })).isRequired,
