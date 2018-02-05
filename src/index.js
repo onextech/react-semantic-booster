@@ -18,6 +18,7 @@ export { default as LineAccordion } from './components/atoms/LineAccordion';
 export { default as VideoBackground } from './components/molecules/VideoBackground';
 export { default as GoalCards } from './components/molecules/GoalCards';
 export { default as PhotoCard } from './components/molecules/PhotoCard';
+export { default as SocialLinkGroup } from './components/molecules/SocialLinkGroup';
 
 // organisms
 export { default as Hero } from './components/organisms/Hero';

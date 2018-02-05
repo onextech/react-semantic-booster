@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SocialLinkGroup> renders correctly 1`] = `
+<div
+  className="ui massive basic icon buttons sc-bdVaJa cNayXi"
+>
+  <a
+    href="http://www.facebook.com"
+    onClick={[Function]}
+  >
+    <button
+      className="ui button"
+      disabled={undefined}
+      onClick={[Function]}
+      role="button"
+      tabIndex={undefined}
+    >
+      <i
+        aria-hidden="true"
+        className="facebook f icon"
+      />
+    </button>
+  </a>
+  <a
+    href="http://www.instagram.com"
+    onClick={[Function]}
+  >
+    <button
+      className="ui button"
+      disabled={undefined}
+      onClick={[Function]}
+      role="button"
+      tabIndex={undefined}
+    >
+      <i
+        aria-hidden="true"
+        className="instagram icon"
+      />
+    </button>
+  </a>
+  <a
+    href="http://www.twitter.com"
+    onClick={[Function]}
+  >
+    <button
+      className="ui button"
+      disabled={undefined}
+      onClick={[Function]}
+      role="button"
+      tabIndex={undefined}
+    >
+      <i
+        aria-hidden="true"
+        className="twitter icon"
+      />
+    </button>
+  </a>
+</div>
+`;
