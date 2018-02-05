@@ -8,7 +8,9 @@ import { itemsExample, groupPropsExample } from './index.story';
 describe('<SocialLinkGroup>', () => {
   it('renders correctly', () => {
     const tree = renderer
-      .create(<Router><SocialLinkGroup items={itemsExample} groupProps={groupPropsExample} /></Router>)
+      .create(<Router>
+        <SocialLinkGroup items={itemsExample} groupProps={groupPropsExample} />
+      </Router>)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
