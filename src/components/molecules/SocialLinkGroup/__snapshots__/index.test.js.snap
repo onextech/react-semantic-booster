@@ -2,14 +2,14 @@
 
 exports[`<SocialLinkGroup> renders correctly 1`] = `
 <div
-  className="ui massive basic icon buttons sc-bdVaJa cNayXi"
+  className="ui massive icon buttons social-link-group sc-bdVaJa hsQhTP"
 >
   <a
     href="http://www.facebook.com"
     onClick={[Function]}
   >
     <button
-      className="ui button"
+      className="ui facebook button"
       disabled={undefined}
       onClick={[Function]}
       role="button"
@@ -26,7 +26,7 @@ exports[`<SocialLinkGroup> renders correctly 1`] = `
     onClick={[Function]}
   >
     <button
-      className="ui button"
+      className="ui instagram button"
       disabled={undefined}
       onClick={[Function]}
       role="button"
@@ -43,7 +43,7 @@ exports[`<SocialLinkGroup> renders correctly 1`] = `
     onClick={[Function]}
   >
     <button
-      className="ui button"
+      className="ui twitter button"
       disabled={undefined}
       onClick={[Function]}
       role="button"

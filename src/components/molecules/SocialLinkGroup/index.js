@@ -6,28 +6,49 @@ import { Button, Icon } from 'semantic-ui-react';
 import { kebabCase } from 'lodash';
 
 
+const socialLinkGroupClassName = 'social-link-group';
+const borderlessClassName = 'borderless';
+const basicClassName = 'basic';
+
 const StyledButtonGroup = styled(Button.Group)`
-  &.ui.buttons {
-    border: none;
-    .button {
-      &, &:hover, &:active, &:focus {
-        box-shadow: none;
+  &.ui.buttons.${socialLinkGroupClassName} {
+  
+    // borderless
+    &.borderless {
+      border: none;
+      .button {
+        &, &:hover, &:active, &:focus {
+          box-shadow: none;
+        }
       }
     }
+    
   }
 `;
 
-const SocialLinkGroup = ({ items, groupProps }) => (
-  <StyledButtonGroup {...groupProps}>
-    {
-      items.map(item => <Link {...item.link} key={kebabCase(item.name)}>
-        <Button {...item.btn}>
-          <Icon {...item.icon} />
-        </Button>
-      </Link>)
+const SocialLinkGroup = ({ items, groupProps }) => {
+  const { borderless, ...btnGroupProps } = groupProps;
+
+  const getClassName = () => {
+    const className = [socialLinkGroupClassName];
+    if (borderless) {
+      className.push(borderlessClassName, basicClassName);
     }
-  </StyledButtonGroup>
-);
+    return className.join(' ');
+  };
+
+  return (
+    <StyledButtonGroup className={getClassName()} icon {...btnGroupProps}>
+      {
+        items.map(item => <Link {...item.link} key={kebabCase(item.name)}>
+          <Button {...item.btn}>
+            <Icon {...item.icon} />
+          </Button>
+        </Link>)
+      }
+    </StyledButtonGroup>
+  );
+};
 
 SocialLinkGroup.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
@@ -36,7 +57,10 @@ SocialLinkGroup.propTypes = {
     btn: PropTypes.object, // semantic-ui button props
     icon: PropTypes.object, // semantic-ui icon props
   })).isRequired,
-  groupProps: PropTypes.object, // semantic-ui button group props
+  groupProps: PropTypes.shape({
+    borderless: PropTypes.bool, // custom: only works when basic: true
+    // ... others, semantic-ui button group props
+  }),
 };
 
 export default SocialLinkGroup;
