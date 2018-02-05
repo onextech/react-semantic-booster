@@ -7,10 +7,15 @@ import { kebabCase } from 'lodash';
 
 const socialLinkGroupClassName = 'social-link-group';
 const borderlessClassName = 'borderless';
-const basicClassName = 'basic';
 
 const StyledButtonGroup = styled(Button.Group)`
   &.ui.buttons.${socialLinkGroupClassName} {
+  
+    &:not(.basic) {
+      .button {
+        border-radius: 0;
+      }
+    }
   
     // borderless
     &.borderless {
@@ -25,23 +30,34 @@ const StyledButtonGroup = styled(Button.Group)`
   }
 `;
 
-const SocialLinkGroup = ({ items, groupProps }) => {
-  const { borderless, ...btnGroupProps } = groupProps;
+const TextSpan = styled.span`
+  margin-left: .25em;
+  margin-right: .4em;
+`;
 
+const SocialLinkGroup = ({ items, groupProps }) => {
   const getClassName = () => {
     const className = [socialLinkGroupClassName];
-    if (borderless) {
-      className.push(borderlessClassName, basicClassName);
+    if (groupProps && groupProps.borderless) {
+      className.push(borderlessClassName);
     }
     return className.join(' ');
   };
 
+  // separate custom from semantic props
+  let semanticButtonGroupProps = {};
+  if (groupProps) {
+    const { borderless, ...rest } = groupProps;
+    semanticButtonGroupProps = rest;
+  }
+
   return (
-    <StyledButtonGroup className={getClassName()} icon {...btnGroupProps}>
+    <StyledButtonGroup className={getClassName()} icon {...semanticButtonGroupProps}>
       {
         items.map(item => <a {...item.link} key={kebabCase(item.name)}>
           <Button {...item.btn}>
             <Icon {...item.icon} />
+            {item.text && <TextSpan>{item.text}</TextSpan>}
           </Button>
         </a>)
       }
@@ -55,6 +71,7 @@ SocialLinkGroup.propTypes = {
     link: PropTypes.object, // <a> props
     btn: PropTypes.object, // semantic-ui button props
     icon: PropTypes.object, // semantic-ui icon props
+    text: PropTypes.string,
   })).isRequired,
   groupProps: PropTypes.shape({
     borderless: PropTypes.bool, // custom: only works when basic: true

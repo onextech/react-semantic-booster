@@ -28,10 +28,32 @@ export const groupPropsExample = { size: 'massive' };
 
 storiesOf('SocialLinkGroup', module)
   .add('Default', () => (
-    <SocialLinkGroup items={itemsExample} groupProps={{ ...groupPropsExample }} />
+    <SocialLinkGroup items={itemsExample} groupProps={groupPropsExample} />
   ))
   .add('Basic', () => (
     <SocialLinkGroup
       items={itemsExample}
+      groupProps={{ ...groupPropsExample, basic: true }} />
+  ))
+  .add('Borderless', () => (
+    <SocialLinkGroup
+      items={itemsExample}
       groupProps={{ ...groupPropsExample, basic: true, borderless: true }} />
+  ))
+  .add('Text', () => (
+    <SocialLinkGroup
+      items={[
+        {
+          ...itemsExample[0],
+          text: 'Facebook',
+        },
+        {
+          ...itemsExample[1],
+          text: 'Instagram',
+        },
+        {
+          ...itemsExample[2],
+          text: 'Twitter',
+        },
+      ]} />
   ));

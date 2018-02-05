@@ -2,7 +2,7 @@
 
 exports[`<SocialLinkGroup> renders correctly 1`] = `
 <div
-  className="ui massive icon buttons social-link-group sc-bdVaJa hsQhTP"
+  className="ui massive icon buttons social-link-group sc-bdVaJa ijjTBL"
 >
   <a
     href="http://www.facebook.com"
