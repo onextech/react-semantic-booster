@@ -2,7 +2,7 @@
 
 exports[`<SiteNav> renders correctly 1`] = `
 <div
-  className="pushable"
+  className="pushable sc-bxivhb jSLwlH"
 >
   <div
     className="ui inverted vertical labeled icon ui push left thin sidebar menu"
@@ -17,7 +17,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-ifAKCX gPFwxH"
+        className="sc-EHOje cCeQFN"
         custom={
           Object {
             "basic": true,
@@ -43,7 +43,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-EHOje fafhJU"
+        className="sc-bZQynM hnksPx"
         custom={undefined}
         href="/home"
         onClick={[Function]}
@@ -61,7 +61,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-bZQynM hnksPx"
+        className="sc-gzVnrw iHJwsb"
         custom={undefined}
         href="/about"
         onClick={[Function]}

@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
 import { Sidebar, Dropdown, Responsive, Menu, Dimmer, Image } from 'semantic-ui-react';
@@ -6,7 +7,59 @@ import FloatingMenu from '../../atoms/FloatingMenu';
 import MenuLink from '../../atoms/MenuLink';
 import DropdownLink from '../../atoms/DropdownLink';
 import ButtonLink from '../../atoms/ButtonLink';
-import './style.scss';
+
+const SidebarPushable = styled(Sidebar.Pushable)`
+  /* Icons */
+  // Fix for icons always having a right margin from SUI
+  .ui.menu .item>i.icon {
+    margin: 0;
+  }
+  
+  /* Button */
+  .ui.menu.vertical .ui.button {
+    width: 100%;
+  }
+  
+  /* Fix for button padding in SUI menus */
+  .ui.menu:not(.vertical) .item>.button.custom {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  /* Dropdown */
+  .ui.menu .ui.dropdown .menu>.item.fitted.link {
+    display: flex;
+    padding: 0 !important;
+    a {
+      color: inherit;
+      &:focus, &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  
+  // Fix for dropdown link in  menu
+  .inverted.ui.menu .ui.dropdown .menu > .item.fitted.link a {
+    color: rgba(0,0,0,.87);
+  }
+  
+  // Fix for dropdown text alignment in vertical menu
+  .ui.menu.vertical .ui.item.dropdown {
+    text-align: left;
+  }
+  
+  /* Fix for dropdown menu not showing in sidebar due to SUI */
+  .ui.sidebar {
+    overflow-y: initial !important;
+  }
+  
+  
+  /* Sidebar */
+  // Fix for menu items not positioned correctly
+  .ui.secondary.pointing.menu .item {
+    align-self: center;
+  }
+`;
 
 
 class SiteNav extends React.Component {
@@ -94,7 +147,7 @@ class SiteNav extends React.Component {
     const { showSidebar } = this.state;
 
     return (
-      <Sidebar.Pushable>
+      <SidebarPushable>
         <Sidebar
           as={Menu}
           animation='push'
@@ -116,7 +169,7 @@ class SiteNav extends React.Component {
           <Dimmer active={showSidebar} onClick={this.handleDimmerClick} />
           {children}
         </Sidebar.Pusher>
-      </Sidebar.Pushable>
+      </SidebarPushable>
     );
   }
 }

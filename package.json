@@ -10,8 +10,7 @@
     "url": "github.com/onextech"
   },
   "main": "dist/index.js",
-  "jsnext:main": "dist/es/index.js",
-  "module": "dist/es/index.js",
+  "module": "src/index.js",
   "files": [
     "src",
     "dist",
@@ -23,15 +22,13 @@
   "scripts": {
     "test": "jest",
     "coverage": "npm test -- --coverage",
-    "postcoverage": "opn coverage/lcov-report/index.html",
+    "postcoverage": "open coverage/lcov-report/index.html",
     "lint": "eslint src test",
     "flow": "flow check",
     "docs": "documentation readme src --section=API",
     "clean": "rimraf dist",
     "prebuild": "npm run docs && npm run clean",
-    "build:umd": "webpack -p",
-    "build:es": "cross-env NODE_ENV=es babel src -d dist/es",
-    "build": "yarn build:umd && yarn build:es",
+    "build": "webpack -p",
     "watch": "npm-watch",
     "patch": "npm version patch && npm publish --access=public",
     "minor": "npm version minor && npm publish --access=public",
@@ -105,6 +102,7 @@
     "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
+    "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^3.10.0"
   }
 }

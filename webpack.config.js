@@ -1,20 +1,19 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const LIBRARY_NAME = 'react-semantic-booster';
+const LIBRARY_NAME = 'reactSemanticBooster';
 const extractPlugin = new ExtractTextPlugin({
   filename: `${LIBRARY_NAME}.min.css`,
 });
 
 module.exports = {
   entry: './src/index.js',
-  devtool: 'source-map',
+
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     library: LIBRARY_NAME,
-    libraryTarget: 'umd',
-    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -36,6 +35,7 @@ module.exports = {
   },
   plugins: [
     extractPlugin,
+    new UglifyJsPlugin(),
   ],
   externals: {
     react: 'react',
@@ -43,5 +43,11 @@ module.exports = {
     'react-router-dom': 'react-router-dom',
     'styled-components': 'styled-components',
     'semantic-ui-react': 'semantic-ui-react',
+    lodash: {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_',
+    },
   },
 };
