@@ -85,6 +85,15 @@ const Block = ({ ...props }) => {
     }
     return className.join(' ');
   };
+  // separate custom from semantic props
+  let semanticSegmentProps = {};
+  if (props) {
+    const {
+      verticalAlign, ...rest
+    } = props;
+    semanticSegmentProps = rest;
+  }
+
   if (props.angular) {
     /**
      * Create an angular block
@@ -115,7 +124,7 @@ const Block = ({ ...props }) => {
     };
     const svgFill = getSvgFill();
     return (
-      <StyledBlock className={getClassName()} {...props}>
+      <StyledBlock className={getClassName()} {...semanticSegmentProps}>
         {props.angular.top && <TopSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
             <polygon fill={`${props.angular.top.fill || svgFill}`} points="0,100 100,0 100,100" />
           </TopSvg>}
@@ -127,15 +136,6 @@ const Block = ({ ...props }) => {
     );
   }
   // default
-
-  // separate custom from semantic props
-  let semanticSegmentProps = {};
-  if (props) {
-    const {
-      angular, background, verticalAlign, ...rest
-    } = props;
-    semanticSegmentProps = rest;
-  }
   return (<StyledBlock className={getClassName()} {...semanticSegmentProps} />);
 };
 

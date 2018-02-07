@@ -2,6 +2,8 @@
 
 exports[`<Callout> renders correctly 1`] = `
 <div
+  angular={undefined}
+  background={undefined}
   className="ui vertical segment sc-bdVaJa fzUeb"
   spacer={0.5}
 >
