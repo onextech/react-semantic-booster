@@ -4,19 +4,22 @@
   "description": "Extended components for react-semantic-ui",
   "license": "MIT",
   "repository": "onextech/react-semantic-booster",
-  "main": "dist/index.js",
   "author": {
     "name": "One X Tech",
     "email": "hello@onextech.co",
     "url": "github.com/onextech"
   },
-  "engines": {
-    "node": ">=6"
-  },
+  "main": "dist/index.js",
+  "jsnext:main": "dist/es/index.js",
+  "module": "dist/es/index.js",
   "files": [
+    "src",
     "dist",
     "index.js"
   ],
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "test": "jest",
     "coverage": "npm test -- --coverage",
@@ -27,6 +30,7 @@
     "clean": "rimraf dist",
     "prebuild": "npm run docs && npm run clean",
     "build": "webpack -p",
+    "build:es": "cross-env NODE_ENV=es babel src -d dist/es",
     "watch": "npm-watch",
     "patch": "npm version patch && npm publish --access=public",
     "minor": "npm version minor && npm publish --access=public",
