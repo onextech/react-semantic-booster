@@ -6,6 +6,7 @@ import { isPlainObject } from 'lodash';
 
 const backgroundClassName = 'background';
 const angularClassName = 'angular';
+const verticalAlignClassName = 'vertical-align';
 
 const StyledBlock = styled(Segment)`
   // spacer
@@ -27,7 +28,7 @@ const StyledBlock = styled(Segment)`
     }
     return `padding: ${baseEmPadding * props.spacer}em 0`;
   }}
-    }
+  }
   
   // background
   ${(props) => {
@@ -59,6 +60,15 @@ const StyledBlock = styled(Segment)`
     }
     return false;
   }}
+  
+  // vertical-align
+  &.ui.segment.${verticalAlignClassName} {
+    display: flex;
+    &.top { align-items: flex-start; }
+    &.middle { align-items: center; }
+    &.bottom { align-items: flex-end; }
+  }
+  
   `;
 
 const Block = ({ ...props }) => {
@@ -69,6 +79,9 @@ const Block = ({ ...props }) => {
     }
     if (props.angular) {
       className.push(angularClassName);
+    }
+    if (props.verticalAlign) {
+      className.push(verticalAlignClassName, props.verticalAlign);
     }
     return className.join(' ');
   };
@@ -114,7 +127,16 @@ const Block = ({ ...props }) => {
     );
   }
   // default
-  return (<StyledBlock className={getClassName()} {...props} />);
+
+  // separate custom from semantic props
+  let semanticSegmentProps = {};
+  if (props) {
+    const {
+      angular, background, verticalAlign, ...rest
+    } = props;
+    semanticSegmentProps = rest;
+  }
+  return (<StyledBlock className={getClassName()} {...semanticSegmentProps} />);
 };
 
 Block.propTypes = {
@@ -156,12 +178,14 @@ Block.propTypes = {
   ]).isRequired,
   secondary: PropTypes.bool,
   inverted: PropTypes.bool,
+  verticalAlign: PropTypes.string,
 };
 
 Block.defaultProps = {
   spacer: 1,
   background: undefined,
   angular: undefined,
+  verticalAlign: undefined,
 };
 
 export default Block;

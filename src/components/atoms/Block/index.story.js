@@ -36,4 +36,17 @@ storiesOf('Block', module)
         Hello World
       </Block>
     </div>
+  ))
+  .add('Vertical Align', () => (
+    <div>
+      <Block style={{ height: 300 }} vertical verticalAlign="top" textAlign="center">
+        Hello World
+      </Block>
+      <Block style={{ height: 300 }} vertical verticalAlign="middle" secondary textAlign="center">
+        Hello World
+      </Block>
+      <Block style={{ height: 300 }} vertical verticalAlign="bottom" inverted textAlign="center">
+        Hello World
+      </Block>
+    </div>
   ));
