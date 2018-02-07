@@ -83,6 +83,16 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ### autoPlay
 
+### sayHello
+
+This function says hello.
+
+**Parameters**
+
+-   `name`  Some name to say hello for.
+
+Returns **any** The hello.
+
 ## License
 
 MIT © [Diego Haz](https://github.com/diegohaz)
