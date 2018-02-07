@@ -21,31 +21,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /(\.jsx|\.js)$/,
+        loader: 'babel-loader',
         exclude: /(node_modules|bower_components)/,
-        use: ['babel-loader'],
       },
-      // {
-      //   test: /\.scss$/,
-      //   use: extractPlugin.extract({
-      //     use: [
-      //       { loader: 'css-loader', options: { minimize: true } },
-      //       'sass-loader',
-      //     ],
-      //   }),
-      // },
     ],
   },
   // plugins: [
   //   new UglifyJsPlugin(),
   // ],
   externals: {
-    // react: 'react',
-    // 'react-dom': 'ReactDOM',
-    // 'prop-types': 'prop-types',
-    // 'react-router-dom': 'react-router-dom',
-    // 'styled-components': 'styled-components',
-    // 'semantic-ui-react': 'semantic-ui-react',
+    react: 'react',
+    'react-dom': 'ReactDOM',
+    'prop-types': 'prop-types',
+    'react-router-dom': 'react-router-dom',
+    'styled-components': 'styled-components',
+    'semantic-ui-react': 'semantic-ui-react',
     lodash: {
       commonjs: 'lodash',
       commonjs2: 'lodash',
