@@ -28,7 +28,7 @@
     "docs": "documentation readme src --section=API",
     "clean": "rimraf dist",
     "prebuild": "npm run docs && npm run clean",
-    "build": "webpack -p",
+    "build": "webpack",
     "watch": "npm-watch",
     "patch": "npm version patch && npm publish --access=public",
     "minor": "npm version minor && npm publish --access=public",
