@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Callout> renders correctly 1`] = `
+<div
+  angular={undefined}
+  background={undefined}
+  className="ui vertical segment sc-bdVaJa isoeTA"
+  spacer={0.5}
+>
+  <div
+    className="ui container stackable grid"
+  >
+    <div
+      className="middle aligned row"
+    >
+      <div
+        className="twelve wide column sc-bxivhb iiVAHN"
+      >
+        <p
+          className="sc-bwzfXH BaQOG"
+        >
+          Available for bookings. Based in Singapore. Open to custom events.
+        </p>
+      </div>
+      <div
+        className="four wide column sc-htpNat uswuH"
+      >
+        <button
+          className="ui large circular primary button"
+          disabled={undefined}
+          onClick={[Function]}
+          role="button"
+          tabIndex={undefined}
+        >
+          Make Booking
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

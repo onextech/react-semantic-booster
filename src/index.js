@@ -19,6 +19,7 @@ export { default as VideoBackground } from './components/molecules/VideoBackgrou
 export { default as GoalCards } from './components/molecules/GoalCards';
 export { default as PhotoCard } from './components/molecules/PhotoCard';
 export { default as SocialLinkGroup } from './components/molecules/SocialLinkGroup';
+export { default as Callout } from './components/molecules/Callout';
 
 // organisms
 export { default as Hero } from './components/organisms/Hero';
