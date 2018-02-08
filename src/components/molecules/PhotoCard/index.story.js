@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Grid } from 'semantic-ui-react';
 import PhotoCard from '.';
+import { testImage1 } from '../../../../test/placeholders';
 
 
 export const photoCardExamples = [
@@ -13,7 +14,7 @@ export const photoCardExamples = [
     },
     key: 'hello-world',
     imgProps: {
-      src: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG',
+      src: testImage1,
     },
     to: '/link-1',
   },
@@ -24,7 +25,7 @@ export const photoCardExamples = [
     },
     key: 'hello-world-2',
     imgProps: {
-      src: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG',
+      src: testImage1,
     },
     to: '/link-2',
   },
@@ -35,7 +36,7 @@ export const photoCardExamples = [
     },
     key: 'hello-world-3',
     imgProps: {
-      src: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG',
+      src: testImage1,
     },
     to: '/link-3',
   },

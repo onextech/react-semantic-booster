@@ -1,37 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PhotoCard> renders correctly 1`] = `
-<button
-  card="hello-world"
-  className="ui fluid button sc-bdVaJa liaItL"
-  disabled={undefined}
-  onClick={[Function]}
-  role="button"
-  tabIndex={undefined}
-  to="#"
+<div
+  style={
+    Object {
+      "backgroundColor": "black",
+    }
+  }
 >
-  <div
-    className="sc-bwzfXH crJjvc"
+  <button
+    card="hello-world"
+    className="ui fluid button sc-bdVaJa dvglne"
+    disabled={undefined}
+    onClick={[Function]}
+    role="button"
+    tabIndex={undefined}
+    to="#"
   >
-    <h4
-      className="ui large inverted header"
+    <div
+      className="sc-bwzfXH crJjvc"
     >
-      <div
-        className="sub header"
-        style={
-          Object {
-            "opacity": "0.8",
-          }
-        }
+      <h4
+        className="ui large inverted header"
       >
-        foo
-      </div>
-      hello world
-    </h4>
-  </div>
-  <img
-    className="ui image animated scale sc-htpNat btySty"
-    src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
-  />
-</button>
+        <div
+          className="sub header"
+          style={
+            Object {
+              "opacity": "0.8",
+            }
+          }
+        >
+          foo
+        </div>
+        hello world
+      </h4>
+    </div>
+    <img
+      className="ui image animated scale sc-htpNat btySty"
+      src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
+    />
+  </button>
+</div>
 `;

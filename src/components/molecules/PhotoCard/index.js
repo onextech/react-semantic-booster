@@ -32,6 +32,7 @@ const PhotoCard = ({
       &:active, 
       &:focus {
         img.animated {
+          opacity: 0.7;
           &.scale {
             transform: scale(1.05);
           }
@@ -91,27 +92,29 @@ const PhotoCard = ({
   const handleClick = (e, data) => onClick(e, data);
 
   return (
-    <CardContainer
-      className={getCardContainerClass()}
-      onClick={handleClick}
-      to="#"
-      {...cardProps}>
-      {
-        content &&
-        <CardContent>
-          <Header as="h4" {...headerProps}>
-            {
-              content.subheader &&
-              <Header.Subheader style={{ opacity: '0.8' }}>
-                {content.subheader}
-              </Header.Subheader>
-            }
-            {content.header}
-          </Header>
-        </CardContent>
-      }
-      <CardImage className={getCardImageClass()} {...imgProps} />
-    </CardContainer>
+    <div style={{ backgroundColor: 'black' }}>
+      <CardContainer
+        className={getCardContainerClass()}
+        onClick={handleClick}
+        to="#"
+        {...cardProps}>
+        {
+          content &&
+          <CardContent>
+            <Header as="h4" {...headerProps}>
+              {
+                content.subheader &&
+                <Header.Subheader style={{ opacity: '0.8' }}>
+                  {content.subheader}
+                </Header.Subheader>
+              }
+              {content.header}
+            </Header>
+          </CardContent>
+        }
+        <CardImage className={getCardImageClass()} {...imgProps} />
+      </CardContainer>
+    </div>
   );
 };
 
