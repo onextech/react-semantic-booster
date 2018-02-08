@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Callout from '.';
 
-export const text = 'Available for bookings. Based in Singapore. Open to custom events.';
+export const text = <span>Based in Singapore. Available for event bookings <span role="img" aria-label="Victory Hand">✌🏻</span></span>;
 export const cta = 'Make Booking';
 
 storiesOf('Callout', module)

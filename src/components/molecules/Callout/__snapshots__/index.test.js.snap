@@ -19,7 +19,15 @@ exports[`<Callout> renders correctly 1`] = `
         <p
           className="sc-bwzfXH BaQOG"
         >
-          Available for bookings. Based in Singapore. Open to custom events.
+          <span>
+            Based in Singapore. Available for event bookings 
+            <span
+              aria-label="Victory Hand"
+              role="img"
+            >
+              ✌🏻
+            </span>
+          </span>
         </p>
       </div>
       <div

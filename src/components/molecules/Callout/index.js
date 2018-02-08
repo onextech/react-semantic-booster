@@ -42,7 +42,10 @@ const Callout = ({
 );
 
 Callout.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]).isRequired,
   cta: PropTypes.string.isRequired,
   button: PropTypes.object, // semantic-ui button props
   block: PropTypes.object, // Block component props
