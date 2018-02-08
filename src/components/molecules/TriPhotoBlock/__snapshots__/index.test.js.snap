@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TriPhotoBlock> renders correctly 1`] = `
+<div
+  angular={undefined}
+  background={undefined}
+  className="ui inverted vertical segment sc-bdVaJa hPErls"
+  spacer={2}
+>
+  <div
+    className="ui container stackable relaxed equal width grid"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="column"
+      >
+        <img
+          className="ui image"
+          src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
+        />
+      </div>
+      <div
+        className="column"
+      >
+        <img
+          className="ui image sc-bwzfXH foxNII"
+          src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
+        />
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="eight wide computer sixteen wide mobile eight wide tablet column"
+      >
+        <img
+          className="ui large right floated image sc-htpNat hdSlWk"
+          src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
