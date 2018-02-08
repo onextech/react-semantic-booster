@@ -25,7 +25,7 @@ exports[`<TriPhotoBlock> renders correctly 1`] = `
         className="column"
       >
         <img
-          className="ui image sc-bwzfXH foxNII"
+          className="ui image sc-ifAKCX gTAWXr"
           src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
         />
       </div>
@@ -37,7 +37,7 @@ exports[`<TriPhotoBlock> renders correctly 1`] = `
         className="eight wide computer sixteen wide mobile eight wide tablet column"
       >
         <img
-          className="ui large right floated image sc-htpNat hdSlWk"
+          className="ui large right floated image sc-EHOje hzShKD"
           src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
         />
       </div>

@@ -17,7 +17,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-EHOje cCeQFN"
+        className="sc-htoDjs hEQchW"
         custom={
           Object {
             "basic": true,
@@ -43,7 +43,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-bZQynM hnksPx"
+        className="sc-dnqmqq fmpnCF"
         custom={undefined}
         href="/home"
         onClick={[Function]}
@@ -61,7 +61,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-gzVnrw iHJwsb"
+        className="sc-iwsKbI jNAZJn"
         custom={undefined}
         href="/about"
         onClick={[Function]}

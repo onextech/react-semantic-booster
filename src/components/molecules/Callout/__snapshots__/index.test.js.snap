@@ -14,10 +14,10 @@ exports[`<Callout> renders correctly 1`] = `
       className="middle aligned row"
     >
       <div
-        className="twelve wide column sc-bxivhb iiVAHN"
+        className="twelve wide column sc-bZQynM bVXCjN"
       >
         <p
-          className="sc-bwzfXH BaQOG"
+          className="sc-ifAKCX kNoTXA"
         >
           <span>
             Based in Singapore. Available for event bookings 
@@ -31,7 +31,7 @@ exports[`<Callout> renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="four wide column sc-htpNat uswuH"
+        className="four wide column sc-EHOje iJmCMA"
       >
         <button
           className="ui large circular primary button"

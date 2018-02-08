@@ -70,6 +70,27 @@ const StyledBlock = styled(Segment)`
   }
   
   `;
+/**
+ * Create an angular block
+ * @link https://css-tricks.com/creating-non-rectangular-headers/
+ */
+const AngularSvg = styled.svg`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10vw;
+  z-index: 1;
+  `;
+const TopSvg = styled(AngularSvg)`
+  top: 0;
+  margin-top: -10.1%;
+  `;
+
+const BottomSvg = styled(AngularSvg)`
+  bottom: 0;
+  margin-bottom: -10.1%;
+  transform: rotate(180deg);
+  `;
 
 const Block = ({ ...props }) => {
   const getClassName = () => {
@@ -95,26 +116,6 @@ const Block = ({ ...props }) => {
   }
 
   if (props.angular) {
-    /**
-     * Create an angular block
-     * @link https://css-tricks.com/creating-non-rectangular-headers/
-     */
-    const AngularSvg = styled.svg`
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 10vw;
-      z-index: 1;
-      `;
-    const TopSvg = styled(AngularSvg)`
-      top: 0;
-      margin-top: -10.1%;
-      `;
-    const BottomSvg = styled(AngularSvg)`
-      bottom: 0;
-      margin-bottom: -10.1%;
-      transform: rotate(180deg);
-      `;
     const getSvgFill = () => {
       const defaultFill = '#fff';
       let svgFill = defaultFill;

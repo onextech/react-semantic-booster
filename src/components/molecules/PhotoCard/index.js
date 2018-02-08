@@ -5,16 +5,7 @@ import { Link } from 'react-router-dom';
 import { Header, Button, Image } from 'semantic-ui-react';
 
 
-const PhotoCard = ({
-  content,
-  cardProps,
-  imgProps,
-  headerProps,
-  centered,
-  animated,
-  onClick,
-}) => {
-  const CardContainer = styled(onClick ? Button : Link)`
+const getCardLinkButtonCss = () => `
     &.ui.button, & {
       width: 100%;
       height: 260px;
@@ -50,14 +41,16 @@ const PhotoCard = ({
       }
     }
   `;
+const CardLink = styled(Link)`${getCardLinkButtonCss()}`;
+const CardButton = styled(Button)`${getCardLinkButtonCss()}`;
 
-  const CardContent = styled.div`
+const CardContent = styled.div`
     position: relative;
     max-width: 520px;
     z-index: 2;
   `;
 
-  const CardImage = styled(Image)`
+const CardImage = styled(Image)`
     &.ui.image {
       width: 100%;
       height: 100%;
@@ -72,6 +65,15 @@ const PhotoCard = ({
     }
   `;
 
+const PhotoCard = ({
+  content,
+  cardProps,
+  imgProps,
+  headerProps,
+  centered,
+  animated,
+  onClick,
+}) => {
   const getCardContainerClass = () => {
     const cardContainerClass = [];
     if (centered) {
@@ -90,6 +92,8 @@ const PhotoCard = ({
   };
 
   const handleClick = (e, data) => onClick(e, data);
+
+  const CardContainer = onClick ? CardButton : CardLink;
 
   return (
     <div style={{ backgroundColor: 'black' }}>
