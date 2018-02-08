@@ -20,6 +20,7 @@ export { default as GoalCards } from './components/molecules/GoalCards';
 export { default as PhotoCard } from './components/molecules/PhotoCard';
 export { default as SocialLinkGroup } from './components/molecules/SocialLinkGroup';
 export { default as Callout } from './components/molecules/Callout';
+export { default as TriPhotoBlock } from './components/molecules/TriPhotoBlock';
 
 // organisms
 export { default as Hero } from './components/organisms/Hero';
