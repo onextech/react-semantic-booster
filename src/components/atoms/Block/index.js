@@ -81,6 +81,7 @@ const AngularSvg = styled.svg`
   height: 10vw;
   z-index: 1;
   `;
+
 const TopSvg = styled(AngularSvg)`
   top: 0;
   margin-top: -10.1%;
@@ -106,13 +107,14 @@ const Block = ({ ...props }) => {
     }
     return className.join(' ');
   };
+
   // separate custom from semantic props
-  let semanticSegmentProps = {};
+  let semanticSegmentProps = { vertical: true };
   if (props) {
     const {
       verticalAlign, ...rest
     } = props;
-    semanticSegmentProps = rest;
+    semanticSegmentProps = { ...semanticSegmentProps, ...rest };
   }
 
   if (props.angular) {

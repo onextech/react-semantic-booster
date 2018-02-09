@@ -15,6 +15,6 @@ describe('<Block>', () => {
   it('is a semantic-ui segment component', () => {
     const wrapper = render(<Block>Hello World</Block>);
     expect(wrapper.is('div')).toBe(true);
-    expect(wrapper.hasClass('ui segment')).toBe(true);
+    expect(wrapper.hasClass('ui vertical segment')).toBe(true);
   });
 });

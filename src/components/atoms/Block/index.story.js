@@ -5,27 +5,18 @@ import Block from '.';
 
 storiesOf('Block', module)
   .add('Default', () => (
-    <Block>Hello World</Block>
-  ))
-  .add('Stacked', () => (
     <div>
-      <Block attached textAlign="center">Hello World</Block>
-      <Block attached textAlign="center">Hello World</Block>
-    </div>
-  ))
-  .add('Spacer', () => (
-    <div>
-      <Block attached secondary textAlign="center" spacer={1}>Hello World</Block>
-      <Block attached textAlign="center" spacer={2}>Hello World</Block>
-      <Block attached inverted textAlign="center" spacer={3}>Hello World</Block>
-      <Block attached inverted textAlign="center" spacer={{ top: 3 }}>Hello World</Block>
+      <Block textAlign="center" spacer={1}>Hello World</Block>
+      <Block secondary textAlign="center" spacer={2}>Hello World</Block>
+      <Block inverted textAlign="center" spacer={3}>Hello World</Block>
+      <Block inverted textAlign="center" spacer={{ top: 3 }}>Hello World</Block>
     </div>
   ))
   .add('Angular', () => (
     <div>
-      <Block vertical inverted textAlign="center" spacer={2}>Hello World</Block>
-      <Block vertical textAlign="center" spacer={2} angular={{ top: true, bottom: true }}>Hello World</Block>
-      <Block vertical inverted textAlign="center" spacer={2}>Hello World</Block>
+      <Block inverted textAlign="center" spacer={2}>Hello World</Block>
+      <Block textAlign="center" spacer={2} angular={{ top: true, bottom: true }}>Hello World</Block>
+      <Block inverted textAlign="center" spacer={2}>Hello World</Block>
     </div>
   ))
   .add('Image background', () => (
@@ -39,13 +30,13 @@ storiesOf('Block', module)
   ))
   .add('Vertical Align', () => (
     <div>
-      <Block style={{ height: 300 }} vertical verticalAlign="top" textAlign="center">
+      <Block style={{ height: 300 }} verticalAlign="top" textAlign="center">
         Hello World
       </Block>
-      <Block style={{ height: 300 }} vertical verticalAlign="middle" secondary textAlign="center">
+      <Block style={{ height: 300 }} verticalAlign="middle" secondary textAlign="center">
         Hello World
       </Block>
-      <Block style={{ height: 300 }} vertical verticalAlign="bottom" inverted textAlign="center">
+      <Block style={{ height: 300 }} verticalAlign="bottom" inverted textAlign="center">
         Hello World
       </Block>
     </div>
