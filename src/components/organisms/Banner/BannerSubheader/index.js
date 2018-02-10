@@ -7,9 +7,10 @@ import { getCustomClassName, subtractObject } from '../../../../utils/helpers';
 const boldClassName = 'bold';
 const relaxedClassName = 'relaxed';
 const uppercaseClassName = 'uppercase';
+
 const Subheader = styled(Header.Subheader)`
   &.sub.header {
-    font-size: ${100 / 2}%; // double the em sizes in the container
+    font-size: ${100 / 2}%; // half font-size as due to doubling on the Banner component font-size 
     margin-bottom: 0.25em;
     &.${boldClassName} { font-weight: bold; }
     &.${relaxedClassName} { letter-spacing: 1px; }

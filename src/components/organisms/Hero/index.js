@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Breadcrumbs from '../../atoms/Breadcrumbs';
 
+/* DEPRECATED. PLEASE USE BANNER COMPONENT INSTEAD */
 
 const handleHeroHeight = (props) => {
   if (props.height && typeof props.height === 'number') {

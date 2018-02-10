@@ -8,10 +8,10 @@ exports[`<Banner> renders correctly 1`] = `
   spacer={1}
 >
   <div
-    className="ui container sc-ifAKCX fPwWHD"
+    className="ui container sc-EHOje dINdpB"
   >
     <div
-      className="sc-EHOje iyLTDm"
+      className="sc-bZQynM boMXtV"
     />
   </div>
 </div>
