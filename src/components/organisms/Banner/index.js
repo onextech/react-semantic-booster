@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Container, Header } from 'semantic-ui-react';
 import Block from '../../atoms/Block';
+import BannerSubheader from './BannerSubheader';
 
 
 const BannerContainer = styled(Container)`
@@ -15,9 +16,9 @@ const BannerContainerInner = styled.div`
   ${props => props.width && `width: ${props.width}`}
 `;
 
-const Subheader = styled(Header.Subheader)`
-  &.sub.header {
-    font-size: ${100 / 2}%; // double the em sizes in the container
+const BannerHeader = styled(Header)`
+  &.ui.header {
+    margin-top: 0;
   }
 `;
 
@@ -44,8 +45,8 @@ const Banner = ({
     <Block {...block}>
       <BannerContainer {...semanticContainerProps}>
         <BannerContainerInner {...innerContainerProps}>
-          {subheader && <Subheader {...subheader} />}
-          {header && <Header {...header} />}
+          {subheader && <BannerSubheader {...subheader} />}
+          {header && <BannerHeader {...header} />}
         </BannerContainerInner>
       </BannerContainer>
     </Block>
@@ -55,7 +56,7 @@ const Banner = ({
 Banner.propTypes = {
   block: PropTypes.object, // block props
   header: PropTypes.object, // sui header props
-  subheader: PropTypes.object, // sui subheader props
+  subheader: PropTypes.object, // sui BannerSubheader props
   container: PropTypes.object, // sui container props
 };
 

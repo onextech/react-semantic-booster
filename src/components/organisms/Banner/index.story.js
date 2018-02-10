@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Banner from '.';
+import { testImage2 } from '../../../../test/placeholders';
 
-const testImage2 = 'https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb';
 
 const articleHero = {
   block: {
@@ -29,12 +29,12 @@ const articleHeader = {
     verticalAlign: 'bottom',
   },
   header: {
-    content: 'A new Internet of Things platform and business',
+    content: 'Andy Rubin Sees AI and Quantum Computers as Next Big Thing',
     as: 'h1',
     size: 'huge',
   },
   subheader: {
-    content: 'Impact Story',
+    content: 'Technology',
   },
 };
 
