@@ -46,9 +46,14 @@ const articleSpotlight = {
       src: testImage2,
     },
   },
+  subheader: {
+    content: 'Featured Story',
+    bold: false,
+  },
   header: {
     content: 'Station to station: The best train journeys you’ve never heard of',
     as: 'h1',
+    size: 'large',
     inverted: true,
   },
   container: {
