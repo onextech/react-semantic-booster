@@ -24,6 +24,7 @@ export { default as TriPhotoBlock } from './components/molecules/TriPhotoBlock';
 
 // organisms
 export { default as Hero } from './components/organisms/Hero';
+export { default as Banner } from './components/organisms/Banner';
 
 // templates
 export { default as SiteNav } from './components/templates/SiteNav';

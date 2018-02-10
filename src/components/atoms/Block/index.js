@@ -69,6 +69,17 @@ const StyledBlock = styled(Segment)`
     &.bottom { align-items: flex-end; }
   }
   
+  // height
+  &.ui.segment {
+  ${({ height: rawHeight }) => {
+    if (rawHeight) {
+      const height = typeof rawHeight === 'number' ? `${rawHeight}px` : rawHeight;
+      return `height: ${height}; min-height: ${height};`;
+    }
+    return false;
+  }}
+  }
+  
   `;
 /**
  * Create an angular block
@@ -93,53 +104,57 @@ const BottomSvg = styled(AngularSvg)`
   transform: rotate(180deg);
   `;
 
-const Block = ({ ...props }) => {
+const Block = ({
+  spacer,
+  background,
+  angular,
+  verticalAlign,
+  height,
+  ...rest
+}) => {
   const getClassName = () => {
     const className = [];
-    if (props.background) {
+    if (background) {
       className.push(backgroundClassName);
     }
-    if (props.angular) {
+    if (angular) {
       className.push(angularClassName);
     }
-    if (props.verticalAlign) {
-      className.push(verticalAlignClassName, props.verticalAlign);
+    if (verticalAlign) {
+      className.push(verticalAlignClassName, verticalAlign);
     }
     return className.join(' ');
   };
 
   // separate custom from semantic props
   let semanticSegmentProps = { vertical: true };
-  if (props) {
-    const {
-      verticalAlign, ...rest
-    } = props;
-    semanticSegmentProps = { ...semanticSegmentProps, ...rest };
-  }
+  semanticSegmentProps = { ...semanticSegmentProps, ...rest };
+  const customProps = { spacer, background, height };
+  const renderProps = { ...customProps, ...semanticSegmentProps };
 
-  if (props.angular) {
+  if (angular) {
     const getSvgFill = () => {
       const defaultFill = '#fff';
       let svgFill = defaultFill;
-      if (props.secondary) { svgFill = '#f3f4f5'; /* default semantic-ui secondary color */ }
-      if (props.inverted) { svgFill = '#1b1c1d'; /* default semantic-ui inverted color */ }
+      if (rest.secondary) { svgFill = '#f3f4f5'; /* default semantic-ui secondary color */ }
+      if (rest.inverted) { svgFill = '#1b1c1d'; /* default semantic-ui inverted color */ }
       return svgFill;
     };
     const svgFill = getSvgFill();
     return (
-      <StyledBlock className={getClassName()} {...semanticSegmentProps}>
-        {props.angular.top && <TopSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <polygon fill={`${props.angular.top.fill || svgFill}`} points="0,100 100,0 100,100" />
+      <StyledBlock className={getClassName()} {...renderProps}>
+        {angular.top && <TopSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill={`${angular.top.fill || svgFill}`} points="0,100 100,0 100,100" />
           </TopSvg>}
-        {props.children}
-        {props.angular.bottom && <BottomSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <polygon fill={`${props.angular.bottom.fill || svgFill}`} points="0,100 100,0 100,100" />
+        {rest.children}
+        {angular.bottom && <BottomSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill={`${angular.bottom.fill || svgFill}`} points="0,100 100,0 100,100" />
           </BottomSvg>}
       </StyledBlock>
     );
   }
   // default
-  return (<StyledBlock className={getClassName()} {...semanticSegmentProps} />);
+  return (<StyledBlock className={getClassName()} {...renderProps} />);
 };
 
 Block.propTypes = {
@@ -182,6 +197,10 @@ Block.propTypes = {
   secondary: PropTypes.bool,
   inverted: PropTypes.bool,
   verticalAlign: PropTypes.string,
+  height: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
 };
 
 Block.defaultProps = {
@@ -189,6 +208,7 @@ Block.defaultProps = {
   background: undefined,
   angular: undefined,
   verticalAlign: undefined,
+  height: undefined,
 };
 
 export default Block;

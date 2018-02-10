@@ -1,12 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Block> renders correctly 1`] = `
+exports[`<Banner> renders correctly 1`] = `
 <div
   background={undefined}
   className="ui vertical segment sc-bdVaJa Zzyba"
   height={undefined}
   spacer={1}
 >
-  Hello World
+  <div
+    className="ui container sc-ifAKCX fPwWHD"
+  >
+    <div
+      className="sc-EHOje iyLTDm"
+    />
+  </div>
 </div>
 `;
