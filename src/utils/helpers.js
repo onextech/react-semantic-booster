@@ -1,16 +1,23 @@
 /**
  * Render the class names based on the custom props selected
  * @param {{ prop: className }} customProps - a reference list of custom props and classnames
- * @param {{}} allProps - the user-defined props
+ * @param {{ className: {string} }} allProps - the user-defined props
  * @return {string} - the className string to render onto the DOM
  */
 export const getCustomClassName = (customProps, allProps) => {
   const classNames = [];
+
   Object.entries(allProps).forEach(([key]) => {
     if (allProps[key]) {
       classNames.push(customProps[key]);
     }
   });
+
+  // Add any existing class names
+  if (allProps.className) {
+    classNames.push(allProps.className);
+  }
+
   return classNames.join(' ');
 };
 /**

@@ -93,6 +93,28 @@ This function says hello.
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The hello.
 
+### getCustomClassName
+
+Render the class names based on the custom props selected
+
+**Parameters**
+
+-   `customProps` **{prop: className}** a reference list of custom props and classnames
+-   `allProps` **{}** the user-defined props
+
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the className string to render onto the DOM
+
+### subtractObject
+
+Subtract object from another object (non-recursive)
+
+**Parameters**
+
+-   `subtrahend`  The part being taken away
+-   `minuend`  The part you start with
+
+Returns **{}** The part that is left after subtraction
+
 ## License
 
 MIT © [Diego Haz](https://github.com/diegohaz)

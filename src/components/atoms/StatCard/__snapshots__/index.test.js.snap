@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StatCard> renders correctly 1`] = `
+<div
+  className="ui fluid card    sc-bwzfXH hTXVSi sc-bdVaJa jrjGOD"
+  gradient={undefined}
+  href={undefined}
+  onClick={[Function]}
+>
+  <div
+    className="center aligned content"
+  >
+    <h5
+      className="ui huge header sc-htpNat brlFuT"
+    >
+      60
+    </h5>
+    <h5
+      className="ui medium header sc-bxivhb bLbUBR"
+    >
+      world-class specialists
+    </h5>
+    <div
+      className="description sc-ifAKCX bHgotn"
+    >
+      hired and onboarded
+    </div>
+  </div>
+</div>
+`;

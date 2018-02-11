@@ -40,7 +40,7 @@ const BannerSubheader = (subheader) => {
     subtractObject({ ...defaultSubheaderProps, ...customSubheaderProps }, allSubheaderProps);
 
   return (
-    <Subheader className={subheaderClassName} {...semanticSubheaderProps} />
+    <Subheader {...semanticSubheaderProps} className={subheaderClassName} />
   );
 };
 
