@@ -14,6 +14,7 @@ export { default as Block } from './components/atoms/Block';
 export { default as Breadcrumbs } from './components/atoms/Breadcrumbs';
 export { default as LineAccordion } from './components/atoms/LineAccordion';
 export { default as StatCard } from './components/atoms/StatCard';
+export { default as Header } from './components/atoms/Header';
 
 // molecules
 export { default as VideoBackground } from './components/molecules/VideoBackground';
@@ -22,11 +23,12 @@ export { default as PhotoCard } from './components/molecules/PhotoCard';
 export { default as SocialLinkGroup } from './components/molecules/SocialLinkGroup';
 export { default as Callout } from './components/molecules/Callout';
 export { default as TriPhotoBlock } from './components/molecules/TriPhotoBlock';
-export { default as HalfBanner } from './components/molecules/HalfBanner';
+export { default as Copy } from './components/molecules/Copy';
 
 // organisms
 export { default as Hero } from './components/organisms/Hero';
 export { default as Banner } from './components/organisms/Banner';
+export { default as HalfBanner } from './components/organisms/HalfBanner';
 
 // templates
 export { default as SiteNav } from './components/templates/SiteNav';

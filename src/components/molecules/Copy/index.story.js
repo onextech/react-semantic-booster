@@ -1,9 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Divider } from 'semantic-ui-react';
-import Block from '../Block';
-import Copy from '.';
+import Block from '../../atoms/Block/index';
+import Copy from './index';
 import { sizes } from '../../../utils/constants';
+
 
 const defaultExample = {
   subheader: {
@@ -22,7 +23,6 @@ storiesOf('Copy', module)
     <div>
       <Block><Copy {...defaultExample} /></Block>
       <Block><Copy {...textAlignExample} /></Block>
-
       {
         sizes.slice(0).reverse().map((size) => {
           const data = {

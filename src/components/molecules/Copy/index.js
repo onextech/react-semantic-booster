@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Header } from 'semantic-ui-react';
+import Header from '../../atoms/Header/index';
 import { sizes } from '../../../utils/constants';
 
 /**
@@ -13,8 +13,12 @@ import { sizes } from '../../../utils/constants';
 const getEmSizeScale = size => (0.083 * (size ** 2)) + 0.5;
 
 const ContentContainer = styled.div`
+  width: 100%;
   .sub.header + .header {
-    margin-top: .1em;
+    margin-top: .3em;
+  }
+  .header + p {
+    margin-top: .35em;
   }
   .header {
     margin-bottom: 0;
@@ -51,7 +55,7 @@ const ContentHeader = styled(Header)`
   `;
 
 const ContentSubheader = styled(Header)`
-  &.ui.header {
+  &.ui.header.sub {
     opacity: 0.86;
     letter-spacing: 1px;
   }
@@ -64,10 +68,10 @@ const Copy = ({
   content,
   ...rest
 }) => (
-  <ContentContainer {...rest}>
+  <ContentContainer className="copy" {...rest}>
     {subheader && <ContentSubheader as="h6" sub size="tiny" {...subheader} />}
     {header && <ContentHeader as="h5" size="huge" {...header} />}
-    <p>{body}</p>
+    {body && <p>{body}</p>}
     {content}
   </ContentContainer>
 );
@@ -75,6 +79,10 @@ const Copy = ({
 Copy.propTypes = {
   textAlign: PropTypes.string,
   size: PropTypes.oneOf(sizes),
+  subheader: PropTypes.object, // sui header props
+  header: PropTypes.object, // sui header props
+  body: PropTypes.string,
+  content: PropTypes.element,
 };
 
 export default Copy;

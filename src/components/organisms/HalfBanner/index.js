@@ -1,15 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Grid, Header } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import { MediaCss } from '../../../utils/responsive';
+import Copy from '../../molecules/Copy/index';
+import { verticalAlignFlexCssMap } from '../../../utils/constants';
 
-
-const verticalAlignFlexCssMap = {
-  top: 'flex-start',
-  middle: 'center',
-  bottom: 'flex-end',
-};
 
 const StyledGrid = styled(Grid)`
   &.ui.grid.inverted {
@@ -89,24 +85,6 @@ const ColumnContainer = styled.div`
   }
   `;
 
-const ContentHeader = styled(Header)`
-  &.ui.header {
-    width: 100%;
-    opacity: 0.95;
-    font-weight: normal;
-    &:only-child {
-      margin-bottom: 0;
-    }
-  }
-  `;
-
-const ContentSubheader = styled(Header)`
-  &.ui.header {
-    opacity: 0.86;
-    letter-spacing: 1px;
-  }
-  `;
-
 const HalfBanner = ({
   rightCol,
   leftCol,
@@ -118,9 +96,7 @@ const HalfBanner = ({
         [leftCol, rightCol].map((col, i) => (
           <Col {...col} key={['left', 'right'][i]}>
             <ColumnContainer className="content">
-              {col.subheader && <ContentSubheader as="h6" sub size="tiny" inverted {...col.subheader} />}
-              {col.header && <ContentHeader as="h5" size="huge" inverted {...col.header} />}
-              {col.body}
+              <Copy {...col.copy} />
             </ColumnContainer>
           </Col>
         ))

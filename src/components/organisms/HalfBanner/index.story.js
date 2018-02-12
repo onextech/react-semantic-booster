@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { List } from 'semantic-ui-react';
-import HalfBanner from '.';
-import Block from '../../atoms/Block';
+import HalfBanner from './index';
+import Block from '../../atoms/Block/index';
 import { testImage2 } from '../../../../test/placeholders';
 
 
@@ -11,8 +11,10 @@ export const defaultExample = {
     background: {
       color: '#1f40e6',
     },
-    header: {
-      content: 'Center of Focus',
+    copy: {
+      header: {
+        content: 'Center of Focus',
+      },
     },
     textAlign: 'center',
     verticalAlign: 'middle',
@@ -21,11 +23,13 @@ export const defaultExample = {
     background: {
       src: testImage2,
     },
-    subheader: {
-      content: 'Key Trends',
-    },
-    header: {
-      content: 'We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.',
+    copy: {
+      subheader: {
+        content: 'Key Trends',
+      },
+      header: {
+        content: 'We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.',
+      },
     },
   },
 };
@@ -40,18 +44,21 @@ const ListExample = () => (
     <List.Item>Simplified reporting process with built-in language integrations</List.Item>
   </List>
 );
-
-const listBannerExample = {
+export const listBannerExample = {
   leftCol: {
     background: {
       color: '#1f40e6',
     },
-    header: {
-      content: 'From manual data collation to agile financial analysis in a click of a button.',
+    copy: {
+      header: {
+        content: 'From manual data collation to agile financial analysis in a click of a button.',
+      },
     },
   },
   rightCol: {
-    body: <ListExample />,
+    copy: {
+      content: <ListExample />,
+    },
     background: {
       color: '#eff3f7',
     },
@@ -59,7 +66,7 @@ const listBannerExample = {
   },
 };
 
-const breakExample = {
+export const breakExample = {
   leftCol: {
     background: {
       src: testImage2,
@@ -70,13 +77,15 @@ const breakExample = {
     background: {
       color: '#1f40e6',
     },
-    header: {
-      content: 'With no digital capabilities and no value proposition for digital talent, the company needed to reinvent itself.',
+    copy: {
+      header: {
+        content: 'With no digital capabilities and no value proposition for digital talent, the company needed to reinvent itself.',
+      },
     },
   },
 };
 
-const altTextExample = {
+export const altTextExample = {
   leftCol: {
     background: {
       src: testImage2,
@@ -87,16 +96,12 @@ const altTextExample = {
     background: {
       color: '#1f40e6',
     },
-    header: {
-      content: 'Keeping it real',
+    copy: {
+      header: {
+        content: 'Keeping it real',
+      },
+      body: 'With no digital capabilities and no value proposition for digital talent, the company needed to reinvent itself. We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.',
     },
-    body: <p>
-      With no digital capabilities and no value proposition for digital talent,
-      the company needed to reinvent itself.
-      We reviewed the entire process of data collection,
-      analysis and evaluation to identify key opportunities for
-      automation and efficient data analysis.
-    </p>,
   },
 };
 

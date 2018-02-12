@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import HalfBanner from '.';
+import HalfBanner from './index';
 import { defaultExample } from './index.story';
 
 describe('<HalfBanner>', () => {
