@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HalfBanner> renders correctly 1`] = `
+<div
+  className="ui inverted stackable grid sc-bdVaJa aLVcX"
+>
+  <div
+    className="equal width row"
+  >
+    <div
+      background={
+        Object {
+          "color": "#1f40e6",
+        }
+      }
+      className="center aligned middle aligned column sc-bwzfXH cGsBMB"
+      header={
+        Object {
+          "content": "Center of Focus",
+        }
+      }
+    >
+      <div
+        className="content sc-htpNat leDtIf"
+      >
+        <h5
+          className="ui huge inverted header sc-bxivhb jPPUKp"
+        >
+          Center of Focus
+        </h5>
+      </div>
+    </div>
+    <div
+      background={
+        Object {
+          "src": "https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb",
+        }
+      }
+      className="column sc-bwzfXH knqdmQ"
+      header={
+        Object {
+          "content": "We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.",
+        }
+      }
+      subheader={
+        Object {
+          "content": "Key Trends",
+        }
+      }
+    >
+      <div
+        className="content sc-htpNat leDtIf"
+      >
+        <h6
+          className="ui tiny inverted sub header sc-ifAKCX jVuaxL"
+        >
+          Key Trends
+        </h6>
+        <h5
+          className="ui huge inverted header sc-bxivhb jPPUKp"
+        >
+          We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+`;
