@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Accordion, Icon } from 'semantic-ui-react';
+import { sizes } from '../../../utils/constants';
 
-const sizes = ['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive'];
 
 const StyledAccordion = styled(Accordion)`
   &.ui.accordion {

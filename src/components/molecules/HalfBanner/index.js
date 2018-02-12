@@ -80,7 +80,7 @@ const Col = styled(Grid.Column)`
   }}
   `;
 
-const ColumnContent = styled.div`
+const ColumnContainer = styled.div`
   width: 75%;
   margin: 0 auto;
   padding: 3em 0;
@@ -117,11 +117,11 @@ const HalfBanner = ({
       {
         [leftCol, rightCol].map((col, i) => (
           <Col {...col} key={['left', 'right'][i]}>
-            <ColumnContent className="content">
+            <ColumnContainer className="content">
               {col.subheader && <ContentSubheader as="h6" sub size="tiny" inverted {...col.subheader} />}
               {col.header && <ContentHeader as="h5" size="huge" inverted {...col.header} />}
               {col.body}
-            </ColumnContent>
+            </ColumnContainer>
           </Col>
         ))
       }
