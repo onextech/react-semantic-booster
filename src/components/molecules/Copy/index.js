@@ -23,7 +23,7 @@ const ContentContainer = styled.div`
   .header {
     margin-bottom: 0;
   }
-  p, .list .item {
+  p, .ui.list > .item {
     line-height: 1.6;
   }
   ${({ textAlign }) => textAlign && `text-align: ${textAlign};`}

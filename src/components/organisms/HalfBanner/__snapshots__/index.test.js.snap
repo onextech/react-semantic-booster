@@ -26,7 +26,7 @@ exports[`<HalfBanner> renders correctly 1`] = `
         className="container"
       >
         <div
-          className="copy sc-bxivhb FwzIN"
+          className="copy sc-bxivhb fJchNc"
         >
           <h5
             className="ui huge header inherit     sc-ifAKCX bDLiAJ sc-htpNat eSPVaA"
@@ -58,7 +58,7 @@ exports[`<HalfBanner> renders correctly 1`] = `
         className="container"
       >
         <div
-          className="copy sc-bxivhb FwzIN"
+          className="copy sc-bxivhb fJchNc"
         >
           <h6
             className="ui tiny sub header inherit      sc-EHOje celsWL sc-htpNat eSPVaA"

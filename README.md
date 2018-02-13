@@ -81,6 +81,16 @@ Set custom routes on certain params
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+### getEmSizeScale
+
+Calculate scale based on y = ax2 + bx + c
+
+**Parameters**
+
+-   `size` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** The x value
+
+Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** The y value
+
 ### autoPlay
 
 ### sayHello
@@ -100,7 +110,7 @@ Render the class names based on the custom props selected
 **Parameters**
 
 -   `customProps` **{prop: className}** a reference list of custom props and classnames
--   `allProps` **{}** the user-defined props
+-   `allProps` **{className: {string}}** the user-defined props
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the className string to render onto the DOM
 
