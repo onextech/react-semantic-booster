@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { List } from 'semantic-ui-react';
 import Header from '../../atoms/Header/index';
 import { sizes } from '../../../utils/constants';
 
@@ -67,6 +68,7 @@ const Copy = ({
   header,
   body,
   content,
+  list,
   ...rest
 }) => (
   <ContentContainer className="copy" {...rest}>
@@ -74,6 +76,7 @@ const Copy = ({
     {header && <ContentHeader as="h5" size="huge" {...header} />}
     {body && <p>{body}</p>}
     {content}
+    {list && <List {...list} />}
   </ContentContainer>
 );
 
@@ -83,6 +86,7 @@ Copy.propTypes = {
   size: PropTypes.oneOf(sizes),
   subheader: PropTypes.object, // sui header props
   header: PropTypes.object, // sui header props
+  list: PropTypes.object, // sui list props
   body: PropTypes.string,
   content: PropTypes.element,
 };

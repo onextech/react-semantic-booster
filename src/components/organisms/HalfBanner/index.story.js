@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { List } from 'semantic-ui-react';
 import HalfBanner from './index';
 import Block from '../../atoms/Block/index';
 import { testImage2 } from '../../../../test/placeholders';
@@ -34,16 +33,6 @@ export const defaultExample = {
   },
 };
 
-const ListExample = () => (
-  <List bulleted size="large" relaxed>
-    <List.Item>Designed an integration for realtime financial market data population</List.Item>
-    <List.Item>
-      Built an automatic chart generation and product table tool
-      for effortless market performance tracking
-    </List.Item>
-    <List.Item>Simplified reporting process with built-in language integrations</List.Item>
-  </List>
-);
 export const listBannerExample = {
   leftCol: {
     background: {
@@ -57,7 +46,16 @@ export const listBannerExample = {
   },
   rightCol: {
     copy: {
-      content: <ListExample />,
+      list: {
+        bulleted: true,
+        relaxed: true,
+        size: 'large',
+        items: [
+          'Designed an integration for realtime financial market data population',
+          'Built an automatic chart generation and product table tool',
+          'Simplified reporting process with built-in language integrations',
+        ],
+      },
       color: '#666',
     },
     background: {

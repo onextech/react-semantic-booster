@@ -16,6 +16,19 @@ const defaultExample = {
   body: 'This is the world of the world of the world.',
 };
 
+const listExample = {
+  list: {
+    bulleted: true,
+    relaxed: true,
+    size: 'large',
+    items: [
+      'Designed an integration for realtime financial market data population',
+      'Built an automatic chart generation and product table tool',
+      'Simplified reporting process with built-in language integrations',
+    ],
+  },
+};
+
 const textAlignExample = { ...defaultExample, textAlign: 'center' };
 
 storiesOf('Copy', module)
@@ -33,5 +46,6 @@ storiesOf('Copy', module)
           return (<div key={size}><Copy {...data} /><Divider /></div>);
         })
       }
+      <Block secondary><Copy {...listExample} /></Block>
     </div>
   ));
