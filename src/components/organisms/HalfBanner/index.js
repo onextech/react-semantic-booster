@@ -33,14 +33,6 @@ const Col = styled(Grid.Column)`
     return false;
   }}
   
-  // textColor
-  ${({ textcolor }) => {
-    if (textcolor) {
-      return `&.column { color: ${textcolor}; }`;
-    }
-    return false;
-  }}
-  
   // background
   ${(props) => {
     if (props.background) {

@@ -58,11 +58,11 @@ export const listBannerExample = {
   rightCol: {
     copy: {
       content: <ListExample />,
+      color: '#666',
     },
     background: {
       color: '#eff3f7',
     },
-    textcolor: '#666',
   },
 };
 

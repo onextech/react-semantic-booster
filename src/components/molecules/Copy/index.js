@@ -18,7 +18,7 @@ const ContentContainer = styled.div`
     margin-top: .3em;
   }
   .header + p {
-    margin-top: .35em;
+    margin-top: .4em;
   }
   .header {
     margin-bottom: 0;
@@ -42,6 +42,7 @@ const ContentContainer = styled.div`
     }
     return false;
   }}
+  ${({ color }) => color && `color: ${color};`}
   `;
 
 const ContentHeader = styled(Header)`
@@ -78,6 +79,7 @@ const Copy = ({
 
 Copy.propTypes = {
   textAlign: PropTypes.string,
+  color: PropTypes.string,
   size: PropTypes.oneOf(sizes),
   subheader: PropTypes.object, // sui header props
   header: PropTypes.object, // sui header props
