@@ -18,9 +18,6 @@ const defaultExample = {
 
 const listExample = {
   list: {
-    bulleted: true,
-    relaxed: true,
-    size: 'large',
     items: [
       'Designed an integration for realtime financial market data population',
       'Built an automatic chart generation and product table tool',

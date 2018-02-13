@@ -76,7 +76,7 @@ const Copy = ({
     {header && <ContentHeader as="h5" size="huge" {...header} />}
     {body && <p>{body}</p>}
     {content}
-    {list && <List {...list} />}
+    {list && <List relaxed bulleted size="large" {...list} />}
   </ContentContainer>
 );
 

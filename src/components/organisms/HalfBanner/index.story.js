@@ -47,8 +47,6 @@ export const listBannerExample = {
   rightCol: {
     copy: {
       list: {
-        bulleted: true,
-        relaxed: true,
         size: 'large',
         items: [
           'Designed an integration for realtime financial market data population',
