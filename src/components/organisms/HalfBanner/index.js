@@ -13,7 +13,7 @@ const HalfBanner = ({
     <Grid.Row columns="equal">
       {
         [leftCol, rightCol].map((col, i) => (
-          <Grid.Column {...col} key={['left', 'right'][i]}>
+          <Grid.Column padded {...col} key={['left', 'right'][i]}>
             <Copy {...col.copy} />
           </Grid.Column>
         ))

@@ -7,12 +7,15 @@ storiesOf('Header', module)
   .add('Default', () => (
     <div>
       <Block>
-        <Header fontWeight="normal" content="Hello World" />
-        <Header content="Hello World" />
+        <Header fontWeight="normal" content="Normal" />
+        <Header content="Bold" />
       </Block>
       <Block inverted>
-        <Header fontWeight="normal" content="Hello World" />
-        <Header content="Hello World" />
+        <Header content="Inverted" />
+      </Block>
+      <Block>
+        <Header relaxed content="Relaxed" />
+        <Header compact content="Compact" />
       </Block>
     </div>
   ));

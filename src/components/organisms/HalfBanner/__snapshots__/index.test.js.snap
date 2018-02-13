@@ -2,7 +2,7 @@
 
 exports[`<HalfBanner> renders correctly 1`] = `
 <div
-  className="ui inverted stackable grid attached    sc-bdVaJa eNFBht"
+  className="ui inverted stackable grid attached    sc-bwzfXH hyFbtK"
 >
   <div
     className="equal width row"
@@ -13,7 +13,7 @@ exports[`<HalfBanner> renders correctly 1`] = `
           "color": "#1f40e6",
         }
       }
-      className="center aligned middle aligned column sc-htpNat jWSfSM"
+      className="center aligned middle aligned column padded      sc-bdVaJa ikIaQJ"
       copy={
         Object {
           "header": Object {
@@ -23,13 +23,13 @@ exports[`<HalfBanner> renders correctly 1`] = `
       }
     >
       <div
-        className="container sc-bwzfXH csCdOf"
+        className="container"
       >
         <div
-          className="copy sc-ifAKCX iSyHWT"
+          className="copy sc-bxivhb FwzIN"
         >
           <h5
-            className="ui huge header relaxed inherit     sc-EHOje kIeZiC sc-bxivhb liTdAn"
+            className="ui huge header inherit     sc-ifAKCX bDLiAJ sc-htpNat eSPVaA"
           >
             Center of Focus
           </h5>
@@ -42,7 +42,7 @@ exports[`<HalfBanner> renders correctly 1`] = `
           "src": "https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb",
         }
       }
-      className="column sc-htpNat iJzbpU"
+      className="column padded    sc-bdVaJa NDjoU"
       copy={
         Object {
           "header": Object {
@@ -55,18 +55,18 @@ exports[`<HalfBanner> renders correctly 1`] = `
       }
     >
       <div
-        className="container sc-bwzfXH csCdOf"
+        className="container"
       >
         <div
-          className="copy sc-ifAKCX iSyHWT"
+          className="copy sc-bxivhb FwzIN"
         >
           <h6
-            className="ui tiny sub header relaxed inherit      sc-bZQynM jAKWIt sc-bxivhb liTdAn"
+            className="ui tiny sub header inherit      sc-EHOje celsWL sc-htpNat eSPVaA"
           >
             Key Trends
           </h6>
           <h5
-            className="ui huge header relaxed inherit     sc-EHOje kIeZiC sc-bxivhb liTdAn"
+            className="ui huge header inherit     sc-ifAKCX bDLiAJ sc-htpNat eSPVaA"
           >
             We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.
           </h5>

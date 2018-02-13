@@ -18,12 +18,12 @@ const ContentContainer = styled.div`
     margin-top: .3em;
   }
   .header + p {
-    margin-top: .4em;
+    margin-top: .6em;
   }
   .header {
     margin-bottom: 0;
   }
-  p {
+  p, .list .item {
     line-height: 1.6;
   }
   ${({ textAlign }) => textAlign && `text-align: ${textAlign};`}
