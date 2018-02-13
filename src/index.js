@@ -15,6 +15,7 @@ export { default as Breadcrumbs } from './components/atoms/Breadcrumbs';
 export { default as LineAccordion } from './components/atoms/LineAccordion';
 export { default as StatCard } from './components/atoms/StatCard';
 export { default as Header } from './components/atoms/Header';
+export { default as Grid } from './components/atoms/Grid';
 
 // molecules
 export { default as VideoBackground } from './components/molecules/VideoBackground';

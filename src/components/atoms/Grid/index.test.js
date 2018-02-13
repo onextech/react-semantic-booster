@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Copy from '.';
+import Grid from '.';
 
 
-describe('<Copy>', () => {
+describe('<Grid>', () => {
   it('renders correctly', () => {
     const tree = renderer
-      .create(<Copy />)
+      .create(<Grid />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

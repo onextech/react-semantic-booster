@@ -13,21 +13,27 @@ exports[`<HalfBanner> renders correctly 1`] = `
           "color": "#1f40e6",
         }
       }
-      className="center aligned middle aligned column sc-bwzfXH cGsBMB"
-      header={
+      className="center aligned middle aligned column sc-htpNat jWSfSM"
+      copy={
         Object {
-          "content": "Center of Focus",
+          "header": Object {
+            "content": "Center of Focus",
+          },
         }
       }
     >
       <div
-        className="content sc-htpNat leDtIf"
+        className="container sc-bwzfXH csCdOf"
       >
-        <h5
-          className="ui huge inverted header sc-bxivhb jPPUKp"
+        <div
+          className="copy sc-ifAKCX iSyHWT"
         >
-          Center of Focus
-        </h5>
+          <h5
+            className="ui huge header relaxed inherit     sc-EHOje kIeZiC sc-bxivhb liTdAn"
+          >
+            Center of Focus
+          </h5>
+        </div>
       </div>
     </div>
     <div
@@ -36,31 +42,35 @@ exports[`<HalfBanner> renders correctly 1`] = `
           "src": "https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb",
         }
       }
-      className="column sc-bwzfXH knqdmQ"
-      header={
+      className="column sc-htpNat iJzbpU"
+      copy={
         Object {
-          "content": "We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.",
-        }
-      }
-      subheader={
-        Object {
-          "content": "Key Trends",
+          "header": Object {
+            "content": "We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.",
+          },
+          "subheader": Object {
+            "content": "Key Trends",
+          },
         }
       }
     >
       <div
-        className="content sc-htpNat leDtIf"
+        className="container sc-bwzfXH csCdOf"
       >
-        <h6
-          className="ui tiny inverted sub header sc-ifAKCX jVuaxL"
+        <div
+          className="copy sc-ifAKCX iSyHWT"
         >
-          Key Trends
-        </h6>
-        <h5
-          className="ui huge inverted header sc-bxivhb jPPUKp"
-        >
-          We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.
-        </h5>
+          <h6
+            className="ui tiny sub header relaxed inherit      sc-bZQynM jAKWIt sc-bxivhb liTdAn"
+          >
+            Key Trends
+          </h6>
+          <h5
+            className="ui huge header relaxed inherit     sc-EHOje kIeZiC sc-bxivhb liTdAn"
+          >
+            We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.
+          </h5>
+        </div>
       </div>
     </div>
   </div>
