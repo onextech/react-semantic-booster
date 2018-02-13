@@ -1,5 +1,11 @@
 {
   "presets": [
+    ["env", {
+      "targets": {
+        "node": "current",
+        "uglify": true
+      }
+    }],
     "react",
     "es2015",
     "flow"
