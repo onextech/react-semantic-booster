@@ -67,6 +67,9 @@ const StyledBlock = styled(Segment)`
     &.top { align-items: flex-start; }
     &.middle { align-items: center; }
     &.bottom { align-items: flex-end; }
+    &.left { justify-content: flex-start; }
+    &.center { justify-content: center; }
+    &.right { justify-content: flex-end; }
   }
   
   // height

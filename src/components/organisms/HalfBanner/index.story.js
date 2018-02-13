@@ -108,9 +108,9 @@ export const altTextExample = {
 storiesOf('HalfBanner', module)
   .add('Default', () => (
     <div>
-      <Block spacer={0} vertical><HalfBanner {...listBannerExample} /></Block>
-      <Block spacer={0} vertical><HalfBanner {...breakExample} /></Block>
-      <Block spacer={0} vertical><HalfBanner {...defaultExample} /></Block>
-      <Block spacer={0} vertical><HalfBanner {...altTextExample} /></Block>
+      <Block spacer={0} attached><HalfBanner {...listBannerExample} /></Block>
+      <Block spacer={0} attached><HalfBanner {...breakExample} /></Block>
+      <Block spacer={0} attached><HalfBanner {...defaultExample} /></Block>
+      <Block spacer={0} attached><HalfBanner {...altTextExample} /></Block>
     </div>
   ));

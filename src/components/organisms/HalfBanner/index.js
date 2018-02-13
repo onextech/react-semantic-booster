@@ -9,7 +9,7 @@ const HalfBanner = ({
   leftCol,
   grid,
 }) => (
-  <Grid stackable inverted {...grid}>
+  <Grid attached stackable inverted {...grid}>
     <Grid.Row columns="equal">
       {
         [leftCol, rightCol].map((col, i) => (

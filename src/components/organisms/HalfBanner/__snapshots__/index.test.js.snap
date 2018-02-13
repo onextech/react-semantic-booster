@@ -2,7 +2,7 @@
 
 exports[`<HalfBanner> renders correctly 1`] = `
 <div
-  className="ui inverted stackable grid sc-bdVaJa aLVcX"
+  className="ui inverted stackable grid attached    sc-bdVaJa eNFBht"
 >
   <div
     className="equal width row"

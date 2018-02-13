@@ -4,11 +4,16 @@ import styled from 'styled-components';
 import { Grid as suiGrid } from 'semantic-ui-react';
 import { verticalAlignFlexCssMap } from '../../../utils/constants';
 import { MediaCss } from '../../../utils/responsive';
+import { getCustomClassName, subtractObject } from '../../../utils/helpers';
 
+const attachedClassName = 'attached';
 
 const StyledGrid = styled(suiGrid)`
   &.ui.grid.inverted {
     color: white;
+  }
+  &.ui.grid.${attachedClassName} > .row {
+    padding-bottom: initial;
   }
 `;
 
@@ -90,14 +95,33 @@ GridColumn.propTypes = {
   ]).isRequired,
 };
 
-const Grid = props => (
-  <StyledGrid {...props} />
-);
+const Grid = (props) => {
+  // 1. Define custom props for this component
+  const customProps = {
+    attached: attachedClassName,
+  };
+  // 1.5. Define default props
+  const defaultProps = {
+    attached: false,
+  };
+  const allProps = { ...defaultProps, ...props };
+  // 2. Render the custom class names
+  const className = props &&
+    getCustomClassName(customProps, allProps);
+  // 3. Clean up custom props from main prop set to avoid prop clashing
+  const semanticProps = props &&
+    subtractObject({ ...defaultProps, ...customProps }, allProps);
+
+  return (
+    <StyledGrid {...semanticProps} className={className} />
+  );
+};
 
 Grid.Row = suiGrid.Row;
 Grid.Column = GridColumn;
 
 Grid.propTypes = {
+  attached: PropTypes.bool,
   verticalAlign: PropTypes.oneOf(Object.keys(verticalAlignFlexCssMap)),
   background: PropTypes.shape({
     src: PropTypes.string,
