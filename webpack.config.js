@@ -1,6 +1,18 @@
 const path = require('path');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const webpack = require('webpack');
+
+const { UglifyJsPlugin } = webpack.optimize;
+const plugins = [];
+plugins.push(new UglifyJsPlugin({ minimize: true }));
+// let outputFile;
+// const env = process.env.NODE_ENV;
+// if (env === 'production') {
+//   plugins.push(new UglifyJsPlugin({ minimize: true }));
+//   outputFile = 'index.min.js';
+// } else {
+//   outputFile = 'index.js';
+// }
 
 // const LIBRARY_NAME = 'reactSemanticBooster';
 
@@ -27,9 +39,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new UglifyJsPlugin(),
-  ],
+  plugins,
   externals: {
     react: 'react',
     'react-dom': 'ReactDOM',
