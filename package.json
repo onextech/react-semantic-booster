@@ -1,6 +1,6 @@
 {
   "name": "@onextech/react-semantic-booster",
-  "version": "0.6.22",
+  "version": "0.6.23",
   "description": "Extended components for react-semantic-ui",
   "license": "MIT",
   "repository": "onextech/react-semantic-booster",
@@ -79,6 +79,7 @@
     "babel-jest": "^21.0.2",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-exponentiation-operator": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
@@ -101,7 +102,6 @@
     "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
-    "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^3.10.0"
   }
 }
