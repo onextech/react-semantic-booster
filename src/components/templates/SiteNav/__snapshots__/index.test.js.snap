@@ -2,7 +2,7 @@
 
 exports[`<SiteNav> renders correctly 1`] = `
 <div
-  className="pushable sc-bxivhb jSLwlH"
+  className="pushable sc-EHOje ehJgFu"
 >
   <div
     className="ui inverted vertical labeled icon ui push left thin sidebar menu"
@@ -17,7 +17,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-htoDjs hEQchW"
+        className="sc-htpNat kDZgYk"
         custom={
           Object {
             "basic": true,
@@ -43,7 +43,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-dnqmqq fmpnCF"
+        className="sc-htpNat kDZgYk"
         custom={undefined}
         href="/home"
         onClick={[Function]}
@@ -61,7 +61,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-iwsKbI jNAZJn"
+        className="sc-htpNat kDZgYk"
         custom={undefined}
         href="/about"
         onClick={[Function]}
@@ -107,7 +107,7 @@ exports[`<SiteNav> renders correctly 1`] = `
           role="option"
         >
           <a
-            className="sc-bwzfXH cBTmMw"
+            className="sc-bxivhb jfNDDO"
             href="/phone"
             onClick={[Function]}
           >
@@ -123,7 +123,7 @@ exports[`<SiteNav> renders correctly 1`] = `
           role="option"
         >
           <a
-            className="sc-bwzfXH cBTmMw"
+            className="sc-bxivhb jfNDDO"
             href="/email"
             onClick={[Function]}
           >
@@ -137,7 +137,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       onClick={[Function]}
     >
       <button
-        className="ui primary button custom sc-htpNat cnXOeu"
+        className="ui primary button custom sc-ifAKCX jYsMAz"
         disabled={undefined}
         onClick={[Function]}
         role="button"

@@ -5,23 +5,41 @@ import styled from 'styled-components';
 import { Menu } from 'semantic-ui-react';
 import { HashLink } from 'react-router-hash-link';
 
+
+const StyledLinkFactory = `
+  width: 100%;
+  display: flex;
+  padding: .92857143em 1.14285714em;
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+`;
+
+const StyledHashLink = styled(HashLink)`
+  ${StyledLinkFactory}
+`;
+
+const StyledLink = styled(Link)`
+  ${StyledLinkFactory}
+`;
+
+
 const MenuLink = ({
   to, children, linkProps, ...props
 }) => {
   const isHashLink = to.charAt(0) === '#';
 
-  const StyledLink = styled(isHashLink ? HashLink : Link)`
-    width: 100%;
-    display: flex;
-    padding: ${p => (p.custom && p.custom.basic ? 0 : '.92857143em 1.14285714em')};
-    color: inherit;
-    &:hover {
-      color: inherit;
-    }
-    &:hover, &:focus {
-      text-decoration: none;
-    }
-  `;
+  if (isHashLink) {
+    return (
+      <Menu.Item link fitted {...props} style={{ padding: 0 }}>
+        <StyledHashLink to={to} custom={linkProps}>{children}</StyledHashLink>
+      </Menu.Item>
+    );
+  }
 
   return (
     <Menu.Item link fitted {...props} style={{ padding: 0 }}>
