@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 
 module.exports = {
@@ -20,14 +19,6 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true, // enable source maps to map errors (stack traces) to modules
-      output: {
-        comments: false, // remove all comments
-      },
-    }),
-  ],
   externals: {
     react: 'react',
     'react-dom': 'ReactDOM',
