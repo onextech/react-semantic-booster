@@ -98,12 +98,12 @@ const AngularSvg = styled.svg`
 
 const TopSvg = styled(AngularSvg)`
   top: 0;
-  margin-top: -10.1%;
+  margin-top: -10vw;
   `;
 
 const BottomSvg = styled(AngularSvg)`
   bottom: 0;
-  margin-bottom: -10.1%;
+  margin-bottom: -10vw;
   transform: rotate(180deg);
   `;
 
