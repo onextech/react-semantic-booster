@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Grid } from 'semantic-ui-react';
+import Grid from '../../atoms/Grid';
 import PhotoCard from '.';
 import { testImage1 } from '../../../../test/placeholders';
 
@@ -64,18 +64,34 @@ storiesOf('PhotoCard', module)
       imgProps={firstPhotoCard.imgProps} />
   ))
   .add('Gridded', () => (
-    <Grid container columns="equal">
-      <Grid.Row>
-        {photoCardExamples.map(photoCardExample => (
-          <Grid.Column key={photoCardExample.key}>
-            <PhotoCard
-              animated="scale"
-              content={photoCardExample.content}
-              cardProps={{ card: photoCardExample.key, to: photoCardExample.to }}
-              headerProps={{ inverted: true, size: 'large' }}
-              imgProps={photoCardExample.imgProps} />
-          </Grid.Column>
-        ))}
-      </Grid.Row>
-    </Grid>
+    <div>
+      <Grid container columns="equal">
+        <Grid.Row>
+          {photoCardExamples.map(photoCardExample => (
+            <Grid.Column key={photoCardExample.key}>
+              <PhotoCard
+                animated="scale"
+                content={photoCardExample.content}
+                cardProps={{ card: photoCardExample.key, to: photoCardExample.to }}
+                headerProps={{ inverted: true, size: 'large' }}
+                imgProps={photoCardExample.imgProps} />
+            </Grid.Column>
+          ))}
+        </Grid.Row>
+      </Grid>
+      <Grid container columns="equal" fluid>
+        <Grid.Row>
+          {photoCardExamples.slice(0, 2).map(photoCardExample => (
+            <Grid.Column key={photoCardExample.key}>
+              <PhotoCard
+                animated="scale"
+                content={photoCardExample.content}
+                cardProps={{ card: photoCardExample.key, to: photoCardExample.to }}
+                headerProps={{ inverted: true, size: 'large' }}
+                imgProps={photoCardExample.imgProps} />
+            </Grid.Column>
+          ))}
+        </Grid.Row>
+      </Grid>
+    </div>
   ));

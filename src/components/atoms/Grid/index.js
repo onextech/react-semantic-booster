@@ -8,6 +8,7 @@ import { getCustomClassName, subtractObject } from '../../../utils/helpers';
 
 
 const attachedClassName = 'attached';
+const fluidClassName = 'fluid';
 
 const StyledGrid = styled(suiGrid)`
   &.ui.grid.inverted {
@@ -16,16 +17,26 @@ const StyledGrid = styled(suiGrid)`
   &.ui.grid.${attachedClassName} > .row {
     padding-bottom: initial;
   }
+  &.ui.grid.${fluidClassName} > .row > .column {
+    &:not(:first-of-type) {
+      padding-left: 0;
+    }
+    &:not(:last-of-type) {
+      padding-right: 0;
+    }
+  }
 `;
 
 const Grid = (props) => {
   // 1. Define custom props for this component
   const customProps = {
     attached: attachedClassName,
+    fluid: fluidClassName,
   };
   // 1.5. Define default props
   const defaultProps = {
     attached: false,
+    fluid: false,
   };
   const allProps = { ...defaultProps, ...props };
   // 2. Render the custom class names
@@ -45,6 +56,7 @@ Grid.Column = GridColumn;
 
 Grid.propTypes = {
   attached: PropTypes.bool,
+  fluid: PropTypes.bool,
   verticalAlign: PropTypes.oneOf(Object.keys(verticalAlignFlexCssMap)),
   background: PropTypes.shape({
     src: PropTypes.string,
