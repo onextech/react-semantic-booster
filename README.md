@@ -125,6 +125,18 @@ Subtract object from another object (non-recursive)
 
 Returns **{}** The part that is left after subtraction
 
+### setStyledSpacer
+
+A styled component function to set padding top/bottom of an element
+from a mulitplier
+
+**Parameters**
+
+-   `spacer`  
+-   `baseEm` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** The base em size to scale the spacer (optional, default `5`)
+
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the css to apply
+
 ## License
 
 MIT © [Diego Haz](https://github.com/diegohaz)
