@@ -50,7 +50,6 @@ export const menuProps = {
 };
 
 export const floatedMenuProps = {
-  inverted: true,
   pointing: true,
   secondary: true,
   // Custom props not defined in semantic-ui
@@ -81,8 +80,19 @@ storiesOf('SiteNav', module)
       <ExampleContent />
     </SiteNav>
   ))
+  .add('Floated Inverted', () => (
+    <SiteNav menu={menu} menuProps={{ inverted: true, ...floatedMenuProps }}>
+      <ExampleContent />
+    </SiteNav>
+  ))
   .add('Floated', () => (
     <SiteNav menu={menu} menuProps={floatedMenuProps}>
-      <ExampleContent />
+      <Block secondary>
+        <Container>
+          <div style={{ padding: '8em 0' }}>
+            <h1>Hello World</h1>
+          </div>
+        </Container>
+      </Block>
     </SiteNav>
   ));

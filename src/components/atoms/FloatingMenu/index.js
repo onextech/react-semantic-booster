@@ -9,6 +9,10 @@ const FloatingDiv = styled.div`
     margin: 0 auto;
     z-index: 1;
     width: 100%;
+    .ui.attached.menu:not(.tabular) { border: 0; }
+    .ui.menu .menu.left .item:first-child > a { padding-left: 0; }
+    .ui.menu .menu.right .item:last-child > a { padding-right: 0; }
+    .ui.menu .menu.right .item:last-child { padding-right: 0; }  
 `;
 
 const FloatingMenu = ({ menu, container }) => (

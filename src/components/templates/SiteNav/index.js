@@ -9,12 +9,6 @@ import DropdownLink from '../../atoms/DropdownLink';
 import ButtonLink from '../../atoms/ButtonLink';
 
 const SidebarPushable = styled(Sidebar.Pushable)`
-  /* Icons */
-  // Fix for icons always having a right margin from SUI
-  .ui.menu .item>i.icon {
-    margin: 0;
-  }
-  
   /* Button */
   .ui.menu.vertical .ui.button {
     width: 100%;
@@ -52,7 +46,6 @@ const SidebarPushable = styled(Sidebar.Pushable)`
   .ui.sidebar {
     overflow-y: initial !important;
   }
-  
   
   /* Sidebar */
   // Fix for menu items not positioned correctly
