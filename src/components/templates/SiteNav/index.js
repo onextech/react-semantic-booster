@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-import { Sidebar, Dropdown, Responsive, Menu, Dimmer, Image } from 'semantic-ui-react';
-import FloatingMenu from '../../atoms/FloatingMenu';
+import { Sidebar, Dropdown, Responsive, Dimmer, Image } from 'semantic-ui-react';
 import MenuLink from '../../atoms/MenuLink';
 import DropdownLink from '../../atoms/DropdownLink';
 import ButtonLink from '../../atoms/ButtonLink';
+import Menu from '../../atoms/Menu';
 
 const SidebarPushable = styled(Sidebar.Pushable)`
   /* Button */
@@ -136,7 +136,7 @@ class SiteNav extends React.Component {
   }
 
   render() {
-    const { children, menuProps } = this.props;
+    const { children } = this.props;
     const { showSidebar } = this.state;
 
     return (
@@ -152,13 +152,7 @@ class SiteNav extends React.Component {
           {this.renderMobileMenu()}
         </Sidebar>
         <Sidebar.Pusher>
-          {
-            menuProps && menuProps.custom && menuProps.custom.float ?
-              <FloatingMenu
-                menu={this.renderDesktopMenu()}
-                container={menuProps.custom.container} /> :
-              this.renderDesktopMenu()
-          }
+          {this.renderDesktopMenu()}
           <Dimmer active={showSidebar} onClick={this.handleDimmerClick} />
           {children}
         </Sidebar.Pusher>

@@ -5,7 +5,7 @@ exports[`<SiteNav> renders correctly 1`] = `
   className="pushable sc-EHOje cYVPho"
 >
   <div
-    className="ui inverted vertical labeled icon ui push left thin sidebar menu"
+    className="ui inverted vertical labeled icon      ui push left thin sidebar sc-ifAKCX dMooOH menu"
   >
     <div
       className="link fitted item"
@@ -17,7 +17,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-htpNat kDZgYk"
+        className="sc-bwzfXH czPeHY"
         custom={
           Object {
             "basic": true,
@@ -43,7 +43,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-htpNat kDZgYk"
+        className="sc-bwzfXH czPeHY"
         custom={undefined}
         href="/home"
         onClick={[Function]}
@@ -61,7 +61,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       }
     >
       <a
-        className="sc-htpNat kDZgYk"
+        className="sc-bwzfXH czPeHY"
         custom={undefined}
         href="/about"
         onClick={[Function]}
@@ -107,7 +107,7 @@ exports[`<SiteNav> renders correctly 1`] = `
           role="option"
         >
           <a
-            className="sc-bxivhb jfNDDO"
+            className="sc-htpNat inptNJ"
             href="/phone"
             onClick={[Function]}
           >
@@ -123,7 +123,7 @@ exports[`<SiteNav> renders correctly 1`] = `
           role="option"
         >
           <a
-            className="sc-bxivhb jfNDDO"
+            className="sc-htpNat inptNJ"
             href="/email"
             onClick={[Function]}
           >
@@ -137,7 +137,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       onClick={[Function]}
     >
       <button
-        className="ui primary button custom sc-ifAKCX jYsMAz"
+        className="ui primary button custom sc-bxivhb eHAaiM"
         disabled={undefined}
         onClick={[Function]}
         role="button"
@@ -156,44 +156,42 @@ exports[`<SiteNav> renders correctly 1`] = `
     className="pusher"
   >
     <div
-      className="ui attached menu"
-      custom={
-        Object {
-          "container": false,
-          "float": false,
-        }
-      }
+      className="ui pointing secondary attached container     sc-ifAKCX dMooOH menu"
     >
       <div
-        className="menu"
+        className="ui container"
       >
         <div
-          aria-busy={undefined}
-          aria-disabled={undefined}
-          aria-expanded={false}
-          aria-multiselectable={undefined}
-          className="ui item dropdown"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onMouseDown={[Function]}
-          role="listbox"
-          tabIndex={0}
+          className="menu"
         >
           <div
-            aria-live="polite"
-            className="text"
-            role="alert"
-          />
-          <i
-            aria-hidden="true"
-            className="content icon"
+            aria-busy={undefined}
+            aria-disabled={undefined}
+            aria-expanded={false}
+            aria-multiselectable={undefined}
+            className="ui item dropdown"
+            onBlur={[Function]}
+            onChange={[Function]}
             onClick={[Function]}
-          />
-          <div
-            className="menu transition"
-          />
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            role="listbox"
+            tabIndex={0}
+          >
+            <div
+              aria-live="polite"
+              className="text"
+              role="alert"
+            />
+            <i
+              aria-hidden="true"
+              className="content icon"
+              onClick={[Function]}
+            />
+            <div
+              className="menu transition"
+            />
+          </div>
         </div>
       </div>
     </div>

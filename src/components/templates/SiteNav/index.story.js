@@ -39,24 +39,17 @@ export const menu = [ // eslint-disable-line import/prefer-default-export
 ];
 
 export const menuProps = {
-  inverted: false,
-  pointing: false,
-  secondary: false,
-  // Custom props not defined in semantic-ui
-  custom: {
-    float: false,
-    container: false, // only applied when float = true
-  },
+  pointing: true,
+  secondary: true,
+  floated: false,
+  container: true,
 };
 
 export const floatedMenuProps = {
   pointing: true,
   secondary: true,
-  // Custom props not defined in semantic-ui
-  custom: {
-    float: true,
-    container: true, // only applied when float = true
-  },
+  floated: true,
+  container: true,
 };
 
 const ExampleContent = () => (
@@ -89,9 +82,16 @@ storiesOf('SiteNav', module)
     <SiteNav menu={menu} menuProps={floatedMenuProps}>
       <Block secondary>
         <Container>
-          <div style={{ padding: '8em 0' }}>
-            <h1>Hello World</h1>
-          </div>
+          <h1>Hello World</h1>
+        </Container>
+      </Block>
+    </SiteNav>
+  ))
+  .add('Container Menu', () => (
+    <SiteNav menu={menu} menuProps={menuProps}>
+      <Block secondary>
+        <Container>
+          <h1>Hello World</h1>
         </Container>
       </Block>
     </SiteNav>
