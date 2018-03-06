@@ -5,7 +5,7 @@ exports[`<SiteNav> renders correctly 1`] = `
   className="pushable sc-EHOje cYVPho"
 >
   <div
-    className="ui inverted vertical labeled icon      ui push left thin sidebar sc-ifAKCX dMooOH menu"
+    className="ui inverted vertical labeled icon      ui push left thin sidebar sc-ifAKCX kJRSVp menu"
   >
     <div
       className="link fitted item"
@@ -156,7 +156,7 @@ exports[`<SiteNav> renders correctly 1`] = `
     className="pusher"
   >
     <div
-      className="ui pointing secondary attached container     sc-ifAKCX dMooOH menu"
+      className="ui pointing secondary attached container     sc-ifAKCX kJRSVp menu"
     >
       <div
         className="ui container"

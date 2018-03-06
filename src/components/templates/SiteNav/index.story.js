@@ -41,14 +41,14 @@ export const menu = [ // eslint-disable-line import/prefer-default-export
 export const menuProps = {
   pointing: true,
   secondary: true,
-  floated: false,
+  float: false,
   container: true,
 };
 
-export const floatedMenuProps = {
+export const floatMenuProps = {
   pointing: true,
   secondary: true,
-  floated: true,
+  float: true,
   container: true,
 };
 
@@ -73,13 +73,13 @@ storiesOf('SiteNav', module)
       <ExampleContent />
     </SiteNav>
   ))
-  .add('Floated Inverted', () => (
-    <SiteNav menu={menu} menuProps={{ inverted: true, ...floatedMenuProps }}>
+  .add('Float Inverted', () => (
+    <SiteNav menu={menu} menuProps={{ inverted: true, ...floatMenuProps }}>
       <ExampleContent />
     </SiteNav>
   ))
-  .add('Floated', () => (
-    <SiteNav menu={menu} menuProps={floatedMenuProps}>
+  .add('Float', () => (
+    <SiteNav menu={menu} menuProps={floatMenuProps}>
       <Block secondary>
         <Container>
           <h1>Hello World</h1>

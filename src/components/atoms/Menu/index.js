@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Menu as SuiMenu, Container } from 'semantic-ui-react';
 import { getCustomClassName, subtractObject } from '../../../utils/helpers';
 
-const floatedClassName = 'floated';
+const floatClassName = 'float';
 const containerClassName = 'container';
 
 const StyledMenu = styled(SuiMenu)`
@@ -14,7 +14,7 @@ const StyledMenu = styled(SuiMenu)`
     .menu.right .item:last-child > a { padding-right: 0; }
     .menu.right .item:last-child { padding-right: 0; }
   }
-  &.ui.menu.${floatedClassName} {
+  &.ui.menu.${floatClassName} {
     position: absolute;
     z-index: 1;
     top: initial;
@@ -25,12 +25,12 @@ const StyledMenu = styled(SuiMenu)`
 const Menu = (props) => {
   // 1. Define custom props for this component
   const customProps = {
-    floated: floatedClassName,
+    float: floatClassName,
     container: containerClassName,
   };
   // 1.5. Define default props
   const defaultProps = {
-    floated: false,
+    float: false,
     container: false,
   };
   const allProps = { ...defaultProps, ...props };
@@ -56,7 +56,7 @@ const Menu = (props) => {
 
 Menu.propTypes = {
   container: PropTypes.bool,
-  floated: PropTypes.bool,
+  float: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.string,
