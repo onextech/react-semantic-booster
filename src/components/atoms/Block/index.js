@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Segment } from 'semantic-ui-react';
-import { isPlainObject } from 'lodash';
+import { setStyledSpacer } from '../../../utils/helpers';
+
 
 const backgroundClassName = 'background';
 const angularClassName = 'angular';
@@ -12,22 +13,7 @@ const StyledBlock = styled(Segment)`
   // spacer
   &.ui.segment {
     &.attached { border: 0; }
-    ${(props) => {
-    const baseEmPadding = 5;
-    if (isPlainObject(props.spacer)) {
-      const topSpacer = props.spacer.top * baseEmPadding || null;
-      const bottomSpacer = props.spacer.bottom * baseEmPadding || null;
-      const result = [];
-      if (topSpacer) {
-        result.push(`padding-top: ${topSpacer}em;`);
-      }
-      if (bottomSpacer) {
-        result.push(`padding-bottom: ${bottomSpacer}em;`);
-      }
-      return result.join(' ');
-    }
-    return `padding: ${baseEmPadding * props.spacer}em 0`;
-  }}
+    ${props => props.spacer && setStyledSpacer(props.spacer)}
   }
   
   // background

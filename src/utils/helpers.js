@@ -1,3 +1,5 @@
+import { isPlainObject } from 'lodash';
+
 /**
  * Render the class names based on the custom props selected
  * @param {{ prop: className }} customProps - a reference list of custom props and classnames
@@ -36,4 +38,27 @@ export const subtractObject = (subtrahend, minuend) => {
     });
   }
   return difference;
+};
+
+/**
+ * A styled component function to set padding top/bottom of an element
+ * from a mulitplier
+ * @param {Number || Object} spacer - a multiplier
+ * @param {Number} baseEm - The base em size to scale the spacer
+ * @return {string} - the css to apply
+ */
+export const setStyledSpacer = (spacer, baseEm = 5) => {
+  if (isPlainObject(spacer)) {
+    const topSpacer = spacer.top * baseEm;
+    const bottomSpacer = spacer.bottom * baseEm;
+    const result = [];
+    if (topSpacer) {
+      result.push(`padding-top: ${topSpacer}em;`);
+    }
+    if (bottomSpacer) {
+      result.push(`padding-bottom: ${bottomSpacer}em;`);
+    }
+    return result.join(' ');
+  }
+  return `padding: ${baseEm * spacer}em 0`;
 };
