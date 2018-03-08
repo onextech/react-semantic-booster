@@ -79,7 +79,7 @@ storiesOf('PhotoCard', module)
           ))}
         </Grid.Row>
       </Grid>
-      <Grid container columns="equal" fluid stackable>
+      <Grid container columns="equal" fluid stackable attached>
         <Grid.Row>
           {photoCardExamples.slice(0, 2).map(photoCardExample => (
             <Grid.Column key={photoCardExample.key}>

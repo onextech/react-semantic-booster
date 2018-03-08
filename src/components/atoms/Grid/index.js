@@ -31,6 +31,10 @@ const StyledGrid = styled(suiGrid)`
     &.stackable > .row > .column {
       ${MediaCss.max.sm`padding: 0 !important;`}   
     }
+    &.attached > .row {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 `;
 
