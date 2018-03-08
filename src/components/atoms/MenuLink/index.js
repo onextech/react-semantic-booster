@@ -28,9 +28,7 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledMenuItem = styled(Menu.Item)`
-  &.link.fitted.menulink.item {
-    padding: 0;
-  }
+  padding: 0 !important;
 `;
 
 const MenuLink = ({
@@ -43,7 +41,7 @@ const MenuLink = ({
   const isHashLink = to.charAt(0) === '#';
   if (isHashLink) {
     return (
-      <StyledMenuItem className="menulink" link fitted {...rest}>
+      <StyledMenuItem link fitted {...rest}>
         <StyledHashLink to={to} custom={linkProps}>{children}</StyledHashLink>
       </StyledMenuItem>
     );

@@ -2,7 +2,7 @@
 
 exports[`<MenuLink> renders correctly 1`] = `
 <div
-  className="link fitted item menulink sc-htpNat dkRXyV"
+  className="link fitted item menulink sc-htpNat jVOplu"
   onClick={[Function]}
 >
   <a

@@ -2,14 +2,14 @@
 
 exports[`<SiteNav> renders correctly 1`] = `
 <div
-  className="pushable sc-bZQynM cZvMLJ"
+  className="pushable sc-bZQynM hJJYVo"
 >
   <div
     className="ui inverted vertical labeled icon spacer      ui push left thin sidebar sc-EHOje cKFdXV menu"
     spacer={undefined}
   >
     <div
-      className="link fitted item menulink sc-htpNat dkRXyV"
+      className="link fitted item menulink sc-htpNat jVOplu"
       onClick={[Function]}
     >
       <a
@@ -30,7 +30,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="link fitted item menulink sc-htpNat dkRXyV"
+      className="link fitted item menulink sc-htpNat jVOplu"
       onClick={[Function]}
     >
       <a
@@ -43,7 +43,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="link fitted item menulink sc-htpNat dkRXyV"
+      className="link fitted item menulink sc-htpNat jVOplu"
       onClick={[Function]}
     >
       <a

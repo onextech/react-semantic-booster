@@ -55,9 +55,16 @@ const SidebarPushable = styled(Sidebar.Pushable)`
     align-self: center;
   }
     
-  // Fix for removing padding-left on hamburger icon
-  .menu:not(.sidebar) .ui.item.dropdown[role="listbox"] {
-    padding-left: 0;
+  // Fix for removing padding-left on hamburger icon in secondary menu only only
+  .ui.secondary.pointing.menu:not(.sidebar) {
+    .ui.item.dropdown[role="listbox"] {
+        padding-left: 0;
+    }
+    .right, .left {
+      .ui.item.dropdown[role="listbox"] {
+        padding-left: 1.14286em;
+      }
+    }
   }
 `;
 
