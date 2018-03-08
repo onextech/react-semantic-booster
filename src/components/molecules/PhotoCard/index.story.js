@@ -65,7 +65,7 @@ storiesOf('PhotoCard', module)
   ))
   .add('Gridded', () => (
     <div>
-      <Grid container columns="equal">
+      <Grid container columns="equal" stackable>
         <Grid.Row>
           {photoCardExamples.map(photoCardExample => (
             <Grid.Column key={photoCardExample.key}>
@@ -79,7 +79,7 @@ storiesOf('PhotoCard', module)
           ))}
         </Grid.Row>
       </Grid>
-      <Grid container columns="equal" fluid>
+      <Grid container columns="equal" fluid stackable>
         <Grid.Row>
           {photoCardExamples.slice(0, 2).map(photoCardExample => (
             <Grid.Column key={photoCardExample.key}>

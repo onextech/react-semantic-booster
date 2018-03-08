@@ -5,6 +5,7 @@ import { Grid as suiGrid } from 'semantic-ui-react';
 import GridColumn from './GridColumn';
 import { verticalAlignFlexCssMap } from '../../../utils/constants';
 import { getCustomClassName, subtractObject } from '../../../utils/helpers';
+import { MediaCss } from '../../../utils/responsive';
 
 
 const attachedClassName = 'attached';
@@ -17,12 +18,18 @@ const StyledGrid = styled(suiGrid)`
   &.ui.grid.${attachedClassName} > .row {
     padding-bottom: initial;
   }
-  &.ui.grid.${fluidClassName} > .row > .column {
-    &:not(:first-of-type) {
-      padding-left: 0;
-    }
-    &:not(:last-of-type) {
-      padding-right: 0;
+  &.ui.grid.${fluidClassName} {
+    > .row > .column {
+      &:not(:first-of-type) {
+        padding-left: 0;
+      }
+      &:not(:last-of-type) {
+        padding-right: 0;
+      }
+    } 
+    // Make fluid on mobile stackable as well
+    &.stackable > .row > .column {
+      ${MediaCss.max.sm`padding: 0 !important;`}   
     }
   }
 `;
