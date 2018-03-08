@@ -7,6 +7,8 @@ import MenuLink from '../../atoms/MenuLink';
 import DropdownLink from '../../atoms/DropdownLink';
 import ButtonLink from '../../atoms/ButtonLink';
 import Menu from '../../atoms/Menu';
+import { mediaCssBreakpoints } from '../../../utils/responsive';
+
 
 const SidebarPushable = styled(Sidebar.Pushable)`
   /* Button */
@@ -67,40 +69,65 @@ class SiteNav extends React.Component {
 
   handleDimmerClick = () => this.setState({ showSidebar: false });
 
-  renderMenuItems = (items) => {
+  renderMenuItems = (items, isMobile = false) => {
     const result = [];
+
+    const defaultMenuLinkProps = {};
+    if (isMobile) {
+      defaultMenuLinkProps.onClick = this.toggleSidebar;
+    }
+
     items.map((item) => {
-      let jsx = <MenuLink
-        to={item.to || '/'}
-        key={kebabCase(item.name)}>
-        {item.name}
-      </MenuLink>;
+      // default menu item type
+      let jsx = (
+        <MenuLink
+          to={item.to || '/'}
+          key={kebabCase(item.name)}
+          {...defaultMenuLinkProps}>
+          {item.name}
+        </MenuLink>
+      );
       // render other menu item types
       switch (true) {
         case Boolean(item.image):
-          jsx = <MenuLink to={item.to} key={kebabCase(item.name)} linkProps={{ basic: true }}>
-            <Image {...item.image} />
-          </MenuLink>;
+          jsx = (
+            <MenuLink
+              to={item.to}
+              key={kebabCase(item.name)}
+              linkProps={{ basic: true }}
+              {...defaultMenuLinkProps}>
+              <Image {...item.image} />
+            </MenuLink>
+          );
           break;
         case Boolean(item.button):
-          jsx = <Menu.Item key={kebabCase(item.name)}>
-            <ButtonLink to={item.to} content={item.name} {...item.button} />
-          </Menu.Item>;
+          jsx = (
+            <Menu.Item key={kebabCase(item.name)}>
+              <ButtonLink
+                to={item.to}
+                content={item.name}
+                {...item.button}
+                {...defaultMenuLinkProps} />
+            </Menu.Item>
+          );
           break;
         case Boolean(item.dropdown):
-          jsx = <Dropdown item text={item.name} key={kebabCase(item.name)}>
-            <Dropdown.Menu>
-              {
-                item.dropdown.items.map(dropdownItem => (
-                  <DropdownLink
-                    to={dropdownItem.to}
-                    key={kebabCase(dropdownItem.name)}>
-                    {dropdownItem.name}
-                  </DropdownLink>
-                ))
-              }
-            </Dropdown.Menu>
-          </Dropdown>;
+          jsx = (
+            <Dropdown item text={item.name} key={kebabCase(item.name)}>
+              <Dropdown.Menu>
+                {
+                  item.dropdown.items.map(dropdownItem => (
+                    <DropdownLink
+                      to={dropdownItem.to}
+                      key={kebabCase(dropdownItem.name)}
+                      {...defaultMenuLinkProps}>
+                      {dropdownItem.name}
+                    </DropdownLink>
+                  ))
+                }
+              </Dropdown.Menu>
+            </Dropdown>
+          );
           break;
         default:
           break;
@@ -114,7 +141,7 @@ class SiteNav extends React.Component {
     const { menuProps, menu } = this.props;
     return (
       <Menu attached {...menuProps}>
-        <Responsive maxWidth={768} as={Menu.Menu}>
+        <Responsive maxWidth={mediaCssBreakpoints.sm} as={Menu.Menu}>
           <Dropdown item icon="content" onClick={this.toggleSidebar} />
         </Responsive>
         {menu.map((submenu, i) => (
@@ -122,7 +149,7 @@ class SiteNav extends React.Component {
             key={i}
             as={Menu.Menu}
             position={submenu.position}
-            minWidth={768}>
+            minWidth={mediaCssBreakpoints.sm}>
             {this.renderMenuItems(submenu.content)}
           </Responsive>
         ))}
@@ -137,7 +164,7 @@ class SiteNav extends React.Component {
       // merge menu contents
       menu.map(submenu => allMenus.push(...submenu.content));
     }
-    return this.renderMenuItems(allMenus);
+    return this.renderMenuItems(allMenus, true);
   }
 
   render() {

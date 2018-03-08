@@ -27,24 +27,36 @@ const StyledLink = styled(Link)`
   ${StyledLinkFactory}
 `;
 
+const StyledMenuItem = styled(Menu.Item)`
+  &.link.fitted.menulink.item {
+    padding: 0;
+  }
+`;
 
 const MenuLink = ({
-  to, children, linkProps, ...props
+  onClick,
+  to,
+  children,
+  linkProps,
+  ...rest
 }) => {
   const isHashLink = to.charAt(0) === '#';
-
   if (isHashLink) {
     return (
-      <Menu.Item link fitted {...props} style={{ padding: 0 }}>
+      <StyledMenuItem className="menulink" link fitted {...rest}>
         <StyledHashLink to={to} custom={linkProps}>{children}</StyledHashLink>
-      </Menu.Item>
+      </StyledMenuItem>
     );
   }
 
   return (
-    <Menu.Item link fitted {...props} style={{ padding: 0 }}>
-      <StyledLink to={to} custom={linkProps}>{children}</StyledLink>
-    </Menu.Item>
+    <StyledMenuItem
+      className="menulink"
+      link
+      fitted
+      {...rest}>
+      <StyledLink onClick={onClick} to={to} custom={linkProps}>{children}</StyledLink>
+    </StyledMenuItem>
   );
 };
 
@@ -56,10 +68,12 @@ MenuLink.propTypes = {
   ]).isRequired,
   to: PropTypes.string.isRequired,
   linkProps: PropTypes.object,
+  onClick: PropTypes.func,
 };
 
 MenuLink.defaultProps = {
   linkProps: undefined,
+  onClick: undefined,
 };
 
 export default MenuLink;

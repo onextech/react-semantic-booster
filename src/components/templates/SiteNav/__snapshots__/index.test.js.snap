@@ -2,20 +2,15 @@
 
 exports[`<SiteNav> renders correctly 1`] = `
 <div
-  className="pushable sc-EHOje dcJNxK"
+  className="pushable sc-bZQynM cZvMLJ"
 >
   <div
-    className="ui inverted vertical labeled icon spacer      ui push left thin sidebar sc-ifAKCX knnPmz menu"
+    className="ui inverted vertical labeled icon spacer      ui push left thin sidebar sc-EHOje cKFdXV menu"
     spacer={undefined}
   >
     <div
-      className="link fitted item"
+      className="link fitted item menulink sc-htpNat dkRXyV"
       onClick={[Function]}
-      style={
-        Object {
-          "padding": 0,
-        }
-      }
     >
       <a
         className="sc-bwzfXH czPeHY"
@@ -35,13 +30,8 @@ exports[`<SiteNav> renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="link fitted item"
+      className="link fitted item menulink sc-htpNat dkRXyV"
       onClick={[Function]}
-      style={
-        Object {
-          "padding": 0,
-        }
-      }
     >
       <a
         className="sc-bwzfXH czPeHY"
@@ -53,13 +43,8 @@ exports[`<SiteNav> renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="link fitted item"
+      className="link fitted item menulink sc-htpNat dkRXyV"
       onClick={[Function]}
-      style={
-        Object {
-          "padding": 0,
-        }
-      }
     >
       <a
         className="sc-bwzfXH czPeHY"
@@ -108,7 +93,7 @@ exports[`<SiteNav> renders correctly 1`] = `
           role="option"
         >
           <a
-            className="sc-htpNat inptNJ"
+            className="sc-bxivhb jfNDDO"
             href="/phone"
             onClick={[Function]}
           >
@@ -124,7 +109,7 @@ exports[`<SiteNav> renders correctly 1`] = `
           role="option"
         >
           <a
-            className="sc-htpNat inptNJ"
+            className="sc-bxivhb jfNDDO"
             href="/email"
             onClick={[Function]}
           >
@@ -138,7 +123,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       onClick={[Function]}
     >
       <button
-        className="ui primary button custom sc-bxivhb eHAaiM"
+        className="ui primary button sc-ifAKCX bcJmXr"
         disabled={undefined}
         onClick={[Function]}
         role="button"
@@ -157,7 +142,7 @@ exports[`<SiteNav> renders correctly 1`] = `
     className="pusher"
   >
     <div
-      className="ui pointing secondary attached container spacer     sc-ifAKCX knnPmz menu"
+      className="ui pointing secondary attached container spacer     sc-EHOje cKFdXV menu"
       spacer={undefined}
     >
       <div

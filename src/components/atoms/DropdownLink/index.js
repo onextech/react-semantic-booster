@@ -14,9 +14,16 @@ const StyledDropdownLink = styled(Link)`
   }
 `;
 
-const DropdownLink = ({ to, children, ...props }) => (
-  <Dropdown.Item className="fitted link" {...props}>
-    <StyledDropdownLink to={to}>{children}</StyledDropdownLink>
+const DropdownLink = ({
+  onClick,
+  to,
+  children,
+  ...rest
+}) => (
+  <Dropdown.Item className="fitted link" {...rest}>
+    <StyledDropdownLink to={to} onClick={onClick}>
+      {children}
+    </StyledDropdownLink>
   </Dropdown.Item>
 );
 
@@ -27,6 +34,11 @@ DropdownLink.propTypes = {
     PropTypes.array,
   ]).isRequired,
   to: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+};
+
+DropdownLink.defaultProps = {
+  onClick: undefined,
 };
 
 export default DropdownLink;

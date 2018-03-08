@@ -2,13 +2,8 @@
 
 exports[`<MenuLink> renders correctly 1`] = `
 <div
-  className="link fitted item"
+  className="link fitted item menulink sc-htpNat dkRXyV"
   onClick={[Function]}
-  style={
-    Object {
-      "padding": 0,
-    }
-  }
 >
   <a
     className="sc-bwzfXH czPeHY"

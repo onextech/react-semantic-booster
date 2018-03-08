@@ -7,9 +7,9 @@ import { countArrayLessUndefinedItems } from '@onextech/react-apollo-utils';
 
 
 const hasManyChildren = props => countArrayLessUndefinedItems(props.children.props.children) > 1;
-const ButtonLinkFactory = styled(Button)`
+const Wrapper = styled(Button)`
   &.ui.button {
-    padding: 0;
+    padding: 0 !important;
     overflow: hidden;
     a {
       display: inline-block;  
@@ -26,23 +26,29 @@ const ButtonLinkFactory = styled(Button)`
 `;
 
 const ButtonLink = ({
-  to, icon, content, ...props
-}) => (<ButtonLinkFactory className="custom" {...props}>
-  <Link to={to}>
+  onClick,
+  to,
+  icon,
+  content,
+  ...rest
+}) => (<Wrapper {...rest}>
+  <Link to={to} onClick={onClick}>
     {icon && <Icon name={icon} />}
     {content}
   </Link>
-</ButtonLinkFactory>);
+</Wrapper>);
 
 ButtonLink.propTypes = {
   to: PropTypes.string.isRequired,
   icon: PropTypes.string,
   content: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 ButtonLink.defaultProps = {
   icon: undefined,
   content: undefined,
+  onClick: undefined,
 };
 
 export default ButtonLink;
