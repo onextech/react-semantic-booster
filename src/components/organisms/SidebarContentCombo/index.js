@@ -17,41 +17,55 @@ const Wrapper = styled.div`
     .${containerClassName} {
       width: 100%;
       position: relative;
+      overflow: hidden;
     }
     .${sidebarClassName} {
       width: 0%;
-      position: absolute;
+      position: relative;
+      float: left;
       top: 0;
       left: 0;
+      max-height: 100%;
+      overflow: auto;
       transition: width .3s ease-out;
     }
     .${contentClassName} {
       width: 100%;
-      position: absolute;
+      position: relative;
+      float: right;
       top: 0;
       right: 0;
       transition: width .3s ease-out;
     }
+    
+    // Visible
     &.${visibleClassName} {
       .${sidebarClassName} {
-        width: 20%;
+        ${props => props.sidebarPercentageWidth && `width: ${props.sidebarPercentageWidth}%;`}
+        ${props => props.sidebarMaxWidth && `max-width: ${props.sidebarMaxWidth};`}
         position: initial;
         transition: width .3s ease-out;
       }
       .${contentClassName} {
-        width: 80%;
+        ${props => props.sidebarPercentageWidth && `width: calc(100% - ${props.sidebarPercentageWidth}%);`}
+        ${props => props.sidebarMaxWidth && `min-width: calc(100% - ${props.sidebarMaxWidth});`}
         transition: width .3s ease-out;
       }
     }
     
-    // Mobile
-    &.${visibleClassName}.${mobileClassName} {
+    // Mobile only
+    &.${mobileClassName} {
       .${sidebarClassName} {
-        width: 100%;
-        height: 100vh;
         position: absolute;
         z-index: 1;
-        background-color: rgba(255, 255, 255, 0.85);
+        background-color: white;
+        box-shadow: 10px 0px 17px -8px rgba(0,0,0,0.25);
+      }
+      &.${visibleClassName} {
+        .${sidebarClassName} {
+          width: 50%;
+          height: 100%;
+        }  
       }
     }
   }
@@ -85,7 +99,8 @@ class MenuContentCombo extends React.Component {
       sidebar,
       children,
       menuItems,
-      menuProps,
+      sidebarPercentageWidth,
+      sidebarMaxWidth,
       ...props
     } = this.props;
 
@@ -102,6 +117,8 @@ class MenuContentCombo extends React.Component {
     const customProps = {
       visible,
       mobile,
+      sidebarPercentageWidth,
+      sidebarMaxWidth,
     };
     const allProps = { ...defaultProps, ...props };
     // 2. Render the custom class names
@@ -113,14 +130,14 @@ class MenuContentCombo extends React.Component {
 
     return (
       <Wrapper {...semanticProps} {...customProps} className={className}>
-        <Menu attached menuProps={menuProps}>
+        <Menu attached>
           <Menu.Item>
             <Button onClick={this.toggleVisibility}>Toggle Visibility</Button>
           </Menu.Item>
           {menuItems}
         </Menu>
-        <Responsive maxWidth={mediaCssBreakpoints.sm} onUpdate={this.handleMobileResize} />
-        <Responsive minWidth={mediaCssBreakpoints.sm} onUpdate={this.handleDesktopResize} />
+        <Responsive maxWidth={mediaCssBreakpoints.sm} fireOnMount onUpdate={this.handleMobileResize} />
+        <Responsive minWidth={mediaCssBreakpoints.sm} fireOnMount onUpdate={this.handleDesktopResize} />
         <div className={containerClassName}>
           <div className={sidebarClassName}>{sidebar}</div>
           <div className={contentClassName}>{children}</div>
@@ -142,6 +159,13 @@ MenuContentCombo.propTypes = {
     PropTypes.array,
   ]),
   menuProps: PropTypes.object, // sui menu props
+  sidebarPercentageWidth: PropTypes.number, // in percentage only e.g. 20, 30
+  sidebarMaxWidth: PropTypes.string,
+};
+
+MenuContentCombo.defaultProps = {
+  sidebarPercentageWidth: 25,
+  sidebarMaxWidth: '200px',
 };
 
 

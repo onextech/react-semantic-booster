@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Container, Menu, Card } from 'semantic-ui-react';
+import { Container, Menu, Card, Grid } from 'semantic-ui-react';
 import SidebarContentCombo from '.';
 import Block from '../../atoms/Block';
 import MenuLink from '../../atoms/MenuLink';
@@ -8,33 +8,70 @@ import MenuLink from '../../atoms/MenuLink';
 const src = 'https://react.semantic-ui.com/assets/images/wireframe/white-image.png';
 
 const CardExampleColored = () => (
+
   <Card.Group itemsPerRow={4}>
-    <Card color='red' image={src} />
-    <Card color='orange' image={src} />
-    <Card color='yellow' image={src} />
-    <Card color='olive' image={src} />
-    <Card color='green' image={src} />
-    <Card color='teal' image={src} />
-    <Card color='blue' image={src} />
-    <Card color='violet' image={src} />
-    <Card color='purple' image={src} />
-    <Card color='pink' image={src} />
-    <Card color='brown' image={src} />
-    <Card color='grey' image={src} />
+    <Grid>
+      <Grid.Row columns="equal">
+        <Grid.Column>
+          <Card fluid image={src} />
+        </Grid.Column>
+        <Grid.Column>
+          <Card fluid image={src} />
+        </Grid.Column>
+        <Grid.Column>
+          <Card fluid image={src} />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row columns="equal">
+        <Grid.Column>
+          <Card fluid image={src} />
+        </Grid.Column>
+        <Grid.Column>
+          <Card fluid image={src} />
+        </Grid.Column>
+        <Grid.Column>
+          <Card fluid image={src} />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
   </Card.Group>
 );
 
-const ExampleMenu = () => (
-  <Menu text vertical fluid style={{ padding: '1.3em' }}>
-    <Menu.Item header>Sort By</Menu.Item>
-    <Menu.Item name="closest" />
-    <Menu.Item name="mostComments" />
-    <Menu.Item name="mostPopular" />
-  </Menu>
-);
+class ExampleMenu extends React.Component {
+  state = { activeItem: 'closest' }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  render() {
+    const { activeItem } = this.state;
+
+    return (
+      <div style={{ padding: '1.3em' }}>
+        <Menu text vertical fluid>
+          <Menu.Item header>Sort By</Menu.Item>
+          <Menu.Item name='closest' active={activeItem === 'closest'} onClick={this.handleItemClick} />
+          <Menu.Item name='mostComments' active={activeItem === 'mostComments'} onClick={this.handleItemClick} />
+          <Menu.Item name='mostPopular' active={activeItem === 'mostPopular'} onClick={this.handleItemClick} />
+        </Menu>
+        <Menu text vertical fluid>
+          <Menu.Item header>Filter By</Menu.Item>
+          <Menu.Item name='price' active={activeItem === 'price'} onClick={this.handleItemClick} />
+          <Menu.Item name='dateAdded' active={activeItem === 'dateAdded'} onClick={this.handleItemClick} />
+          <Menu.Item name='lame' active={activeItem === 'lame'} onClick={this.handleItemClick} />
+        </Menu>
+        <Menu text vertical fluid>
+          <Menu.Item header>Categories</Menu.Item>
+          <Menu.Item name='chocolate' active={activeItem === 'chocolate'} onClick={this.handleItemClick} />
+          <Menu.Item name='milo' active={activeItem === 'milo'} onClick={this.handleItemClick} />
+          <Menu.Item name='latte' active={activeItem === 'latte'} onClick={this.handleItemClick} />
+        </Menu>
+      </div>
+    );
+  }
+}
 
 const ExampleContent = () => (
-  <Block attached inverted textAlign="center" style={{ padding: '1em' }}>
+  <Block attached inverted textAlign="center" style={{ padding: '2em' }}>
     <Container>
       <h1>Hello World</h1>
       <CardExampleColored />
@@ -59,7 +96,21 @@ const ExampleMenuItems = () => (
 
 storiesOf('SidebarContentCombo', module)
   .add('Default', () => (
-    <SidebarContentCombo sidebar={<ExampleMenu />} menuItems={<ExampleMenuItems />}>
-      <ExampleContent />
-    </SidebarContentCombo>
+    <div>
+      <Block secondary attached>
+        <Container>
+          <h1>Hello World</h1>
+        </Container>
+      </Block>
+      <SidebarContentCombo
+        sidebar={<ExampleMenu />}
+        menuItems={<ExampleMenuItems />}>
+        <ExampleContent />
+      </SidebarContentCombo>
+      <Block secondary>
+        <Container>
+          <h3>Hello World</h3>
+        </Container>
+      </Block>
+    </div>
   ));
