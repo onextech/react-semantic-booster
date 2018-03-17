@@ -8,9 +8,8 @@ import MenuLink from '../../atoms/MenuLink';
 const src = 'https://react.semantic-ui.com/assets/images/wireframe/white-image.png';
 
 const CardExampleColored = () => (
-
   <Card.Group itemsPerRow={4}>
-    <Grid>
+    <Grid stackable>
       <Grid.Row columns="equal">
         <Grid.Column>
           <Card fluid image={src} />
@@ -73,7 +72,6 @@ class ExampleMenu extends React.Component {
 const ExampleContent = () => (
   <Block attached inverted textAlign="center" style={{ padding: '2em' }}>
     <Container>
-      <h1>Hello World</h1>
       <CardExampleColored />
     </Container>
   </Block>
