@@ -15,32 +15,32 @@ const menuClassName = 'toggle-menu';
 
 const Wrapper = styled.div`
   & {
+    .${menuClassName} {
+      overflow-x: auto;
+      a.item { height: 100% }
+    }
     .${containerClassName} {
       width: 100%;
       position: relative;
       overflow: hidden;
-    }
-    .${sidebarClassName} {
-      width: 0%;
-      position: relative;
-      float: left;
-      top: 0;
-      left: 0;
-      max-height: 100%;
-      overflow: auto;
-      transition: width .3s ease-out;
-    }
-    .${contentClassName} {
-      width: 100%;
-      position: relative;
-      float: right;
-      top: 0;
-      right: 0;
-      transition: width .3s ease-out;
-    }
-    .${menuClassName} {
-      overflow-x: auto;
-      a.item { height: 100% }
+      .${sidebarClassName} {
+        width: 0%;
+        position: relative;
+        float: left;
+        top: 0;
+        left: 0;
+        max-height: 100%;
+        overflow: auto;
+        transition: width .3s ease-out;
+      }
+      .${contentClassName} {
+        width: 100%;
+        position: relative;
+        float: right;
+        top: 0;
+        right: 0;
+        transition: width .3s ease-out;
+      }
     }
     
     // Visible
