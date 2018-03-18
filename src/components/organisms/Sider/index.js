@@ -152,7 +152,8 @@ class Sider extends React.Component {
               <Button
                 content={toggleProps.name}
                 icon={{ name: toggleProps.icon }}
-                onClick={this.toggleVisibility} />
+                onClick={this.toggleVisibility}
+                {...toggleProps.button}/>
             </Menu.Item>
           </Responsive>
           {menuItems}
@@ -181,6 +182,7 @@ Sider.propTypes = {
     name: PropTypes.string,
     mobileName: PropTypes.string,
     icon: PropTypes.string,
+    button: PropTypes.object, // sui button props
   }),
   menuItems: PropTypes.oneOfType([
     PropTypes.element,
@@ -197,6 +199,9 @@ Sider.defaultProps = {
     name: 'Toggle Navigation',
     nameMobile: '',
     icon: 'content',
+    button: {
+      primary: false,
+    },
   },
 };
 

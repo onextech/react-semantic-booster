@@ -93,7 +93,7 @@ storiesOf('Sider', module)
         </Container>
       </Block>
       <Sider
-        toggleProps={{ name: 'Filter', icon: 'filter' }}
+        toggleProps={{ name: 'Filter', icon: 'filter', button: { primary: true } }}
         sidebar={<ExampleMenu />}
         menuItems={<ExampleMenuItems />}>
         <ExampleContent />
