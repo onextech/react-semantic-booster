@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Container, Menu, Card, Grid } from 'semantic-ui-react';
-import SidebarContentCombo from '.';
+import Sider from '.';
 import Block from '../../atoms/Block';
 import MenuLink from '../../atoms/MenuLink';
 import { testCardImage } from '../../../../test/placeholders';
@@ -84,7 +84,7 @@ export const ExampleMenuItems = () => ([
     </Menu.Menu>,
 ]);
 
-storiesOf('SidebarContentCombo', module)
+storiesOf('Sider', module)
   .add('Default', () => (
     <div>
       <Block secondary attached>
@@ -92,12 +92,12 @@ storiesOf('SidebarContentCombo', module)
           <h1>Hello World</h1>
         </Container>
       </Block>
-      <SidebarContentCombo
+      <Sider
         toggleProps={{ name: 'Filter', icon: 'filter' }}
         sidebar={<ExampleMenu />}
         menuItems={<ExampleMenuItems />}>
         <ExampleContent />
-      </SidebarContentCombo>
+      </Sider>
       <Block secondary>
         <Container>
           <h3>Hello World</h3>

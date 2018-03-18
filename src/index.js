@@ -31,7 +31,7 @@ export { default as Copy } from './components/molecules/Copy';
 export { default as Hero } from './components/organisms/Hero';
 export { default as Banner } from './components/organisms/Banner';
 export { default as HalfBanner } from './components/organisms/HalfBanner';
-export { default as SidebarContentCombo } from './components/organisms/SidebarContentCombo';
+export { default as Sider } from './components/organisms/Sider';
 
 // templates
 export { default as SiteNav } from './components/templates/SiteNav';

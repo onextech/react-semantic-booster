@@ -76,7 +76,7 @@ const Wrapper = styled.div`
   }
 `;
 
-class MenuContentCombo extends React.Component {
+class Sider extends React.Component {
   state = {
     visible: true,
     mobile: false,
@@ -166,7 +166,7 @@ class MenuContentCombo extends React.Component {
   }
 }
 
-MenuContentCombo.propTypes = {
+Sider.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.string,
@@ -188,7 +188,7 @@ MenuContentCombo.propTypes = {
   ]),
 };
 
-MenuContentCombo.defaultProps = {
+Sider.defaultProps = {
   sidebarProps: {
     percentageWidth: 25,
     maxWidth: '200px',
@@ -200,4 +200,4 @@ MenuContentCombo.defaultProps = {
   },
 };
 
-export default MenuContentCombo;
+export default Sider;
