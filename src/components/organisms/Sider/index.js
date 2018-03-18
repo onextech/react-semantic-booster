@@ -23,7 +23,7 @@ const Wrapper = styled.div`
       width: 100%;
       position: relative;
       overflow: hidden;
-      .${sidebarClassName} {
+      > .${sidebarClassName} {
         width: 0%;
         position: relative;
         float: left;
@@ -33,7 +33,7 @@ const Wrapper = styled.div`
         overflow: auto;
         transition: width .3s ease-out;
       }
-      .${contentClassName} {
+      > .${contentClassName} {
         width: 100%;
         position: relative;
         float: right;
