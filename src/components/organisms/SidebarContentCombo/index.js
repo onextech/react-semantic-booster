@@ -46,14 +46,14 @@ const Wrapper = styled.div`
     // Visible
     &.${visibleClassName} {
       .${sidebarClassName} {
-        ${props => props.sidebarPercentageWidth && `width: ${props.sidebarPercentageWidth}%;`}
-        ${props => props.sidebarMaxWidth && `max-width: ${props.sidebarMaxWidth};`}
+        ${props => props.sidebarProps.percentageWidth && `width: ${props.sidebarProps.percentageWidth}%;`}
+        ${props => props.sidebarProps.maxWidth && `max-width: ${props.sidebarProps.maxWidth};`}
         position: initial;
         transition: width .3s ease-out;
       }
       .${contentClassName} {
-        ${props => props.sidebarPercentageWidth && `width: calc(100% - ${props.sidebarPercentageWidth}%);`}
-        ${props => props.sidebarMaxWidth && `min-width: calc(100% - ${props.sidebarMaxWidth});`}
+        ${props => props.sidebarProps.percentageWidth && `width: calc(100% - ${props.sidebarProps.percentageWidth}%);`}
+        ${props => props.sidebarProps.maxWidth && `min-width: calc(100% - ${props.sidebarProps.maxWidth});`}
         transition: width .3s ease-out;
       }
     }
@@ -104,10 +104,8 @@ class MenuContentCombo extends React.Component {
       sidebar,
       children,
       menuItems,
-      sidebarPercentageWidth,
-      sidebarMaxWidth,
-      toggleName,
-      toggleNameMobile,
+      sidebarProps,
+      toggleProps,
       ...props
     } = this.props;
 
@@ -124,8 +122,7 @@ class MenuContentCombo extends React.Component {
     const customProps = {
       visible,
       mobile,
-      sidebarPercentageWidth,
-      sidebarMaxWidth,
+      sidebarProps,
     };
     const allProps = { ...defaultProps, ...props };
     // 2. Render the custom class names
@@ -138,15 +135,24 @@ class MenuContentCombo extends React.Component {
     return (
       <Wrapper {...semanticProps} {...customProps} className={className}>
         <Menu attached className={menuClassName}>
-          <Responsive maxWidth={mediaCssBreakpoints.sm} fireOnMount onUpdate={this.handleMobileResize}>
+          <Responsive
+            maxWidth={mediaCssBreakpoints.sm}
+            fireOnMount
+            onUpdate={this.handleMobileResize}>
             <Menu.Item onClick={this.toggleVisibility}>
-              <Icon name="content" />
-              {toggleNameMobile}
+              <Icon name={toggleProps.icon} />
+              {toggleProps.mobileName || toggleProps.name}
             </Menu.Item>
           </Responsive>
-          <Responsive minWidth={mediaCssBreakpoints.sm} fireOnMount onUpdate={this.handleDesktopResize}>
+          <Responsive
+            minWidth={mediaCssBreakpoints.sm}
+            fireOnMount
+            onUpdate={this.handleDesktopResize}>
             <Menu.Item>
-              <Button content={toggleName} onClick={this.toggleVisibility} />
+              <Button
+                content={toggleProps.name}
+                icon={{ name: toggleProps.icon }}
+                onClick={this.toggleVisibility} />
             </Menu.Item>
           </Responsive>
           {menuItems}
@@ -161,29 +167,37 @@ class MenuContentCombo extends React.Component {
 }
 
 MenuContentCombo.propTypes = {
-  sidebar: PropTypes.element,
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.string,
     PropTypes.array,
   ]).isRequired,
+  sidebar: PropTypes.element.isRequired,
+  sidebarProps: PropTypes.shape({
+    percentageWidth: PropTypes.number, // in percentage only e.g. 20, 30
+    maxWidth: PropTypes.string,
+  }),
+  toggleProps: PropTypes.shape({
+    name: PropTypes.string,
+    mobileName: PropTypes.string,
+    icon: PropTypes.string,
+  }),
   menuItems: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.array,
   ]),
-  menuProps: PropTypes.object, // sui menu props
-  sidebarPercentageWidth: PropTypes.number, // in percentage only e.g. 20, 30
-  sidebarMaxWidth: PropTypes.string,
-  toggleName: PropTypes.string,
-  toggleNameMobile: PropTypes.string,
 };
 
 MenuContentCombo.defaultProps = {
-  sidebarPercentageWidth: 25,
-  sidebarMaxWidth: '200px',
-  toggleName: 'Toggle Navigation',
-  toggleNameMobile: '',
+  sidebarProps: {
+    percentageWidth: 25,
+    maxWidth: '200px',
+  },
+  toggleProps: {
+    name: 'Toggle Navigation',
+    nameMobile: '',
+    icon: 'content',
+  },
 };
-
 
 export default MenuContentCombo;

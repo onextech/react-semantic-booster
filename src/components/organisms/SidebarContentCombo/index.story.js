@@ -4,43 +4,39 @@ import { Container, Menu, Card, Grid } from 'semantic-ui-react';
 import SidebarContentCombo from '.';
 import Block from '../../atoms/Block';
 import MenuLink from '../../atoms/MenuLink';
+import { testCardImage } from '../../../../test/placeholders';
 
-const src = 'https://react.semantic-ui.com/assets/images/wireframe/white-image.png';
 
-const CardExampleColored = () => (
-  <Card.Group itemsPerRow={4}>
+export const CardExampleColored = () => (<Card.Group itemsPerRow={4}>
     <Grid stackable>
       <Grid.Row columns="equal">
         <Grid.Column>
-          <Card fluid image={src} />
+          <Card fluid image={testCardImage} />
         </Grid.Column>
         <Grid.Column>
-          <Card fluid image={src} />
+          <Card fluid image={testCardImage} />
         </Grid.Column>
         <Grid.Column>
-          <Card fluid image={src} />
+          <Card fluid image={testCardImage} />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row columns="equal">
         <Grid.Column>
-          <Card fluid image={src} />
+          <Card fluid image={testCardImage} />
         </Grid.Column>
         <Grid.Column>
-          <Card fluid image={src} />
+          <Card fluid image={testCardImage} />
         </Grid.Column>
         <Grid.Column>
-          <Card fluid image={src} />
+          <Card fluid image={testCardImage} />
         </Grid.Column>
       </Grid.Row>
     </Grid>
-  </Card.Group>
-);
+  </Card.Group>);
 
-class ExampleMenu extends React.Component {
+export class ExampleMenu extends React.Component {
   state = { activeItem: 'closest' }
-
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
   render() {
     const { activeItem } = this.state;
 
@@ -69,16 +65,13 @@ class ExampleMenu extends React.Component {
   }
 }
 
-const ExampleContent = () => (
-  <Block attached inverted textAlign="center" style={{ padding: '2em' }}>
+export const ExampleContent = () => (<Block attached inverted textAlign="center" style={{ padding: '2em' }}>
     <Container>
       <CardExampleColored />
     </Container>
-  </Block>
-);
+  </Block>);
 
-const ExampleMenuItems = () => (
-  [
+export const ExampleMenuItems = () => ([
     <Menu.Menu key="left" position="left">
       <MenuLink key={1} to="/1">One</MenuLink>
       <MenuLink key={2} to="/2">Two</MenuLink>
@@ -89,8 +82,7 @@ const ExampleMenuItems = () => (
       <MenuLink key={5} to="/5">Five</MenuLink>
       <MenuLink key={6} to="/6">Six</MenuLink>
     </Menu.Menu>,
-  ]
-);
+]);
 
 storiesOf('SidebarContentCombo', module)
   .add('Default', () => (
@@ -101,6 +93,7 @@ storiesOf('SidebarContentCombo', module)
         </Container>
       </Block>
       <SidebarContentCombo
+        toggleProps={{ name: 'Filter', icon: 'filter' }}
         sidebar={<ExampleMenu />}
         menuItems={<ExampleMenuItems />}>
         <ExampleContent />
