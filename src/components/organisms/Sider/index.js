@@ -44,14 +44,14 @@ const Wrapper = styled.div`
     }
     
     // Visible
-    &.${visibleClassName} {
-      .${sidebarClassName} {
+    &.${visibleClassName} .${containerClassName} {
+      > .${sidebarClassName} {
         ${props => props.sidebarProps.percentageWidth && `width: ${props.sidebarProps.percentageWidth}%;`}
         ${props => props.sidebarProps.maxWidth && `max-width: ${props.sidebarProps.maxWidth};`}
         position: initial;
         transition: width .3s ease-out;
       }
-      .${contentClassName} {
+      > .${contentClassName} {
         ${props => props.sidebarProps.percentageWidth && `width: calc(100% - ${props.sidebarProps.percentageWidth}%);`}
         ${props => props.sidebarProps.maxWidth && `min-width: calc(100% - ${props.sidebarProps.maxWidth});`}
         transition: width .3s ease-out;
