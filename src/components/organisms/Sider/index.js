@@ -15,43 +15,43 @@ const menuClassName = 'toggle-menu';
 
 const Wrapper = styled.div`
   & {
-    .${containerClassName} {
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-    .${sidebarClassName} {
-      width: 0%;
-      position: relative;
-      float: left;
-      top: 0;
-      left: 0;
-      max-height: 100%;
-      overflow: auto;
-      transition: width .3s ease-out;
-    }
-    .${contentClassName} {
-      width: 100%;
-      position: relative;
-      float: right;
-      top: 0;
-      right: 0;
-      transition: width .3s ease-out;
-    }
     .${menuClassName} {
       overflow-x: auto;
       a.item { height: 100% }
     }
+    .${containerClassName} {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      > .${sidebarClassName} {
+        width: 0%;
+        position: relative;
+        float: left;
+        top: 0;
+        left: 0;
+        max-height: 100%;
+        overflow: auto;
+        transition: width .3s ease-out;
+      }
+      > .${contentClassName} {
+        width: 100%;
+        position: relative;
+        float: right;
+        top: 0;
+        right: 0;
+        transition: width .3s ease-out;
+      }
+    }
     
     // Visible
-    &.${visibleClassName} {
-      .${sidebarClassName} {
+    &.${visibleClassName} .${containerClassName} {
+      > .${sidebarClassName} {
         ${props => props.sidebarProps.percentageWidth && `width: ${props.sidebarProps.percentageWidth}%;`}
         ${props => props.sidebarProps.maxWidth && `max-width: ${props.sidebarProps.maxWidth};`}
         position: initial;
         transition: width .3s ease-out;
       }
-      .${contentClassName} {
+      > .${contentClassName} {
         ${props => props.sidebarProps.percentageWidth && `width: calc(100% - ${props.sidebarProps.percentageWidth}%);`}
         ${props => props.sidebarProps.maxWidth && `min-width: calc(100% - ${props.sidebarProps.maxWidth});`}
         transition: width .3s ease-out;
@@ -76,7 +76,7 @@ const Wrapper = styled.div`
   }
 `;
 
-class MenuContentCombo extends React.Component {
+class Sider extends React.Component {
   state = {
     visible: true,
     mobile: false,
@@ -152,7 +152,8 @@ class MenuContentCombo extends React.Component {
               <Button
                 content={toggleProps.name}
                 icon={{ name: toggleProps.icon }}
-                onClick={this.toggleVisibility} />
+                onClick={this.toggleVisibility}
+                {...toggleProps.button}/>
             </Menu.Item>
           </Responsive>
           {menuItems}
@@ -166,7 +167,7 @@ class MenuContentCombo extends React.Component {
   }
 }
 
-MenuContentCombo.propTypes = {
+Sider.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.string,
@@ -181,6 +182,7 @@ MenuContentCombo.propTypes = {
     name: PropTypes.string,
     mobileName: PropTypes.string,
     icon: PropTypes.string,
+    button: PropTypes.object, // sui button props
   }),
   menuItems: PropTypes.oneOfType([
     PropTypes.element,
@@ -188,7 +190,7 @@ MenuContentCombo.propTypes = {
   ]),
 };
 
-MenuContentCombo.defaultProps = {
+Sider.defaultProps = {
   sidebarProps: {
     percentageWidth: 25,
     maxWidth: '200px',
@@ -197,7 +199,10 @@ MenuContentCombo.defaultProps = {
     name: 'Toggle Navigation',
     nameMobile: '',
     icon: 'content',
+    button: {
+      primary: false,
+    },
   },
 };
 
-export default MenuContentCombo;
+export default Sider;
