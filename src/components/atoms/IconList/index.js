@@ -18,10 +18,11 @@ const StyledIconList = styled.div`
       justify-content: center;
     }
   }
-`;
+  ${({ textAlign }) => textAlign && `text-align: ${textAlign};`}
+  `;
 
 const IconList = (props) => {
-  const { items, vertical } = props;
+  const { items, vertical, textAlign } = props;
 
   const iconListItemProps = { vertical };
 
@@ -35,7 +36,9 @@ const IconList = (props) => {
     vertical: true,
     center: false,
   };
-  const customProps = {};
+  const customProps = {
+    textAlign,
+  };
 
   const allProps = { ...defaultProps, ...props };
   // 2. Render the custom class names
@@ -64,6 +67,7 @@ IconList.propTypes = {
   items: PropTypes.array.isRequired,
   vertical: PropTypes.bool,
   center: PropTypes.bool,
+  textAlign: PropTypes.oneOf(['left', 'right', 'center']),
 };
 
 IconList.Item = IconListItem;
