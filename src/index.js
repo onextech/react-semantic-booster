@@ -17,6 +17,7 @@ export { default as StatCard } from './components/atoms/StatCard';
 export { default as Header } from './components/atoms/Header';
 export { default as Grid } from './components/atoms/Grid';
 export { default as Menu } from './components/atoms/Menu';
+export { default as Tab } from './components/atoms/Tab';
 
 // molecules
 export { default as VideoBackground } from './components/molecules/VideoBackground';

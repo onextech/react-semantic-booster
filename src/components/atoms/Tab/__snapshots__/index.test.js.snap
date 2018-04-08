@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tab> renders correctly 1`] = `
+<div
+  className="basic justify angular secondary subtle spacer   sc-bdVaJa cEWMxi"
+  spacer={2}
+>
+  <div
+    className="ui secondary attached labeled icon menu"
+  >
+    <a
+      className="active item"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden="true"
+        className="users icon"
+      />
+      Users
+    </a>
+    <a
+      className="item"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden="true"
+        className="wifi icon"
+      />
+      Users 2
+    </a>
+    <a
+      className="item"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden="true"
+        className="world icon"
+      />
+      Globe
+    </a>
+    <a
+      className="item"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden="true"
+        className="trash icon"
+      />
+      Trash
+    </a>
+  </div>
+  <div
+    className="ui bottom attached segment active tab"
+  >
+    <div
+      background={undefined}
+      className="ui basic secondary vertical attached center aligned segment sc-bwzfXH iGPbOG"
+      height={undefined}
+      spacer={2}
+    >
+      Tab 1 Content
+    </div>
+  </div>
+</div>
+`;
