@@ -18,6 +18,7 @@ export { default as Header } from './components/atoms/Header';
 export { default as Grid } from './components/atoms/Grid';
 export { default as Menu } from './components/atoms/Menu';
 export { default as Tab } from './components/atoms/Tab';
+export { default as IconList } from './components/atoms/IconList';
 
 // molecules
 export { default as VideoBackground } from './components/molecules/VideoBackground';

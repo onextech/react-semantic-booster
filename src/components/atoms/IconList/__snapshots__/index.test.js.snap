@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconList> renders correctly 1`] = `
+<div
+  className="vertical  sc-bwzfXH bUdXam"
+>
+  <div
+    className="   icon-list-item sc-bdVaJa iyPRyX"
+    content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
+  >
+    <div
+      className="icon"
+    >
+      <i
+        aria-hidden="true"
+        className="check circle large icon"
+      />
+    </div>
+    <div
+      className="text"
+    >
+      <h5
+        className="ui header"
+      >
+        Hello World
+      </h5>
+      <p>
+        The property will be presented to over 120 agents during the Rodeo Realty office meeting
+      </p>
+    </div>
+  </div>
+  <div
+    className="   icon-list-item sc-bdVaJa iyPRyX"
+    content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
+  >
+    <div
+      className="icon"
+    >
+      <i
+        aria-hidden="true"
+        className="check circle large icon"
+      />
+    </div>
+    <div
+      className="text"
+    >
+      <h5
+        className="ui header"
+      >
+        Hello World
+      </h5>
+      <p>
+        The property will be presented to over 120 agents during the Rodeo Realty office meeting
+      </p>
+    </div>
+  </div>
+  <div
+    className="   icon-list-item sc-bdVaJa iyPRyX"
+    content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
+  >
+    <div
+      className="icon"
+    >
+      <i
+        aria-hidden="true"
+        className="check circle large icon"
+      />
+    </div>
+    <div
+      className="text"
+    >
+      <h5
+        className="ui header"
+      >
+        Hello World
+      </h5>
+      <p>
+        The property will be presented to over 120 agents during the Rodeo Realty office meeting
+      </p>
+    </div>
+  </div>
+</div>
+`;
