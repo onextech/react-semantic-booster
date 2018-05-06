@@ -46,6 +46,7 @@ const menu = {
   icon: 'labeled',
   attached: true,
   secondary: true,
+  tabular: true,
 };
 
 export const exampleTabProps = { // eslint-disable-line import/prefer-default-export

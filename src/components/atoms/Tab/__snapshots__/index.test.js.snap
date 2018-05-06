@@ -2,11 +2,11 @@
 
 exports[`<Tab> renders correctly 1`] = `
 <div
-  className="basic justify angular secondary subtle spacer   sc-bdVaJa ktidyL"
+  className="basic justify angular secondary subtle spacer   sc-bdVaJa edAoKK"
   spacer={2}
 >
   <div
-    className="ui secondary attached labeled icon menu"
+    className="ui secondary attached labeled icon tabular menu"
   >
     <a
       className="active item"

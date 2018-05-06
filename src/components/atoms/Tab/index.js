@@ -48,7 +48,7 @@ const StyledTab = styled(SuiTab)`
   ${({ spacer }) => {
     if (spacer) {
       return `
-        .ui.menu .item {
+        &.${spacerClassName} .ui.menu .item {
           ${setStyledSpacer(spacer, 1)}
         }
       `;
