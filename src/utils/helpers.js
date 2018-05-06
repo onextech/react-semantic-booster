@@ -49,16 +49,12 @@ export const subtractObject = (subtrahend, minuend) => {
  */
 export const setStyledSpacer = (spacer, baseEm = 5) => {
   if (isPlainObject(spacer)) {
-    const topSpacer = spacer.top * baseEm;
-    const bottomSpacer = spacer.bottom * baseEm;
     const result = [];
-    if (topSpacer) {
-      result.push(`padding-top: ${topSpacer}em;`);
-    }
-    if (bottomSpacer) {
-      result.push(`padding-bottom: ${bottomSpacer}em;`);
-    }
+    Object.keys(spacer).map((direction) => {
+      const value = spacer[direction] * baseEm;
+      return result.push(`padding-${direction}: ${value}em;`);
+    });
     return result.join(' ');
   }
-  return `padding: ${baseEm * spacer}em 0`;
+  return `padding: ${baseEm * spacer}em 0;`;
 };

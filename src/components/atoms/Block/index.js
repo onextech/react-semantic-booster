@@ -152,6 +152,8 @@ Block.propTypes = {
     PropTypes.shape({
       top: PropTypes.number,
       bottom: PropTypes.number,
+      left: PropTypes.number,
+      right: PropTypes.number,
     }),
   ]),
   background: PropTypes.shape({

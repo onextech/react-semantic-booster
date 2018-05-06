@@ -22,9 +22,13 @@ const StyledIconList = styled.div`
   `;
 
 const IconList = (props) => {
-  const { items, vertical, textAlign } = props;
+  const {
+    items, vertical, textAlign, headerProps, contentProps, icon,
+  } = props;
 
-  const iconListItemProps = { vertical };
+  const iconListItemProps = {
+    vertical, headerProps, contentProps, icon,
+  };
 
   // 1. Define custom props for this component
   const classProps = {
@@ -68,6 +72,9 @@ IconList.propTypes = {
   vertical: PropTypes.bool,
   center: PropTypes.bool,
   textAlign: PropTypes.oneOf(['left', 'right', 'center']),
+  headerProps: PropTypes.object,
+  contentProps: PropTypes.object,
+  icon: PropTypes.object,
 };
 
 IconList.Item = IconListItem;

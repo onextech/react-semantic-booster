@@ -24,7 +24,9 @@ const StyledIconListItem = styled.div`
 `;
 
 const IconListItem = (props) => {
-  const { icon, content, header } = props;
+  const {
+    icon, content, header, headerProps, contentProps,
+  } = props;
 
   // 1. Define custom props for this component
   const classProps = {
@@ -50,8 +52,8 @@ const IconListItem = (props) => {
         <Icon name="check circle" size="large" {...icon} />
       </div>
       <div className="text">
-        {header && <Header as="h5">{header}</Header>}
-        {content && <p>{content}</p>}
+        {header && <Header as="h5" {...headerProps}>{header}</Header>}
+        {content && <p {...contentProps}>{content}</p>}
       </div>
     </StyledIconListItem>
   );
@@ -63,6 +65,8 @@ IconListItem.propTypes = {
   header: PropTypes.string,
   vertical: PropTypes.bool,
   className: PropTypes.string,
+  headerProps: PropTypes.object,
+  contentProps: PropTypes.object,
 };
 
 export default IconListItem;

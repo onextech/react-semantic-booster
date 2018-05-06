@@ -9,7 +9,7 @@ storiesOf('Block', module)
       <Block textAlign="center" spacer={1}>Hello World</Block>
       <Block secondary textAlign="center" spacer={2}>Hello World</Block>
       <Block inverted textAlign="center" spacer={3}>Hello World</Block>
-      <Block inverted textAlign="center" spacer={{ top: 3 }}>Hello World</Block>
+      <Block inverted textAlign="center" spacer={{ top: 3, left: 3, right: 3 }}>Hello World</Block>
     </div>
   ))
   .add('Angular', () => (

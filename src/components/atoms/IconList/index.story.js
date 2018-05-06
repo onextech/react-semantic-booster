@@ -31,5 +31,13 @@ storiesOf('IconList', module)
       <Block>
         <IconList center items={items} />
       </Block>
+      <Block inverted>
+        <IconList
+          icon={{ name: 'star' }}
+          headerProps={{ inverted: true }}
+          center
+          items={items}
+        />
+      </Block>
     </div>
   ));
