@@ -5,16 +5,20 @@ exports[`<IconList> renders correctly 1`] = `
   className="vertical  sc-bwzfXH lkruZO"
 >
   <div
-    className="   icon-list-item sc-bdVaJa iyPRyX"
+    className="    icon-list-item sc-bdVaJa iyPRyX"
     content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
-    icon={undefined}
+    icon={
+      Object {
+        "name": "moon",
+      }
+    }
   >
     <div
       className="icon"
     >
       <i
         aria-hidden="true"
-        className="check circle large icon"
+        className="moon large icon"
       />
     </div>
     <div
@@ -31,16 +35,20 @@ exports[`<IconList> renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="   icon-list-item sc-bdVaJa iyPRyX"
+    className="    icon-list-item sc-bdVaJa iyPRyX"
     content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
-    icon={undefined}
+    icon={
+      Object {
+        "name": "moon",
+      }
+    }
   >
     <div
       className="icon"
     >
       <i
         aria-hidden="true"
-        className="check circle large icon"
+        className="moon large icon"
       />
     </div>
     <div
@@ -57,16 +65,20 @@ exports[`<IconList> renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="   icon-list-item sc-bdVaJa iyPRyX"
+    className="    icon-list-item sc-bdVaJa iyPRyX"
     content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
-    icon={undefined}
+    icon={
+      Object {
+        "name": "moon",
+      }
+    }
   >
     <div
       className="icon"
     >
       <i
         aria-hidden="true"
-        className="check circle large icon"
+        className="moon large icon"
       />
     </div>
     <div

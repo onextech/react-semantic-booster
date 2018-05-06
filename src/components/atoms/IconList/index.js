@@ -58,8 +58,8 @@ const IconList = (props) => {
         items.map((item, i) => (
           <IconListItem
             key={i}
-            {...item}
             {...iconListItemProps}
+            {...item}
             className={iconListItemClassName} />
         ))
       }

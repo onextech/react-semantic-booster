@@ -8,6 +8,7 @@ import IconList from '.';
 const exampleProps = {
   header: 'Hello World',
   content: 'The property will be presented to over 120 agents during the Rodeo Realty office meeting',
+  icon: { name: 'moon' },
 };
 
 // eslint-disable-next-line import/prefer-default-export
