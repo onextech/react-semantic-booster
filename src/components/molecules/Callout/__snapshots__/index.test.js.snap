@@ -3,7 +3,7 @@
 exports[`<Callout> renders correctly 1`] = `
 <div
   background={undefined}
-  className="ui vertical segment sc-bdVaJa jDKbyP"
+  className="ui vertical segment sc-bdVaJa fwyugK"
   height={undefined}
   spacer={0.5}
 >

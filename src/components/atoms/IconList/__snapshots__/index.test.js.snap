@@ -7,6 +7,7 @@ exports[`<IconList> renders correctly 1`] = `
   <div
     className="   icon-list-item sc-bdVaJa iyPRyX"
     content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
+    icon={undefined}
   >
     <div
       className="icon"
@@ -32,6 +33,7 @@ exports[`<IconList> renders correctly 1`] = `
   <div
     className="   icon-list-item sc-bdVaJa iyPRyX"
     content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
+    icon={undefined}
   >
     <div
       className="icon"
@@ -57,6 +59,7 @@ exports[`<IconList> renders correctly 1`] = `
   <div
     className="   icon-list-item sc-bdVaJa iyPRyX"
     content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
+    icon={undefined}
   >
     <div
       className="icon"

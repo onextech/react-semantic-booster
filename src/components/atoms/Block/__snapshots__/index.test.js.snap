@@ -3,7 +3,7 @@
 exports[`<Block> renders correctly 1`] = `
 <div
   background={undefined}
-  className="ui vertical segment sc-bdVaJa gbbSuz"
+  className="ui vertical segment sc-bdVaJa bQfUzD"
   height={undefined}
   spacer={1}
 >
