@@ -114,6 +114,7 @@ class Sider extends React.Component {
       menuItems,
       sidebarProps,
       toggleProps,
+      showDesktopToggle,
       ...props
     } = this.props;
 
@@ -127,6 +128,7 @@ class Sider extends React.Component {
     const defaultProps = {
       visible,
       mobile,
+      showDesktopToggle: true,
       navScroll: false,
     };
     const customProps = {
@@ -154,18 +156,21 @@ class Sider extends React.Component {
               {toggleProps.mobileName || toggleProps.name}
             </Menu.Item>
           </Responsive>
-          <Responsive
-            minWidth={mediaCssBreakpoints.sm}
-            fireOnMount
-            onUpdate={this.handleDesktopResize}>
-            <Menu.Item>
-              <Button
-                content={toggleProps.name}
-                icon={{ name: toggleProps.icon }}
-                onClick={this.toggleVisibility}
-                {...toggleProps.button}/>
-            </Menu.Item>
-          </Responsive>
+          {
+            showDesktopToggle &&
+            <Responsive
+              minWidth={mediaCssBreakpoints.sm}
+              fireOnMount
+              onUpdate={this.handleDesktopResize}>
+              <Menu.Item>
+                <Button
+                  content={toggleProps.name}
+                  icon={{ name: toggleProps.icon }}
+                  onClick={this.toggleVisibility}
+                  {...toggleProps.button}/>
+              </Menu.Item>
+            </Responsive>
+          }
           {menuItems}
         </Menu>
         <div className={containerClassName}>
@@ -188,6 +193,7 @@ Sider.propTypes = {
     percentageWidth: PropTypes.number, // in percentage only e.g. 20, 30
     maxWidth: PropTypes.string,
   }),
+  showDesktopToggle: PropTypes.bool,
   toggleProps: PropTypes.shape({
     name: PropTypes.string,
     mobileName: PropTypes.string,
@@ -205,6 +211,7 @@ Sider.defaultProps = {
     percentageWidth: 25,
     maxWidth: '200px',
   },
+  showDesktopToggle: true,
   toggleProps: {
     name: 'Toggle Navigation',
     nameMobile: '',

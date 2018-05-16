@@ -127,6 +127,7 @@ storiesOf('Sider', module)
     return (
       <div>
         <Sider
+          showDesktopToggle={false}
           toggleProps={{ icon: 'content', button: { primary: true } }}
           sidebar={<DashboardMenu />}
           menuItems={<DashboardNav />}>
