@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Responsive, Menu, Button, Icon } from 'semantic-ui-react';
 import styled from 'styled-components';
 import { getCustomClassName, subtractObject } from '../../../utils/helpers';
-import { MediaCss, mediaCssBreakpoints } from '../../../utils/responsive';
+import { mediaCssBreakpoints } from '../../../utils/responsive';
 
 
 const visibleClassName = 'visible';
@@ -12,13 +12,13 @@ const sidebarClassName = 'sidebar';
 const contentClassName = 'content';
 const mobileClassName = 'mobile';
 const menuClassName = 'toggle-menu';
+const navScrollClassName = 'nav-scroll';
 
 const Wrapper = styled.div`
   & {
     height: 100%;
     .${menuClassName} {
       a.item { height: 100% }
-      ${MediaCss.max.sm`overflow-x: auto;`}   
     }
     .${containerClassName} {
       width: 100%;
@@ -45,6 +45,11 @@ const Wrapper = styled.div`
         right: 0;
         transition: width .3s ease-out;
       }
+    }
+    
+    // Nav Scroll
+    &.${navScrollClassName} .${menuClassName} {
+      overflow-x: auto;
     }
     
     // Visible
@@ -116,11 +121,13 @@ class Sider extends React.Component {
     const classProps = {
       visible: visibleClassName,
       mobile: mobileClassName,
+      navScroll: navScrollClassName,
     };
     // 1.5. Define default props
     const defaultProps = {
       visible,
       mobile,
+      navScroll: false,
     };
     const customProps = {
       visible,
