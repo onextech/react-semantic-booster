@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Responsive, Menu, Button, Icon } from 'semantic-ui-react';
 import styled from 'styled-components';
 import { getCustomClassName, subtractObject } from '../../../utils/helpers';
-import { mediaCssBreakpoints } from '../../../utils/responsive';
+import { MediaCss, mediaCssBreakpoints } from '../../../utils/responsive';
 
 
 const visibleClassName = 'visible';
@@ -17,8 +17,8 @@ const Wrapper = styled.div`
   & {
     height: 100%;
     .${menuClassName} {
-      overflow-x: auto;
       a.item { height: 100% }
+      ${MediaCss.max.sm`overflow-x: auto;`}   
     }
     .${containerClassName} {
       width: 100%;
