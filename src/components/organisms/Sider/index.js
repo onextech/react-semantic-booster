@@ -156,12 +156,12 @@ class Sider extends React.Component {
               {toggleProps.mobileName || toggleProps.name}
             </Menu.Item>
           </Responsive>
-          {
-            showDesktopToggle &&
-            <Responsive
-              minWidth={mediaCssBreakpoints.sm}
-              fireOnMount
-              onUpdate={this.handleDesktopResize}>
+          <Responsive
+            minWidth={mediaCssBreakpoints.sm}
+            fireOnMount
+            onUpdate={this.handleDesktopResize}>
+            {
+              showDesktopToggle &&
               <Menu.Item>
                 <Button
                   content={toggleProps.name}
@@ -169,8 +169,8 @@ class Sider extends React.Component {
                   onClick={this.toggleVisibility}
                   {...toggleProps.button}/>
               </Menu.Item>
-            </Responsive>
-          }
+            }
+          </Responsive>
           {menuItems}
         </Menu>
         <div className={containerClassName}>
