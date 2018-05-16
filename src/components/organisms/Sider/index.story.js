@@ -85,7 +85,7 @@ export const ExampleMenuItems = () => ([
 ]);
 
 storiesOf('Sider', module)
-  .add('Default', () => (
+  .add('Filter', () => (
     <div>
       <Block secondary attached>
         <Container>
@@ -104,4 +104,37 @@ storiesOf('Sider', module)
         </Container>
       </Block>
     </div>
-  ));
+  ))
+  .add('Dashboard', () => {
+    const DashboardMenu = () => (
+      <Menu vertical fluid inverted style={{ height: '100%', borderRadius: 0 }}>
+        <Menu.Item header>Sort By</Menu.Item>
+        <Menu.Item name='closest' />
+        <Menu.Item name='mostComments' />
+        <Menu.Item name='mostPopular' />
+      </Menu>
+    );
+    const DashboardNav = () => ([
+      <Menu.Menu key="left" position="left">
+        <MenuLink key={1} to="/1">One</MenuLink>
+      </Menu.Menu>,
+      <Menu.Menu key="right" position="right">
+        <MenuLink key={5} to="/5">Five</MenuLink>
+        <MenuLink key={6} to="/6">Six</MenuLink>
+      </Menu.Menu>,
+    ]);
+    return (
+      <div>
+        <Sider
+          toggleProps={{ icon: 'content', button: { primary: true } }}
+          sidebar={<DashboardMenu />}
+          menuItems={<DashboardNav />}>
+          <Block attached secondary textAlign="center" style={{ padding: '2em' }}>
+            <Container>
+              <CardExampleColored />
+            </Container>
+          </Block>
+        </Sider>
+      </div>
+    );
+  });

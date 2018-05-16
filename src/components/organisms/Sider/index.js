@@ -15,16 +15,20 @@ const menuClassName = 'toggle-menu';
 
 const Wrapper = styled.div`
   & {
+    height: 100%;
     .${menuClassName} {
       overflow-x: auto;
       a.item { height: 100% }
     }
     .${containerClassName} {
       width: 100%;
+      height: 100%;
+      display: flex;
+      flex: 1;
       position: relative;
       overflow: hidden;
       > .${sidebarClassName} {
-        width: 0%;
+        width: 0;
         position: relative;
         float: left;
         top: 0;
@@ -69,7 +73,6 @@ const Wrapper = styled.div`
       &.${visibleClassName} {
         .${sidebarClassName} {
           width: 50%;
-          height: 100%;
         }  
       }
     }
