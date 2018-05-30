@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { getCustomClassName, subtractObject } from '../../../utils/helpers';
 import { mediaCssBreakpoints } from '../../../utils/responsive';
 
-
 const visibleClassName = 'visible';
 const containerClassName = 'container';
 const sidebarClassName = 'sidebar';
@@ -20,7 +19,7 @@ const Wrapper = styled.div`
     .${menuClassName} {
       a.item { height: 100% }
     }
-    .${containerClassName} {
+    > .${containerClassName} {
       width: 100%;
       height: 100%;
       display: flex;

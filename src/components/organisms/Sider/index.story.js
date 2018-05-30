@@ -31,6 +31,28 @@ export const CardExampleColored = () => (<Card.Group itemsPerRow={4}>
           <Card fluid image={testCardImage} />
         </Grid.Column>
       </Grid.Row>
+      <Grid.Row columns="equal">
+        <Grid.Column>
+          <Card fluid image={testCardImage} />
+        </Grid.Column>
+        <Grid.Column>
+          <Card fluid image={testCardImage} />
+        </Grid.Column>
+        <Grid.Column>
+          <Card fluid image={testCardImage} />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row columns="equal">
+        <Grid.Column>
+          <Card fluid image={testCardImage} />
+        </Grid.Column>
+        <Grid.Column>
+          <Card fluid image={testCardImage} />
+        </Grid.Column>
+        <Grid.Column>
+          <Card fluid image={testCardImage} />
+        </Grid.Column>
+      </Grid.Row>
     </Grid>
   </Card.Group>);
 
