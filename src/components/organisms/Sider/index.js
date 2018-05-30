@@ -16,10 +16,13 @@ const navScrollClassName = 'nav-scroll';
 const Wrapper = styled.div`
   & {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     .${menuClassName} {
       a.item { height: 100% }
     }
-    > .${containerClassName} {
+    .${containerClassName} {
       width: 100%;
       height: 100%;
       display: flex;
