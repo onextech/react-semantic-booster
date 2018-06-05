@@ -123,7 +123,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       onClick={[Function]}
     >
       <button
-        className="ui primary button sc-ifAKCX bcJmXr"
+        className="ui primary button sc-ifAKCX iISMqs"
         disabled={undefined}
         onClick={[Function]}
         role="button"
