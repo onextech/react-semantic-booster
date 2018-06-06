@@ -8,8 +8,9 @@ const TEXT_CLASS = 'text';
 const StyledSuiButton = styled(SuiButton)`
   &.ui.button {
     &.${TEXT_CLASS} {
+      font-weight: normal;
       background-color: transparent;
-      padding: 0;  
+      padding: 0;
     }
   }
 `;

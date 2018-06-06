@@ -2,7 +2,7 @@
 
 exports[`<Button> renders correctly 1`] = `
 <button
-  className="ui button text sc-bdVaJa hLngH"
+  className="ui button text sc-bdVaJa YDtEk"
   disabled={undefined}
   onClick={[Function]}
   role="button"
