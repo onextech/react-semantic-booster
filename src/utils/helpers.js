@@ -70,5 +70,6 @@ export const setCustomProps = (props, customProps) => {
       return classNames.push(customProps[key][0]);
     }
   });
+  if (props.className) classNames.push(...props.className.split(' '));
   return { ...newProps, className: classNames.join(' ') };
 };
