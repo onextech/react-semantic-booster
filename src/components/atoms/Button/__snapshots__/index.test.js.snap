@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button> renders correctly 1`] = `
+<button
+  className="ui button text sc-bdVaJa hLngH"
+  disabled={undefined}
+  onClick={[Function]}
+  role="button"
+  tabIndex={undefined}
+>
+  Hello
+</button>
+`;

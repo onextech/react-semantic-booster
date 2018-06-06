@@ -22,6 +22,7 @@ export const getCustomClassName = (customProps, allProps) => {
 
   return classNames.join(' ');
 };
+
 /**
  * Subtract object from another object (non-recursive)
  * @param subtrahend - The part being taken away
@@ -57,4 +58,17 @@ export const setStyledSpacer = (spacer, baseEm = 5) => {
     return result.join(' ');
   }
   return `padding: ${baseEm * spacer}em 0;`;
+};
+
+/* Set custom props */
+export const setCustomProps = (props, customProps) => {
+  const newProps = { ...props };
+  const classNames = [];
+  Object.keys(customProps).map((key) => {
+    if (Object.keys(props).includes(key)) {
+      delete newProps[key];
+      return classNames.push(customProps[key][0]);
+    }
+  });
+  return { ...newProps, className: classNames.join(' ') };
 };

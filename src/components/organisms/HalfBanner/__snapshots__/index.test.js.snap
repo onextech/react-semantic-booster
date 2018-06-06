@@ -29,7 +29,7 @@ exports[`<HalfBanner> renders correctly 1`] = `
           className="copy sc-bxivhb fJchNc"
         >
           <h5
-            className="ui huge header inherit     sc-ifAKCX bDLiAJ sc-htpNat eSPVaA"
+            className="ui huge header sc-htpNat eSPVaA"
           >
             Center of Focus
           </h5>
@@ -61,12 +61,12 @@ exports[`<HalfBanner> renders correctly 1`] = `
           className="copy sc-bxivhb fJchNc"
         >
           <h6
-            className="ui tiny sub header inherit      sc-EHOje celsWL sc-htpNat eSPVaA"
+            className="ui tiny sub header sc-htpNat eSPVaA"
           >
             Key Trends
           </h6>
           <h5
-            className="ui huge header inherit     sc-ifAKCX bDLiAJ sc-htpNat eSPVaA"
+            className="ui huge header sc-htpNat eSPVaA"
           >
             We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.
           </h5>

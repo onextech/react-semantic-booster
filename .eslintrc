@@ -14,6 +14,8 @@
   },
   "rules": {
     "comma-dangle": [2, "always-multiline"],
-    "flowtype-errors/show-errors": 2
+    "flowtype-errors/show-errors": 2,
+    "array-callback-return": 0,
+    "consistent-return": 0
   }
 }
