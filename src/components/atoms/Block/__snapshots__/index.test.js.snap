@@ -2,9 +2,7 @@
 
 exports[`<Block> renders correctly 1`] = `
 <div
-  background={undefined}
-  className="ui vertical segment sc-bdVaJa bQfUzD"
-  height={undefined}
+  className="ui vertical segment spacer sc-bdVaJa cYUOLB"
   spacer={1}
 >
   Hello World

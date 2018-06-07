@@ -53,9 +53,7 @@ exports[`<Tab> renders correctly 1`] = `
     className="ui bottom attached segment active tab"
   >
     <div
-      background={undefined}
-      className="ui basic secondary vertical attached center aligned segment sc-bwzfXH hYcpKh"
-      height={undefined}
+      className="ui basic secondary vertical attached center aligned segment spacer sc-bwzfXH bsANxE"
       spacer={2}
     >
       Tab 1 Content
