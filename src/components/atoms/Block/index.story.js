@@ -28,6 +28,11 @@ storiesOf('Block', module)
       </Block>
     </div>
   ))
+  .add('Page Center', () => (
+    <Block pageCenter>
+      I am centered
+    </Block>
+  ))
   .add('Vertical Align', () => (
     <div>
       <Block height={600} verticalAlign="top" inverted textAlign="center">

@@ -60,16 +60,42 @@ export const setStyledSpacer = (spacer, baseEm = 5) => {
   return `padding: ${baseEm * spacer}em 0;`;
 };
 
-/* Set custom props */
-export const setCustomProps = (props, customProps) => {
-  const newProps = { ...props };
+/**
+ * Set custom props
+ * @param {{}} props
+ * @param {{}} customProps
+ * @param {{}} defaultProps
+ * @return {{className: string}}
+ */
+export const setCustomProps = (props, customProps, defaultProps) => {
+  const newProps = { ...defaultProps, ...props };
   const classNames = [];
+
+  const getClassName = (value) => {
+    if (typeof value === 'object') {
+      const classes = [value.className];
+      if (value.classProps) classes.push(value.classProps);
+      return classes.join(' ');
+    }
+    return value;
+  };
+
+  const getShouldDeleteProp = value => (typeof value === 'object' ? !value.props : true);
+
   Object.keys(customProps).map((key) => {
-    if (Object.keys(props).includes(key)) {
-      delete newProps[key];
-      return classNames.push(customProps[key][0]);
+    const value = customProps[key];
+
+    const shouldDeleteProp = getShouldDeleteProp(value);
+    if (shouldDeleteProp) delete newProps[key];
+
+    const isCustomPropExist = typeof props[key] !== 'undefined';
+    if (isCustomPropExist) {
+      const className = getClassName(value);
+      return classNames.push(className);
     }
   });
+
   if (props.className) classNames.push(...props.className.split(' '));
+
   return { ...newProps, className: classNames.join(' ') };
 };

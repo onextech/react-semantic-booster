@@ -18,9 +18,9 @@ const StyledHeader = styled(suiHeader)`
 
 const Header = (rawProps) => {
   const customProps = {
-    relaxed: [relaxedClassName, false],
-    compact: [compactClassName, false],
-    inherit: [inheritClassName, true],
+    relaxed: relaxedClassName,
+    compact: compactClassName,
+    inherit: inheritClassName,
   };
   const props = setCustomProps(rawProps, customProps);
 
