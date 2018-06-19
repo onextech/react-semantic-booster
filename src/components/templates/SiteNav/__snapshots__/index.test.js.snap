@@ -10,15 +10,15 @@ exports[`<SiteNav> renders correctly 1`] = `
   >
     <div
       className="link fitted item menulink sc-htpNat jVOplu"
+      linkProps={
+        Object {
+          "basic": true,
+        }
+      }
       onClick={[Function]}
     >
       <a
         className="sc-bwzfXH czPeHY"
-        custom={
-          Object {
-            "basic": true,
-          }
-        }
         href="/"
         onClick={[Function]}
       >
@@ -35,7 +35,6 @@ exports[`<SiteNav> renders correctly 1`] = `
     >
       <a
         className="sc-bwzfXH czPeHY"
-        custom={undefined}
         href="/home"
         onClick={[Function]}
       >
@@ -48,7 +47,6 @@ exports[`<SiteNav> renders correctly 1`] = `
     >
       <a
         className="sc-bwzfXH czPeHY"
-        custom={undefined}
         href="/about"
         onClick={[Function]}
       >

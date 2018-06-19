@@ -35,14 +35,14 @@ const MenuLink = ({
   onClick,
   to,
   children,
-  linkProps,
+  link,
   ...rest
 }) => {
   const isHashLink = to.charAt(0) === '#';
   if (isHashLink) {
     return (
       <StyledMenuItem link fitted {...rest}>
-        <StyledHashLink to={to} custom={linkProps}>{children}</StyledHashLink>
+        <StyledHashLink to={to} {...link}>{children}</StyledHashLink>
       </StyledMenuItem>
     );
   }
@@ -53,7 +53,7 @@ const MenuLink = ({
       link
       fitted
       {...rest}>
-      <StyledLink onClick={onClick} to={to} custom={linkProps}>{children}</StyledLink>
+      <StyledLink onClick={onClick} to={to} {...link}>{children}</StyledLink>
     </StyledMenuItem>
   );
 };
@@ -65,12 +65,12 @@ MenuLink.propTypes = {
     PropTypes.array,
   ]).isRequired,
   to: PropTypes.string.isRequired,
-  linkProps: PropTypes.object,
+  link: PropTypes.object,
   onClick: PropTypes.func,
 };
 
 MenuLink.defaultProps = {
-  linkProps: undefined,
+  link: undefined,
   onClick: undefined,
 };
 
