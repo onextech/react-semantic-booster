@@ -9,7 +9,7 @@ const StyledDiv = styled.div`
   border-radius: 0.5em;
   box-shadow: 1px 1px 1px 0 #ccc;
   margin: 1.5em 0;
-  opacity: 0.95
+  opacity: 0.95;
   background-color: white;
   
   &:first-child {
