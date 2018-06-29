@@ -29,6 +29,7 @@ export { default as SocialLinkGroup } from './components/molecules/SocialLinkGro
 export { default as Callout } from './components/molecules/Callout';
 export { default as TriPhotoBlock } from './components/molecules/TriPhotoBlock';
 export { default as Copy } from './components/molecules/Copy';
+export { default as SpacedAccordion } from './components/molecules/SpacedAccordion';
 
 // organisms
 export { default as Hero } from './components/organisms/Hero';
