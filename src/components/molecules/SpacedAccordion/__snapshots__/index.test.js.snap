@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpacedAccordion> renders correctly 1`] = `
+<div
+  className="accordion ui fluid"
+>
+  <div
+    className="sc-bdVaJa ftzGve"
+  >
+    <div
+      className="title"
+      onClick={[Function]}
+      style={
+        Object {
+          "fontSize": "1.2em",
+          "fontWeight": "bold",
+          "padding": "1.5em 3em",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+      />
+      What is a table?
+    </div>
+    <div
+      className="content"
+      style={
+        Object {
+          "padding": "0 4em 2em",
+        }
+      }
+    >
+      <p>
+         A table is a type of domesticated animal. Known for its loyalty and faithfulness, it can
+            be found as a welcome guest in many households across the world.
+      </p>
+    </div>
+  </div>
+  <div
+    className="sc-bdVaJa ftzGve"
+  >
+    <div
+      className="title"
+      onClick={[Function]}
+      style={
+        Object {
+          "fontSize": "1.2em",
+          "fontWeight": "bold",
+          "padding": "1.5em 3em",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+      />
+      How do you acquire a table?
+    </div>
+    <div
+      className="content"
+      style={
+        Object {
+          "padding": "0 4em 2em",
+        }
+      }
+    >
+      <p>
+        Three common ways for a prospective owner to acquire a table is from pet shops, private
+            owners, or shelters.
+      </p>
+    </div>
+  </div>
+  <div
+    className="sc-bdVaJa ftzGve"
+  >
+    <div
+      className="title"
+      onClick={[Function]}
+      style={
+        Object {
+          "fontSize": "1.2em",
+          "fontWeight": "bold",
+          "padding": "1.5em 3em",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+      />
+      What kinds of tables are there?
+    </div>
+    <div
+      className="content"
+      style={
+        Object {
+          "padding": "0 4em 2em",
+        }
+      }
+    >
+      <p>
+        There are many breeds of tables. Each breed varies in size and temperament. Owners often
+            select a breed of table that they find to be compatible with their own lifestyle and
+            desires from a companion.
+      </p>
+    </div>
+  </div>
+</div>
+`;
