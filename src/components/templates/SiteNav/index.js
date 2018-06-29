@@ -101,7 +101,6 @@ class SiteNav extends React.Component {
             <MenuLink
               to={item.to}
               key={kebabCase(item.name)}
-              linkProps={{ basic: true }}
               {...defaultMenuLinkProps}>
               <Image {...item.image} />
             </MenuLink>

@@ -10,11 +10,6 @@ exports[`<SiteNav> renders correctly 1`] = `
   >
     <div
       className="link fitted item menulink sc-htpNat jVOplu"
-      linkProps={
-        Object {
-          "basic": true,
-        }
-      }
       onClick={[Function]}
     >
       <a
