@@ -12,6 +12,7 @@ export const menu = [ // eslint-disable-line import/prefer-default-export
       {
         name: 'Logo',
         to: '/',
+        link: { style: { padding: 0 } },
         image: {
           height: 50,
           src: 'https://s3-ap-southeast-1.amazonaws.com/storage.api.merrymaker.com/images/merrymaker_mascot_head_side.svg',

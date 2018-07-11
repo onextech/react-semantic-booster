@@ -85,44 +85,40 @@ class SiteNav extends React.Component {
     }
 
     items.map((item) => {
-      // default menu item type
-      let jsx = (
-        <MenuLink
-          to={item.to || '/'}
-          key={kebabCase(item.name)}
-          {...defaultMenuLinkProps}>
-          {item.name}
-        </MenuLink>
-      );
-      // render other menu item types
+      const { to, name, image, button, dropdown, ...rest } = item;
+      const key = kebabCase(name);
+      let jsx;
       switch (true) {
-        case Boolean(item.image):
+        case Boolean(image): {
           jsx = (
             <MenuLink
-              to={item.to}
-              key={kebabCase(item.name)}
-              {...defaultMenuLinkProps}>
+              to={to}
+              key={key}
+              {...defaultMenuLinkProps}
+              {...rest}>
               <Image {...item.image} />
             </MenuLink>
           );
           break;
-        case Boolean(item.button):
+        }
+        case Boolean(button): {
           jsx = (
-            <Menu.Item key={kebabCase(item.name)}>
+            <Menu.Item key={key} {...rest}>
               <ButtonLink
-                to={item.to}
-                content={item.name}
-                {...item.button}
+                to={to}
+                content={name}
+                {...button}
                 {...defaultMenuLinkProps} />
             </Menu.Item>
           );
           break;
-        case Boolean(item.dropdown):
+        }
+        case Boolean(dropdown): {
           jsx = (
-            <Dropdown item text={item.name} key={kebabCase(item.name)}>
+            <Dropdown item text={item.name} key={key} {...rest}>
               <Dropdown.Menu>
                 {
-                  item.dropdown.items.map(dropdownItem => (
+                  dropdown.items.map(dropdownItem => (
                     <DropdownLink
                       to={dropdownItem.to}
                       key={kebabCase(dropdownItem.name)}
@@ -135,8 +131,19 @@ class SiteNav extends React.Component {
             </Dropdown>
           );
           break;
-        default:
+        }
+        default: {
+          jsx = (
+            <MenuLink
+              to={to || '/'}
+              key={key}
+              {...defaultMenuLinkProps}
+              {...rest}>
+              {name}
+            </MenuLink>
+          );
           break;
+        }
       }
       return result.push(jsx);
     });

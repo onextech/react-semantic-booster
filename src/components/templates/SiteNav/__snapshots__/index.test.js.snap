@@ -16,6 +16,11 @@ exports[`<SiteNav> renders correctly 1`] = `
         className="sc-bwzfXH czPeHY"
         href="/"
         onClick={[Function]}
+        style={
+          Object {
+            "padding": 0,
+          }
+        }
       >
         <img
           className="ui image"
