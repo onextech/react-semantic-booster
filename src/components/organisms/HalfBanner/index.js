@@ -8,9 +8,10 @@ const HalfBanner = ({
   rightCol,
   leftCol,
   grid,
+  row,
 }) => (
   <Grid attached stackable inverted {...grid}>
-    <Grid.Row columns="equal">
+    <Grid.Row columns="equal" {...row}>
       {
         [leftCol, rightCol].map((col, i) => (
           <Grid.Column padded {...col} key={['left', 'right'][i]}>
@@ -26,6 +27,7 @@ HalfBanner.propTypes = {
   rightCol: PropTypes.object.isRequired,
   leftCol: PropTypes.object.isRequired,
   grid: PropTypes.object, // grid props
+  row: PropTypes.object, // grid row props
 };
 
 export default HalfBanner;
