@@ -99,3 +99,20 @@ export const setCustomProps = (props, customProps, defaultProps) => {
 
   return { ...newProps, className: classNames.join(' ') };
 };
+
+/**
+ * Merge prev class names with new class names to prevent
+ * overwrite of className prop
+ * @param {[]|string} newClassName
+ * @param {[]|null} prevClassName
+ * @return {string}
+ */
+export const mergeClassNames = (newClassName, prevClassName) => {
+  let nextClassName = [];
+  if (prevClassName) {
+    nextClassName = prevClassName.split(' ');
+  }
+  if (typeof newClassName === 'string') nextClassName.push(newClassName);
+  if (Array.isArray(newClassName)) nextClassName.push(...newClassName);
+  return nextClassName.join(' ');
+};

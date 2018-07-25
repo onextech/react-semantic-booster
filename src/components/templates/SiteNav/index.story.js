@@ -72,12 +72,6 @@ export const floatMenuProps = {
   container: true,
 };
 
-export const logoProps = {
-  style: {
-    background: '#fff',
-  },
-};
-
 const ExampleContent = () => (
   <Block attached inverted textAlign="center">
     <Container>
@@ -123,7 +117,7 @@ storiesOf('SiteNav', module)
     </SiteNav>
   ))
   .add('Container Menu Center', () => (
-    <SiteNav menu={menuCenter} menuProps={menuProps} logoProps={logoProps}>
+    <SiteNav menu={menuCenter} menuProps={menuProps}>
       <Block secondary>
         <Container>
           <h1>Hello World</h1>

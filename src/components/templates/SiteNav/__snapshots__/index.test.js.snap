@@ -2,7 +2,7 @@
 
 exports[`<SiteNav> renders correctly 1`] = `
 <div
-  className="pushable sc-bZQynM hJJYVo"
+  className="pushable sc-bZQynM jgpMuy"
 >
   <div
     className="ui inverted vertical labeled icon spacer      ui push left thin sidebar sc-EHOje cKFdXV menu"
