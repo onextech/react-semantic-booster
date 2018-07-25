@@ -78,7 +78,6 @@ const StyledDiv = styled.div`
 const CenterLogo = styled(Responsive)`
   display: flex;
   justify-content: center;
-  padding: 1em 0 0;
 `;
 
 class SiteNav extends React.Component {
