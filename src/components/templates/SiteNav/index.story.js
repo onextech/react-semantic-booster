@@ -39,6 +39,25 @@ export const menu = [ // eslint-disable-line import/prefer-default-export
   },
 ];
 
+export const menuCenter = [ // eslint-disable-line import/prefer-default-export
+  {
+    position: 'center',
+    content: [
+      {
+        name: 'Logo',
+        to: '/',
+        link: { style: { padding: 0 } },
+        image: {
+          height: 50,
+          src: 'https://s3-ap-southeast-1.amazonaws.com/storage.api.merrymaker.com/images/merrymaker_mascot_head_side.svg',
+        },
+      },
+      { name: 'Home', to: '/home' },
+      { name: 'About', to: '/about' },
+    ],
+  },
+];
+
 export const menuProps = {
   pointing: true,
   secondary: true,
@@ -90,6 +109,15 @@ storiesOf('SiteNav', module)
   ))
   .add('Container Menu', () => (
     <SiteNav menu={menu} menuProps={menuProps}>
+      <Block secondary>
+        <Container>
+          <h1>Hello World</h1>
+        </Container>
+      </Block>
+    </SiteNav>
+  ))
+  .add('Container Menu Center', () => (
+    <SiteNav menu={menuCenter} menuProps={menuProps}>
       <Block secondary>
         <Container>
           <h1>Hello World</h1>

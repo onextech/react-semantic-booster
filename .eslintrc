@@ -17,6 +17,7 @@
     "flowtype-errors/show-errors": 2,
     "array-callback-return": 0,
     "consistent-return": 0,
-    "object-curly-newline": 0
+    "object-curly-newline": 0,
+    "max-len": 0
   }
 }
