@@ -42,6 +42,12 @@ export const menu = [ // eslint-disable-line import/prefer-default-export
 export const menuCenter = [ // eslint-disable-line import/prefer-default-export
   {
     position: 'center',
+    props: {
+      style: {
+        width: '100%',
+        justifyContent: 'space-between',
+      },
+    },
     content: [
       {
         name: 'Logo',

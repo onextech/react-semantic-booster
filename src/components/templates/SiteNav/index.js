@@ -194,6 +194,7 @@ class SiteNav extends React.Component {
                 minWidth={mediaCssBreakpoints.sm}
                 // Semantic Menu.Menu.position prop only takes in enums ['left', 'right']
                 position={submenu.position === 'center' ? null : submenu.position}
+                {...submenu.props}
               >
                 {this.renderMenuItems(submenu.content, renderMenuItemsOptions)}
             </Responsive>
