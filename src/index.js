@@ -19,6 +19,7 @@ export { default as Grid } from './components/atoms/Grid';
 export { default as Menu } from './components/atoms/Menu';
 export { default as Tab } from './components/atoms/Tab';
 export { default as IconList } from './components/atoms/IconList';
+export { default as Button } from './components/atoms/Button';
 
 // molecules
 export { default as VideoBackground } from './components/molecules/VideoBackground';
@@ -28,6 +29,7 @@ export { default as SocialLinkGroup } from './components/molecules/SocialLinkGro
 export { default as Callout } from './components/molecules/Callout';
 export { default as TriPhotoBlock } from './components/molecules/TriPhotoBlock';
 export { default as Copy } from './components/molecules/Copy';
+export { default as SpacedAccordion } from './components/molecules/SpacedAccordion';
 
 // organisms
 export { default as Hero } from './components/organisms/Hero';
@@ -41,3 +43,4 @@ export { default as HomeTemplate } from './components/templates/HomeTemplate';
 
 // utils
 export * from './utils/responsive';
+export * from './utils/helpers';

@@ -8,5 +8,6 @@ storiesOf('MenuLink', module)
     <Menu>
       <MenuLink to="/">Home</MenuLink>
       <MenuLink to="#about">About</MenuLink>
+      <MenuLink to="/google" link={{ target: '_blank' }}>External Link</MenuLink>
     </Menu>
   ));

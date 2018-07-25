@@ -7,8 +7,10 @@ import MenuLink from '../../atoms/MenuLink';
 import DropdownLink from '../../atoms/DropdownLink';
 import ButtonLink from '../../atoms/ButtonLink';
 import Menu from '../../atoms/Menu';
-import { mediaCssBreakpoints } from '../../../utils/responsive';
+import { mediaCssBreakpoints, MediaCss } from '../../../utils/responsive';
+import { mergeClassNames } from '../../../utils/helpers';
 
+const MENU_CENTER_CLASS = 'center';
 
 const SidebarPushable = styled(Sidebar.Pushable)`
   /* Button */
@@ -66,8 +68,12 @@ const SidebarPushable = styled(Sidebar.Pushable)`
       }
     }
   }
+  
+  .ui.menu.${MENU_CENTER_CLASS} .container {
+    ${MediaCss.min.sm`justify-content: center;`};
+    > .menu { display: flex; }   
+  }
 `;
-
 
 class SiteNav extends React.Component {
   state = {}
@@ -76,7 +82,9 @@ class SiteNav extends React.Component {
 
   handleDimmerClick = () => this.setState({ showSidebar: false });
 
-  renderMenuItems = (items, isMobile = false) => {
+  renderMenuItems = (items, options = {}) => {
+    const { isMobile = false, center = false } = options;
+
     const result = [];
 
     const defaultMenuLinkProps = {};
@@ -85,45 +93,42 @@ class SiteNav extends React.Component {
     }
 
     items.map((item) => {
-      // default menu item type
-      let jsx = (
-        <MenuLink
-          to={item.to || '/'}
-          key={kebabCase(item.name)}
-          {...defaultMenuLinkProps}>
-          {item.name}
-        </MenuLink>
-      );
-      // render other menu item types
+      const { to, name, image, button, dropdown, ...rest } = item;
+      const key = kebabCase(name);
+      let jsx;
       switch (true) {
-        case Boolean(item.image):
-          jsx = (
-            <MenuLink
-              to={item.to}
-              key={kebabCase(item.name)}
-              linkProps={{ basic: true }}
-              {...defaultMenuLinkProps}>
-              <Image {...item.image} />
-            </MenuLink>
-          );
+        case Boolean(image): {
+          if (!center) {
+            jsx = (
+              <MenuLink
+                to={to}
+                key={key}
+                {...defaultMenuLinkProps}
+                {...rest}>
+                <Image {...item.image} />
+              </MenuLink>
+            );
+          }
           break;
-        case Boolean(item.button):
+        }
+        case Boolean(button): {
           jsx = (
-            <Menu.Item key={kebabCase(item.name)}>
+            <Menu.Item key={key} {...rest}>
               <ButtonLink
-                to={item.to}
-                content={item.name}
-                {...item.button}
+                to={to}
+                content={name}
+                {...button}
                 {...defaultMenuLinkProps} />
             </Menu.Item>
           );
           break;
-        case Boolean(item.dropdown):
+        }
+        case Boolean(dropdown): {
           jsx = (
-            <Dropdown item text={item.name} key={kebabCase(item.name)}>
+            <Dropdown item text={item.name} key={key} {...rest}>
               <Dropdown.Menu>
                 {
-                  item.dropdown.items.map(dropdownItem => (
+                  dropdown.items.map(dropdownItem => (
                     <DropdownLink
                       to={dropdownItem.to}
                       key={kebabCase(dropdownItem.name)}
@@ -136,42 +141,77 @@ class SiteNav extends React.Component {
             </Dropdown>
           );
           break;
-        default:
+        }
+        default: {
+          jsx = (
+            <MenuLink
+              to={to || '/'}
+              key={key}
+              {...defaultMenuLinkProps}
+              {...rest}>
+              {name}
+            </MenuLink>
+          );
           break;
+        }
       }
       return result.push(jsx);
     });
     return result;
-  }
+  };
 
   renderDesktopMenu = () => {
     const { menuProps, menu } = this.props;
+    // Check for centered menu. There should only be 1 menu for centered menus. So take the first array index
+    const isCenteredMenu = menu.length === 1 && menu[0].position === 'center';
+    const extraMenuProps = {};
+    const renderMenuItemsOptions = {};
+    // Alter props with menu is centered
+    if (isCenteredMenu) {
+      renderMenuItemsOptions.center = true;
+      extraMenuProps.className = mergeClassNames(MENU_CENTER_CLASS, menuProps.className);
+    }
     return (
-      <Menu attached {...menuProps}>
-        <Responsive maxWidth={mediaCssBreakpoints.sm} as={Menu.Menu}>
-          <Dropdown item icon="content" onClick={this.toggleSidebar} />
-        </Responsive>
-        {menu.map((submenu, i) => (
-          <Responsive
-            key={i}
-            as={Menu.Menu}
-            position={submenu.position}
-            minWidth={mediaCssBreakpoints.sm}>
-            {this.renderMenuItems(submenu.content)}
+      <React.Fragment>
+        {isCenteredMenu && menu[0].content.map((content, i) => {
+            const { image, to } = content;
+            if (image) {
+              return (
+                <Responsive key={i} minWidth={mediaCssBreakpoints.sm} style={{ display: 'flex', justifyContent: 'center' }}>
+                  <MenuLink to={to}><Image {...image} /></MenuLink>
+                </Responsive>
+              );
+            }
+          })}
+        <Menu attached {...menuProps} {...extraMenuProps}>
+          <Responsive maxWidth={mediaCssBreakpoints.sm} as={Menu.Menu}>
+            <Dropdown item icon="content" onClick={this.toggleSidebar} />
           </Responsive>
-        ))}
-      </Menu>
+          {menu.map((submenu, i) => (
+            <Responsive
+                key={i}
+                as={Menu.Menu}
+                minWidth={mediaCssBreakpoints.sm}
+                // Semantic Menu.Menu.position prop only takes in enums ['left', 'right']
+                position={submenu.position === 'center' ? null : submenu.position}
+                {...submenu.props}
+              >
+                {this.renderMenuItems(submenu.content, renderMenuItemsOptions)}
+            </Responsive>
+          ))}
+        </Menu>
+      </React.Fragment>
     );
-  }
+  };
 
   renderMobileMenu = () => {
     const { menu } = this.props;
     const allMenus = [];
-    if (menu.length > 1) {
+    if (menu.length >= 1) {
       // merge menu contents
       menu.map(submenu => allMenus.push(...submenu.content));
     }
-    return this.renderMenuItems(allMenus, true);
+    return this.renderMenuItems(allMenus, { isMobile: true });
   }
 
   render() {

@@ -2,9 +2,7 @@
 
 exports[`<TriPhotoBlock> renders correctly 1`] = `
 <div
-  background={undefined}
-  className="ui inverted vertical segment sc-bdVaJa jvNilU"
-  height={undefined}
+  className="ui inverted vertical segment spacer sc-bdVaJa cOSjit"
   spacer={2}
 >
   <div

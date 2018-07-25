@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Header as suiHeader } from 'semantic-ui-react';
-import { getCustomClassName, subtractObject } from '../../../utils/helpers';
-
+import { setCustomProps } from '../../../utils/helpers';
 
 const relaxedClassName = 'relaxed';
 const compactClassName = 'compact';
@@ -17,29 +16,16 @@ const StyledHeader = styled(suiHeader)`
   }
 `;
 
-const Header = (header) => {
-  // 1. Define custom props for this component
+const Header = (rawProps) => {
   const customProps = {
     relaxed: relaxedClassName,
     compact: compactClassName,
     inherit: inheritClassName,
   };
-  // 1.5. Define default props
-  const defaultProps = {
-    relaxed: false,
-    compact: false,
-    inherit: true,
-  };
-  const allProps = { ...defaultProps, ...header };
-  // 2. Render the custom class names
-  const className = header &&
-    getCustomClassName(customProps, allProps);
-  // 3. Clean up custom props from main prop set to avoid prop clashing
-  const semanticProps = header &&
-    subtractObject({ ...defaultProps, ...customProps }, allProps);
+  const props = setCustomProps(rawProps, customProps);
 
   return (
-    <StyledHeader {...semanticProps} className={className} />
+    <StyledHeader {...props} />
   );
 };
 

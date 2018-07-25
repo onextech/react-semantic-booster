@@ -137,6 +137,18 @@ from a mulitplier
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the css to apply
 
+### setCustomProps
+
+Set custom props
+
+**Parameters**
+
+-   `props` **{}** 
+-   `customProps` **{}** 
+-   `defaultProps` **{}** 
+
+Returns **{className: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)}** 
+
 ### mediaCssFactory
 
 Iterate through the mediaCssBreakpoints and create a media template

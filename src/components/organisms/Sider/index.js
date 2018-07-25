@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { getCustomClassName, subtractObject } from '../../../utils/helpers';
 import { mediaCssBreakpoints } from '../../../utils/responsive';
 
-
 const visibleClassName = 'visible';
 const containerClassName = 'container';
 const sidebarClassName = 'sidebar';
@@ -17,6 +16,9 @@ const navScrollClassName = 'nav-scroll';
 const Wrapper = styled.div`
   & {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     .${menuClassName} {
       a.item { height: 100% }
     }

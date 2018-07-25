@@ -1,16 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ButtonLink> renders correctly 1`] = `
+exports[`<Button> renders correctly 1`] = `
 <button
-  className="ui button sc-bdVaJa kpATae"
+  className="ui button text sc-bdVaJa YDtEk"
   disabled={undefined}
   onClick={[Function]}
   role="button"
   tabIndex={undefined}
 >
-  <a
-    href="/"
-    onClick={[Function]}
-  />
+  Hello
 </button>
 `;

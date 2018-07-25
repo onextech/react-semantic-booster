@@ -12,6 +12,7 @@ const Wrapper = styled(Button)`
     padding: 0 !important;
     overflow: hidden;
     a {
+      width: 100%;
       display: inline-block;  
       padding: ${props => (hasManyChildren(props) ? '.78571429em 1.5em' : '.78571429em')};
       color: inherit;

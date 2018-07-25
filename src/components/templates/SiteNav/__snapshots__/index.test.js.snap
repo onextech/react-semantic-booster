@@ -2,7 +2,7 @@
 
 exports[`<SiteNav> renders correctly 1`] = `
 <div
-  className="pushable sc-bZQynM hJJYVo"
+  className="pushable sc-bZQynM jgpMuy"
 >
   <div
     className="ui inverted vertical labeled icon spacer      ui push left thin sidebar sc-EHOje cKFdXV menu"
@@ -14,13 +14,13 @@ exports[`<SiteNav> renders correctly 1`] = `
     >
       <a
         className="sc-bwzfXH czPeHY"
-        custom={
-          Object {
-            "basic": true,
-          }
-        }
         href="/"
         onClick={[Function]}
+        style={
+          Object {
+            "padding": 0,
+          }
+        }
       >
         <img
           className="ui image"
@@ -35,7 +35,6 @@ exports[`<SiteNav> renders correctly 1`] = `
     >
       <a
         className="sc-bwzfXH czPeHY"
-        custom={undefined}
         href="/home"
         onClick={[Function]}
       >
@@ -48,7 +47,6 @@ exports[`<SiteNav> renders correctly 1`] = `
     >
       <a
         className="sc-bwzfXH czPeHY"
-        custom={undefined}
         href="/about"
         onClick={[Function]}
       >
@@ -123,7 +121,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       onClick={[Function]}
     >
       <button
-        className="ui primary button sc-ifAKCX bcJmXr"
+        className="ui primary button sc-ifAKCX iISMqs"
         disabled={undefined}
         onClick={[Function]}
         role="button"

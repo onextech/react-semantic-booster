@@ -2,18 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Segment } from 'semantic-ui-react';
-import { setStyledSpacer } from '../../../utils/helpers';
-
+import { setStyledSpacer, setCustomProps } from '../../../utils/helpers';
 
 const backgroundClassName = 'background';
 const angularClassName = 'angular';
 const verticalAlignClassName = 'vertical-align';
+const spacerClassName = 'spacer';
+const heightClassName = 'height';
+const pageCenterClassName = 'page-center';
 
 const StyledBlock = styled(Segment)`
   // spacer
   &.ui.segment {
     &.attached { border: 0; }
     ${props => props.spacer && setStyledSpacer(props.spacer)}
+  }
+  
+  // page-center
+  &.ui.segment.${pageCenterClassName} {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   // background
@@ -68,8 +78,8 @@ const StyledBlock = styled(Segment)`
     return false;
   }}
   }
-  
   `;
+
 /**
  * Create an angular block
  * @link https://css-tricks.com/creating-non-rectangular-headers/
@@ -93,57 +103,40 @@ const BottomSvg = styled(AngularSvg)`
   transform: rotate(180deg);
   `;
 
-const Block = ({
-  spacer,
-  background,
-  angular,
-  verticalAlign,
-  height,
-  ...rest
-}) => {
-  const getClassName = () => {
-    const className = [];
-    if (background) {
-      className.push(backgroundClassName);
-    }
-    if (angular) {
-      className.push(angularClassName);
-    }
-    if (verticalAlign) {
-      className.push(verticalAlignClassName, verticalAlign);
-    }
-    return className.join(' ');
-  };
+const Block = (rawProps) => {
+  const props = setCustomProps(rawProps, {
+    angular: { className: angularClassName, props: rawProps.angular },
+    verticalAlign: { className: verticalAlignClassName, classProps: rawProps.verticalAlign },
+    background: { className: backgroundClassName, props: rawProps.background },
+    spacer: { className: spacerClassName, props: rawProps.spacer },
+    height: { className: heightClassName, props: rawProps.height },
+    pageCenter: pageCenterClassName,
+  }, { vertical: true });
 
-  // separate custom from semantic props
-  let semanticSegmentProps = { vertical: true };
-  semanticSegmentProps = { ...semanticSegmentProps, ...rest };
-  const customProps = { spacer, background, height };
-  const renderProps = { ...customProps, ...semanticSegmentProps };
-
+  const { angular } = props;
   if (angular) {
     const getSvgFill = () => {
       const defaultFill = '#fff';
       let svgFill = defaultFill;
-      if (rest.secondary) { svgFill = '#f3f4f5'; /* default semantic-ui secondary color */ }
-      if (rest.inverted) { svgFill = '#1b1c1d'; /* default semantic-ui inverted color */ }
+      if (props.secondary) { svgFill = '#f3f4f5'; /* default semantic-ui secondary color */ }
+      if (props.inverted) { svgFill = '#1b1c1d'; /* default semantic-ui inverted color */ }
       return svgFill;
     };
     const svgFill = getSvgFill();
     return (
-      <StyledBlock className={getClassName()} {...renderProps}>
+      <StyledBlock {...props}>
         {angular.top && <TopSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
             <polygon fill={`${angular.top.fill || svgFill}`} points="0,100 100,0 100,100" />
           </TopSvg>}
-        {rest.children}
+        {props.children}
         {angular.bottom && <BottomSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
             <polygon fill={`${angular.bottom.fill || svgFill}`} points="0,100 100,0 100,100" />
           </BottomSvg>}
       </StyledBlock>
     );
   }
-  // default
-  return (<StyledBlock className={getClassName()} {...renderProps} />);
+
+  return (<StyledBlock {...props} />);
 };
 
 Block.propTypes = {
