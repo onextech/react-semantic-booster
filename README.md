@@ -149,6 +149,18 @@ Set custom props
 
 Returns **{className: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)}** 
 
+### mergeClassNames
+
+Merge prev class names with new class names to prevent
+overwrite of className prop
+
+**Parameters**
+
+-   `newClassName` **(\[] | [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))** 
+-   `prevClassName` **(\[] | null)** 
+
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
 ### mediaCssFactory
 
 Iterate through the mediaCssBreakpoints and create a media template
