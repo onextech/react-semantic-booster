@@ -7,8 +7,7 @@ import MenuLink from '../../atoms/MenuLink';
 import DropdownLink from '../../atoms/DropdownLink';
 import ButtonLink from '../../atoms/ButtonLink';
 import Menu from '../../atoms/Menu';
-import { mediaCssBreakpoints } from '../../../utils/responsive';
-
+import { mediaCssBreakpoints, MediaCss } from '../../../utils/responsive';
 
 const SidebarPushable = styled(Sidebar.Pushable)`
   /* Button */
@@ -69,12 +68,14 @@ const SidebarPushable = styled(Sidebar.Pushable)`
 `;
 
 const StyledDiv = styled.div`
-  .ui.menu .container {
-    justify-content: center;
-  }
+  ${MediaCss.min.sm`
+    .ui.menu .container {
+      justify-content: center;
+    }
+  `};
 `;
 
-const CenterLogo = styled.div`
+const CenterLogo = styled(Responsive)`
   display: flex;
   justify-content: center;
   padding: 1em 0 0;
@@ -175,6 +176,7 @@ class SiteNav extends React.Component {
                   return (
                     <CenterLogo
                       key={key}
+                      minWidth={mediaCssBreakpoints.sm}
                       {...logoProps}
                     >
                     <MenuLink to='/'>
@@ -223,7 +225,7 @@ class SiteNav extends React.Component {
   renderMobileMenu = () => {
     const { menu } = this.props;
     const allMenus = [];
-    if (menu.length > 1) {
+    if (menu.length >= 1) {
       // merge menu contents
       menu.map(submenu => allMenus.push(...submenu.content));
     }
