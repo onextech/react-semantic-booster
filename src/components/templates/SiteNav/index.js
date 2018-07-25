@@ -68,6 +68,17 @@ const SidebarPushable = styled(Sidebar.Pushable)`
   }
 `;
 
+const StyledDiv = styled.div`
+  .ui.menu .container {
+    justify-content: center;
+  }
+`;
+
+const CenterLogo = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 1em 0 0;
+`;
 
 class SiteNav extends React.Component {
   state = {}
@@ -76,7 +87,7 @@ class SiteNav extends React.Component {
 
   handleDimmerClick = () => this.setState({ showSidebar: false });
 
-  renderMenuItems = (items, isMobile = false) => {
+  renderMenuItems = (items, isMobile = false, center = false) => {
     const result = [];
 
     const defaultMenuLinkProps = {};
@@ -90,15 +101,17 @@ class SiteNav extends React.Component {
       let jsx;
       switch (true) {
         case Boolean(image): {
-          jsx = (
-            <MenuLink
-              to={to}
-              key={key}
-              {...defaultMenuLinkProps}
-              {...rest}>
-              <Image {...item.image} />
-            </MenuLink>
-          );
+          if (!center) {
+            jsx = (
+              <MenuLink
+                to={to}
+                key={key}
+                {...defaultMenuLinkProps}
+                {...rest}>
+                <Image {...item.image} />
+              </MenuLink>
+            );
+          }
           break;
         }
         case Boolean(button): {
@@ -148,10 +161,47 @@ class SiteNav extends React.Component {
       return result.push(jsx);
     });
     return result;
-  }
+  };
 
   renderDesktopMenu = () => {
-    const { menuProps, menu } = this.props;
+    const { menuProps, logoProps, menu } = this.props;
+    const contents = menu[0].content;
+    if (menu.length === 1 && menu[0].position === 'center') {
+      return (
+        <StyledDiv>
+            {
+              contents.map((content, key) => {
+                if (content.image) {
+                  return (
+                    <CenterLogo
+                      key={key}
+                      {...logoProps}
+                    >
+                    <MenuLink to='/'>
+                      <Image {...content.image} />
+                    </MenuLink>
+                    </CenterLogo>
+                  );
+                }
+              })
+            }
+          <Menu attached {...menuProps}>
+            <Responsive maxWidth={mediaCssBreakpoints.sm} as={Menu.Menu}>
+              <Dropdown item icon="content" onClick={this.toggleSidebar} />
+            </Responsive>
+            {menu.map((submenu, i) => (
+              <Responsive
+                style={{ display: 'flex' }}
+                key={i}
+                as={Menu.Menu}
+                minWidth={mediaCssBreakpoints.sm}>
+                { this.renderMenuItems(submenu.content, false, true) }
+              </Responsive>
+            ))}
+          </Menu>
+        </StyledDiv>
+      );
+    }
     return (
       <Menu attached {...menuProps}>
         <Responsive maxWidth={mediaCssBreakpoints.sm} as={Menu.Menu}>
@@ -168,7 +218,7 @@ class SiteNav extends React.Component {
         ))}
       </Menu>
     );
-  }
+  };
 
   renderMobileMenu = () => {
     const { menu } = this.props;
@@ -227,10 +277,12 @@ SiteNav.propTypes = {
     PropTypes.array,
   ]),
   menuProps: PropTypes.object,
+  logoProps: PropTypes.object,
 };
 
 SiteNav.defaultProps = {
   menuProps: undefined,
+  logoProps: undefined,
 };
 
 export default SiteNav;
