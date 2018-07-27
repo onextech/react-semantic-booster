@@ -18,6 +18,8 @@
     "array-callback-return": 0,
     "consistent-return": 0,
     "object-curly-newline": 0,
-    "max-len": 0
+    "object-curly-spacing": 0,
+    "max-len": 0,
+    "arrow-body-style": 0
   }
 }

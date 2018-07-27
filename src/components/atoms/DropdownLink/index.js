@@ -3,29 +3,39 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Dropdown } from 'semantic-ui-react';
+import {mergeClassNames} from '../../..';
 
+const DROPDOWNLINK_CLASS = 'dropdown-link';
 
-const StyledDropdownLink = styled(Link)`
-  width: 100%;
-  padding: .78571429em 1.14285714em;
-  color: inherit;
-  &:hover {
-    color: inherit;
+const StyledDropdownItem = styled(Dropdown.Item)`
+  &.item.link.fitted.${DROPDOWNLINK_CLASS} {
+    padding: 0 !important;
+    > a {
+      width: 100%;
+      display: inline-block;
+      padding: .78571429em 1.14285714em;
+      color: inherit;
+      &:hover { color: inherit }
+    }
   }
 `;
 
-const DropdownLink = ({
-  onClick,
-  to,
-  children,
-  ...rest
-}) => (
-  <Dropdown.Item className="fitted link" {...rest}>
-    <StyledDropdownLink to={to} onClick={onClick}>
-      {children}
-    </StyledDropdownLink>
-  </Dropdown.Item>
-);
+const DropdownLink = ({ to, children, ...rest }) => {
+  const dropdownItemProps = {...rest};
+  dropdownItemProps.className = mergeClassNames([DROPDOWNLINK_CLASS, 'link', 'fitted'], rest.className);
+
+  if (to) {
+    return (
+      <StyledDropdownItem {...dropdownItemProps}>
+        <Link to={to}>{children}</Link>
+      </StyledDropdownItem>
+    );
+  }
+
+  return (
+    <Dropdown.Item {...rest}>{children}</Dropdown.Item>
+  );
+};
 
 DropdownLink.propTypes = {
   children: PropTypes.oneOfType([

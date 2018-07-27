@@ -2,10 +2,10 @@
 
 exports[`<SiteNav> renders correctly 1`] = `
 <div
-  className="pushable sc-bZQynM jgpMuy"
+  className="pushable sc-fMiknA fwmEDX"
 >
   <div
-    className="ui inverted vertical labeled icon spacer      ui push left thin sidebar sc-EHOje cKFdXV menu"
+    className="ui inverted vertical labeled icon spacer      ui push left thin sidebar sc-cSHVUG bQoLja menu"
     spacer={undefined}
   >
     <div
@@ -86,12 +86,11 @@ exports[`<SiteNav> renders correctly 1`] = `
           aria-checked={undefined}
           aria-disabled={undefined}
           aria-selected={undefined}
-          className="item fitted link"
+          className="item dropdown-link link fitted sc-fBuWsC ifLbMT"
           onClick={[Function]}
           role="option"
         >
           <a
-            className="sc-bxivhb jfNDDO"
             href="/phone"
             onClick={[Function]}
           >
@@ -102,12 +101,11 @@ exports[`<SiteNav> renders correctly 1`] = `
           aria-checked={undefined}
           aria-disabled={undefined}
           aria-selected={undefined}
-          className="item fitted link"
+          className="item dropdown-link link fitted sc-fBuWsC ifLbMT"
           onClick={[Function]}
           role="option"
         >
           <a
-            className="sc-bxivhb jfNDDO"
             href="/email"
             onClick={[Function]}
           >
@@ -121,7 +119,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       onClick={[Function]}
     >
       <button
-        className="ui primary button sc-ifAKCX iISMqs"
+        className="ui primary button sc-bxivhb fXYmVd"
         disabled={undefined}
         onClick={[Function]}
         role="button"
@@ -140,7 +138,7 @@ exports[`<SiteNav> renders correctly 1`] = `
     className="pusher"
   >
     <div
-      className="ui pointing secondary attached container spacer     sc-EHOje cKFdXV menu"
+      className="ui pointing secondary attached container spacer     sc-cSHVUG bQoLja menu"
       spacer={undefined}
     >
       <div
