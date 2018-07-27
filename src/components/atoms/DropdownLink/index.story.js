@@ -8,7 +8,7 @@ storiesOf('DropdownLink', module)
     <Dropdown text="Dropdown">
       <Dropdown.Menu>
         <DropdownLink to="/">Hello World</DropdownLink>
-        <DropdownLink>Greetings</DropdownLink>
+        <DropdownLink>Hello World</DropdownLink>
       </Dropdown.Menu>
     </Dropdown>
   ));

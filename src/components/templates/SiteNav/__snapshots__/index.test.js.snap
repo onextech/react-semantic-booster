@@ -2,10 +2,10 @@
 
 exports[`<SiteNav> renders correctly 1`] = `
 <div
-  className="pushable sc-fMiknA fwmEDX"
+  className="pushable sc-bZQynM jgpMuy"
 >
   <div
-    className="ui inverted vertical labeled icon spacer      ui push left thin sidebar sc-cSHVUG bQoLja menu"
+    className="ui inverted vertical labeled icon spacer      ui push left thin sidebar sc-EHOje cKFdXV menu"
     spacer={undefined}
   >
     <div
@@ -82,36 +82,20 @@ exports[`<SiteNav> renders correctly 1`] = `
       <div
         className="menu transition"
       >
-        <div
-          aria-checked={undefined}
-          aria-disabled={undefined}
-          aria-selected={undefined}
-          className="item dropdown-link link fitted sc-fBuWsC ifLbMT"
+        <a
+          className="sc-bxivhb cLdsLP"
+          href="/phone"
           onClick={[Function]}
-          role="option"
         >
-          <a
-            href="/phone"
-            onClick={[Function]}
-          >
-            Phone
-          </a>
-        </div>
-        <div
-          aria-checked={undefined}
-          aria-disabled={undefined}
-          aria-selected={undefined}
-          className="item dropdown-link link fitted sc-fBuWsC ifLbMT"
+          Phone
+        </a>
+        <a
+          className="sc-bxivhb cLdsLP"
+          href="/email"
           onClick={[Function]}
-          role="option"
         >
-          <a
-            href="/email"
-            onClick={[Function]}
-          >
-            Email
-          </a>
-        </div>
+          Email
+        </a>
       </div>
     </div>
     <div
@@ -119,7 +103,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       onClick={[Function]}
     >
       <button
-        className="ui primary button sc-bxivhb fXYmVd"
+        className="ui primary button sc-ifAKCX iISMqs"
         disabled={undefined}
         onClick={[Function]}
         role="button"
@@ -138,7 +122,7 @@ exports[`<SiteNav> renders correctly 1`] = `
     className="pusher"
   >
     <div
-      className="ui pointing secondary attached container spacer     sc-cSHVUG bQoLja menu"
+      className="ui pointing secondary attached container spacer     sc-EHOje cKFdXV menu"
       spacer={undefined}
     >
       <div
