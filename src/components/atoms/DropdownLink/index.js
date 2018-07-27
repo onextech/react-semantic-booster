@@ -43,12 +43,11 @@ DropdownLink.propTypes = {
     PropTypes.string,
     PropTypes.array,
   ]).isRequired,
-  to: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
+  to: PropTypes.string,
 };
 
 DropdownLink.defaultProps = {
-  onClick: undefined,
+  to: undefined,
 };
 
 export default DropdownLink;
