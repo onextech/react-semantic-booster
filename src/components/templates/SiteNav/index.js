@@ -161,7 +161,7 @@ class SiteNav extends React.Component {
   };
 
   renderDesktopMenu = () => {
-    const { menuProps, menu } = this.props;
+    const { menuProps, menu, menuTop } = this.props;
     // Check for centered menu. There should only be 1 menu for centered menus. So take the first array index
     const isCenteredMenu = menu.length === 1 && menu[0].position === 'center';
     const extraMenuProps = {};
@@ -173,6 +173,7 @@ class SiteNav extends React.Component {
     }
     return (
       <React.Fragment>
+        {menuTop}
         {isCenteredMenu && menu[0].content.map((content, i) => {
             const { image, to } = content;
             if (image) {
@@ -194,6 +195,7 @@ class SiteNav extends React.Component {
                 minWidth={mediaCssBreakpoints.sm}
                 // Semantic Menu.Menu.position prop only takes in enums ['left', 'right']
                 position={submenu.position === 'center' ? null : submenu.position}
+                {...submenu.props}
               >
                 {this.renderMenuItems(submenu.content, renderMenuItemsOptions)}
             </Responsive>
@@ -260,10 +262,12 @@ SiteNav.propTypes = {
     PropTypes.array,
   ]),
   menuProps: PropTypes.object,
+  menuTop: PropTypes.element,
 };
 
 SiteNav.defaultProps = {
   menuProps: undefined,
+  menuTop: undefined,
 };
 
 export default SiteNav;

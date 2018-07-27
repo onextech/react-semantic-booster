@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
-import { Container } from 'semantic-ui-react';
+import { Container, Icon, Menu } from 'semantic-ui-react';
 import Block from '../../atoms/Block';
 import SiteNav from './index';
-
 
 export const menu = [ // eslint-disable-line import/prefer-default-export
   {
@@ -42,6 +42,12 @@ export const menu = [ // eslint-disable-line import/prefer-default-export
 export const menuCenter = [ // eslint-disable-line import/prefer-default-export
   {
     position: 'center',
+    props: {
+      style: {
+        width: '100%',
+        justifyContent: 'space-between',
+      },
+    },
     content: [
       {
         name: 'Logo',
@@ -71,6 +77,23 @@ export const floatMenuProps = {
   float: true,
   container: true,
 };
+
+export const menuTopItems = [
+  { key: 'login', name: 'Login', to: '/login' },
+  { key: 'signup', name: 'Signup', to: '/signup' },
+  { key: 'basket', name: <Icon name='shopping basket' />, to: '/cart' },
+];
+
+export const menuTop = (
+  <Menu size='mini'>
+    { menuTopItems.map(item => (
+        <Menu.Item link key={item.key}>
+          <Link to={item.to}>{item.name}</Link>
+        </Menu.Item>
+      ))
+    }
+  </Menu>
+);
 
 const ExampleContent = () => (
   <Block attached inverted textAlign="center">
@@ -117,7 +140,7 @@ storiesOf('SiteNav', module)
     </SiteNav>
   ))
   .add('Container Menu Center', () => (
-    <SiteNav menu={menuCenter} menuProps={menuProps}>
+    <SiteNav menu={menuCenter} menuProps={menuProps} menuTop={menuTop}>
       <Block secondary>
         <Container>
           <h1>Hello World</h1>
