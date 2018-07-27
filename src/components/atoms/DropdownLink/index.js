@@ -14,6 +14,9 @@ const StyledLink = styled(Link)`
     color: inherit;
     background-color: rgba(0, 0, 0, .05);
   }
+  > .icon {
+    margin-right: .75em;
+  }
 `;
 
 const DropdownLink = ({ to, children, ...rest }) => {

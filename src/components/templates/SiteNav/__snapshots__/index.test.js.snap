@@ -83,14 +83,14 @@ exports[`<SiteNav> renders correctly 1`] = `
         className="menu transition"
       >
         <a
-          className="sc-bxivhb cLdsLP"
+          className="sc-bxivhb jHKcwC"
           href="/phone"
           onClick={[Function]}
         >
           Phone
         </a>
         <a
-          className="sc-bxivhb cLdsLP"
+          className="sc-bxivhb jHKcwC"
           href="/email"
           onClick={[Function]}
         >
