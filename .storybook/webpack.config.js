@@ -8,11 +8,21 @@ module.exports = (baseConfig, env) => {
   // Extend it as you need.
 
   // For example, add sass loader:
-  config.module.rules.push({
-    test: /\.scss$/,
-    loaders: ["style-loader", "css-loader", "sass-loader"],
-    include: path.resolve(__dirname, '../')
-  });
+  config.module.rules.push(
+    {
+      test: /\.scss$/,
+      include: path.resolve(__dirname, '../'),
+      loaders: ['style-loader', 'css-loader', 'sass-loader'],
+    },
+    {
+      test: /\.less$/,
+      include: path.resolve(__dirname, '../'),
+      loaders: ['style-loader', 'css-loader', {
+        loader: 'less-loader',
+        options: { javascriptEnabled: true },
+      }],
+    },
+  );
 
   return config;
 };

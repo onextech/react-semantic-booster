@@ -6,8 +6,8 @@
   "repository": "onextech/react-semantic-booster",
   "author": {
     "name": "One X Tech",
-    "email": "hello@onextech.co",
-    "url": "github.com/onextech"
+    "email": "hello@onextech.com",
+    "url": "https://www.github.com/onextech"
   },
   "main": "dist/index.js",
   "files": [
@@ -17,6 +17,88 @@
   ],
   "engines": {
     "node": ">=6"
+  },
+  "watch": {
+    "test": "{src,test}/*.js",
+    "lint": "{src,test}/*.js",
+    "build": "src"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/test/init.js",
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/test/__mocks__/styleMock.js"
+    }
+  },
+  "keywords": [
+    "react",
+    "semantic-ui-react"
+  ],
+  "dependencies": {
+    "@onextech/react-apollo-utils": "^0.3.1",
+    "@storybook/addon-actions": "^3.2.19",
+    "@storybook/addon-links": "^3.2.19",
+    "@storybook/react": "^3.2.19",
+    "ismobilejs": "^0.4.1",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-responsive": "^4.0.3",
+    "react-router-dom": "^4.2.2",
+    "react-router-hash-link": "^1.1.1",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.80.0",
+    "styled-components": "^3.3.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^8.0.0",
+    "babel-jest": "^21.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.8.0",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-exponentiation-operator": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "css-loader": "^1.0.0",
+    "documentation": "^5.3.2",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-flowtype": "^2.29.2",
+    "eslint-plugin-flowtype-errors": "^3.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^7.5.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "flow-bin": "^0.54.1",
+    "isomorphic-style-loader": "^4.0.0",
+    "jest-cli": "^21.1.0",
+    "node-sass": "^4.7.2",
+    "npm-watch": "^0.2.0",
+    "opn-cli": "^3.1.0",
+    "react-test-renderer": "^16.2.0",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.6",
+    "url-loader": "^1.0.1",
+    "webpack": "^3.10.0"
+  },
+  "peerDependencies": {
+    "antd": "^3.6.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.80.0",
+    "styled-components": "^3.3.3"
   },
   "scripts": {
     "test": "jest",
@@ -36,73 +118,5 @@
     "postpublish": "git push origin master --follow-tags",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
-  },
-  "watch": {
-    "test": "{src,test}/*.js",
-    "lint": "{src,test}/*.js",
-    "build": "src"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "testPathIgnorePatterns": [
-      "<rootDir>/dist/",
-      "<rootDir>/node_modules/"
-    ],
-    "setupTestFrameworkScriptFile": "<rootDir>/test/init.js",
-    "moduleNameMapper": {
-      "\\.(css|scss)$": "<rootDir>/test/__mocks__/styleMock.js"
-    }
-  },
-  "keywords": [
-    "generator-nod"
-  ],
-  "dependencies": {
-    "@onextech/react-apollo-utils": "^0.3.1",
-    "@storybook/addon-actions": "^3.2.19",
-    "@storybook/addon-links": "^3.2.19",
-    "@storybook/react": "^3.2.19",
-    "ismobilejs": "^0.4.1",
-    "lodash": "^4.17.4",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-responsive": "^4.0.3",
-    "react-router-dom": "^4.2.2",
-    "react-router-hash-link": "^1.1.1",
-    "semantic-ui-css": "^2.2.12",
-    "semantic-ui-react": "^0.80.0",
-    "styled-components": "^3.2.6"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-eslint": "^8.0.0",
-    "babel-jest": "^21.0.2",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-styled-components": "^1.5.1",
-    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
-    "babel-plugin-transform-exponentiation-operator": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-stage-2": "^6.18.0",
-    "documentation": "^5.3.2",
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^4.0.0",
-    "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-plugin-flowtype": "^2.29.2",
-    "eslint-plugin-flowtype-errors": "^3.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-react": "^7.5.1",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "flow-bin": "^0.54.1",
-    "jest-cli": "^21.1.0",
-    "node-sass": "^4.7.2",
-    "npm-watch": "^0.2.0",
-    "opn-cli": "^3.1.0",
-    "react-test-renderer": "^16.2.0",
-    "rimraf": "^2.6.1",
-    "sass-loader": "^6.0.6",
-    "webpack": "^3.10.0"
   }
 }

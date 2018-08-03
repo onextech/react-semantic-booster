@@ -9,6 +9,7 @@
     "transform-object-rest-spread",
     "transform-class-properties",
     "transform-exponentiation-operator",
-    "babel-plugin-styled-components"
+    "babel-plugin-styled-components",
+    ["import", { "libraryName": "antd", "style": true }]
   ]
 }
