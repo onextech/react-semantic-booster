@@ -2,7 +2,7 @@
 
 exports[`<VideoBackground> renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iDOixQ"
+  className="VideoBackground__VideoContainer-bUrRxM ehWSXR"
   poster={
     Object {
       "bgPos": "140% 50%",

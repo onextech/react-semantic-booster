@@ -10,7 +10,7 @@ exports[`<PhotoCard> renders correctly 1`] = `
 >
   <button
     card="hello-world"
-    className="ui fluid button sc-bwzfXH iEixwU"
+    className="ui fluid button PhotoCard__CardButton-eplqGp gevlgQ"
     disabled={undefined}
     onClick={[Function]}
     role="button"
@@ -18,7 +18,7 @@ exports[`<PhotoCard> renders correctly 1`] = `
     to="#"
   >
     <div
-      className="sc-htpNat lftsvH"
+      className="PhotoCard__CardContent-dYurnQ GhxTK"
     >
       <h4
         className="ui large inverted header"
@@ -37,7 +37,7 @@ exports[`<PhotoCard> renders correctly 1`] = `
       </h4>
     </div>
     <img
-      className="ui image animated scale sc-bxivhb cKfqAU"
+      className="ui image animated scale PhotoCard__CardImage-cQBsPO iFTMzI"
       src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
     />
   </button>

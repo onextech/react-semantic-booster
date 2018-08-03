@@ -2,10 +2,10 @@
 
 exports[`<IconList> renders correctly 1`] = `
 <div
-  className="vertical  sc-bwzfXH lkruZO"
+  className="vertical  IconList__StyledIconList-cJMFBY dCsqOj"
 >
   <div
-    className="    icon-list-item sc-bdVaJa iyPRyX"
+    className="    icon-list-item IconListItem__StyledIconListItem-eZKnyn llnLcS"
     content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
     icon={
       Object {
@@ -35,7 +35,7 @@ exports[`<IconList> renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="    icon-list-item sc-bdVaJa iyPRyX"
+    className="    icon-list-item IconListItem__StyledIconListItem-eZKnyn llnLcS"
     content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
     icon={
       Object {
@@ -65,7 +65,7 @@ exports[`<IconList> renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="    icon-list-item sc-bdVaJa iyPRyX"
+    className="    icon-list-item IconListItem__StyledIconListItem-eZKnyn llnLcS"
     content="The property will be presented to over 120 agents during the Rodeo Realty office meeting"
     icon={
       Object {

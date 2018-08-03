@@ -2,6 +2,6 @@
 
 exports[`<Grid> renders correctly 1`] = `
 <div
-  className="ui grid sc-bwzfXH kDUFYf"
+  className="ui grid Grid__StyledGrid-hPdIDY kWsVRI"
 />
 `;

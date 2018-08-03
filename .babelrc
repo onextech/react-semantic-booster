@@ -8,6 +8,7 @@
     "transform-es2015-destructuring",
     "transform-object-rest-spread",
     "transform-class-properties",
-    "transform-exponentiation-operator"
+    "transform-exponentiation-operator",
+    "babel-plugin-styled-components"
   ]
 }

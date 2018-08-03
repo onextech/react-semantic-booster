@@ -2,7 +2,7 @@
 
 exports[`<StatCard> renders correctly 1`] = `
 <div
-  className="ui fluid card    sc-bwzfXH hTXVSi sc-bdVaJa jrjGOD"
+  className="ui fluid card    StatCard__StyledCard-fUXdfT ndeBq Card__StyledCard-hKtLXx isCsom"
   gradient={undefined}
   href={undefined}
   onClick={[Function]}
@@ -11,17 +11,17 @@ exports[`<StatCard> renders correctly 1`] = `
     className="center aligned content"
   >
     <h5
-      className="ui huge header sc-htpNat brlFuT"
+      className="ui huge header StatCard__StatNumber-cUVTlO blSQes"
     >
       60
     </h5>
     <h5
-      className="ui medium header sc-bxivhb bLbUBR"
+      className="ui medium header StatCard__StatHeader-hDZpFU MNTII"
     >
       world-class specialists
     </h5>
     <div
-      className="description sc-ifAKCX bHgotn"
+      className="description StatCard__StatDesc-bvgQEi cWcpLY"
     >
       hired and onboarded
     </div>

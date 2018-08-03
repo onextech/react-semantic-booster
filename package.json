@@ -71,13 +71,14 @@
     "react-router-hash-link": "^1.1.1",
     "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.80.0",
-    "styled-components": "^2.4.0"
+    "styled-components": "^3.2.6"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^8.0.0",
     "babel-jest": "^21.0.2",
     "babel-loader": "^7.1.2",
+    "babel-plugin-styled-components": "^1.5.1",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-plugin-transform-exponentiation-operator": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",

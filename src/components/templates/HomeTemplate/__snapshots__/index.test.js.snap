@@ -3,7 +3,7 @@
 exports[`<HomeTemplate> renders correctly 1`] = `
 <div>
   <div
-    className="sc-bdVaJa jAsZWk"
+    className="Hero__HeroFactory-hoaCgt hkHcUh"
     height={700}
     src="/"
   >
@@ -11,12 +11,12 @@ exports[`<HomeTemplate> renders correctly 1`] = `
       className="ui text container"
     >
       <h1
-        className="sc-bwzfXH TFpGQ"
+        className="Hero__HeroHeader-dulUCc evQOct"
       >
         Header
       </h1>
       <p
-        className="sc-htpNat ebaRZE"
+        className="Hero__HeroSubheader-igSxRJ FLHjP"
       >
         Subheader
       </p>

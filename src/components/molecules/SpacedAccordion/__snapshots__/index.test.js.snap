@@ -5,7 +5,7 @@ exports[`<SpacedAccordion> renders correctly 1`] = `
   className="accordion ui fluid"
 >
   <div
-    className="sc-bdVaJa jcPGEl"
+    className="SpacedAccordion__StyledDiv-bMoOhG gvVVzp"
   >
     <div
       className="title"
@@ -39,7 +39,7 @@ exports[`<SpacedAccordion> renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-bdVaJa jcPGEl"
+    className="SpacedAccordion__StyledDiv-bMoOhG gvVVzp"
   >
     <div
       className="title"
@@ -73,7 +73,7 @@ exports[`<SpacedAccordion> renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-bdVaJa jcPGEl"
+    className="SpacedAccordion__StyledDiv-bMoOhG gvVVzp"
   >
     <div
       className="title"

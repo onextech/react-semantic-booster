@@ -2,7 +2,7 @@
 
 exports[`<GoalCards> renders correctly 1`] = `
 <div
-  className="ui doubling stackable three cards sc-bdVaJa dxmbKJ"
+  className="ui doubling stackable three cards GoalCards__CardGrid-iotZoC kvcTkr"
 >
   <div
     className="ui card"

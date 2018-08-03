@@ -2,7 +2,7 @@
 
 exports[`<Callout> renders correctly 1`] = `
 <div
-  className="ui vertical segment spacer sc-bdVaJa bgIHaQ"
+  className="ui vertical segment spacer Block__StyledBlock-kDohJM iXrwQe"
   spacer={0.5}
 >
   <div
@@ -12,10 +12,10 @@ exports[`<Callout> renders correctly 1`] = `
       className="middle aligned row"
     >
       <div
-        className="twelve wide column sc-bZQynM bVXCjN"
+        className="twelve wide column Callout__ResponsiveLeftTextColumn-kKRyHH hDxSob"
       >
         <p
-          className="sc-ifAKCX kNoTXA"
+          className="Callout__CalloutText-jifegs hmWHSN"
         >
           <span>
             Based in Singapore. Available for event bookings 
@@ -29,7 +29,7 @@ exports[`<Callout> renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="four wide column sc-EHOje iJmCMA"
+        className="four wide column Callout__ResponsiveRightTextColumn-cYdPoE kidUMW"
       >
         <button
           className="ui large circular primary button"

@@ -2,7 +2,7 @@
 
 exports[`<LineAccordion> renders correctly 1`] = `
 <div
-  className="accordion ui sc-bdVaJa ftDjUA"
+  className="accordion ui LineAccordion__StyledAccordion-jXXxAU hBYvMi"
   defaultindex={undefined}
   size={undefined}
 >

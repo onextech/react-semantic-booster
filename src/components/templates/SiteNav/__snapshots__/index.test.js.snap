@@ -2,18 +2,18 @@
 
 exports[`<SiteNav> renders correctly 1`] = `
 <div
-  className="pushable sc-bZQynM jgpMuy"
+  className="pushable SiteNav__SidebarPushable-dYuHVv buwTHb"
 >
   <div
-    className="ui inverted vertical labeled icon spacer      ui push left thin sidebar sc-EHOje cKFdXV menu"
+    className="ui inverted vertical labeled icon spacer      ui push left thin sidebar Menu__StyledMenu-gqqLID kzWpkN menu"
     spacer={undefined}
   >
     <div
-      className="link fitted item menulink sc-htpNat jVOplu"
+      className="link fitted item menulink MenuLink__StyledMenuItem-rzklK dtSOEI"
       onClick={[Function]}
     >
       <a
-        className="sc-bwzfXH czPeHY"
+        className="MenuLink__StyledLink-qDIQN fSLszI"
         href="/"
         onClick={[Function]}
         style={
@@ -30,11 +30,11 @@ exports[`<SiteNav> renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="link fitted item menulink sc-htpNat jVOplu"
+      className="link fitted item menulink MenuLink__StyledMenuItem-rzklK dtSOEI"
       onClick={[Function]}
     >
       <a
-        className="sc-bwzfXH czPeHY"
+        className="MenuLink__StyledLink-qDIQN fSLszI"
         href="/home"
         onClick={[Function]}
       >
@@ -42,11 +42,11 @@ exports[`<SiteNav> renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="link fitted item menulink sc-htpNat jVOplu"
+      className="link fitted item menulink MenuLink__StyledMenuItem-rzklK dtSOEI"
       onClick={[Function]}
     >
       <a
-        className="sc-bwzfXH czPeHY"
+        className="MenuLink__StyledLink-qDIQN fSLszI"
         href="/about"
         onClick={[Function]}
       >
@@ -83,14 +83,14 @@ exports[`<SiteNav> renders correctly 1`] = `
         className="menu transition"
       >
         <a
-          className="sc-bxivhb jHKcwC"
+          className="DropdownLink__StyledLink-bHQcRR iXvXTg"
           href="/phone"
           onClick={[Function]}
         >
           Phone
         </a>
         <a
-          className="sc-bxivhb jHKcwC"
+          className="DropdownLink__StyledLink-bHQcRR iXvXTg"
           href="/email"
           onClick={[Function]}
         >
@@ -103,7 +103,7 @@ exports[`<SiteNav> renders correctly 1`] = `
       onClick={[Function]}
     >
       <button
-        className="ui primary button sc-ifAKCX iISMqs"
+        className="ui primary button ButtonLink__Wrapper-ihQwoR cIMsMl"
         disabled={undefined}
         onClick={[Function]}
         role="button"
@@ -122,7 +122,7 @@ exports[`<SiteNav> renders correctly 1`] = `
     className="pusher"
   >
     <div
-      className="ui pointing secondary attached container spacer     sc-EHOje cKFdXV menu"
+      className="ui pointing secondary attached container spacer     Menu__StyledMenu-gqqLID kzWpkN menu"
       spacer={undefined}
     >
       <div

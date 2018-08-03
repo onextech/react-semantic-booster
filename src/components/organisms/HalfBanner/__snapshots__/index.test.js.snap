@@ -2,7 +2,7 @@
 
 exports[`<HalfBanner> renders correctly 1`] = `
 <div
-  className="ui inverted stackable grid attached    sc-bwzfXH kDUFYf"
+  className="ui inverted stackable grid attached    Grid__StyledGrid-hPdIDY kWsVRI"
 >
   <div
     className="equal width row"
@@ -13,7 +13,7 @@ exports[`<HalfBanner> renders correctly 1`] = `
           "color": "#1f40e6",
         }
       }
-      className="center aligned middle aligned column padded      sc-bdVaJa ikIaQJ"
+      className="center aligned middle aligned column padded      GridColumn__StyledColumn-fwItIZ buyYsI"
       copy={
         Object {
           "header": Object {
@@ -26,10 +26,10 @@ exports[`<HalfBanner> renders correctly 1`] = `
         className="container"
       >
         <div
-          className="copy sc-bxivhb fJchNc"
+          className="copy Copy__ContentContainer-igKQRf jRaOND"
         >
           <h5
-            className="ui huge header sc-ifAKCX bDLiAJ sc-htpNat eSPVaA"
+            className="ui huge header Copy__ContentHeader-gyVhPH iHKWqe Header__StyledHeader-grPIeX fJUZqS"
           >
             Center of Focus
           </h5>
@@ -42,7 +42,7 @@ exports[`<HalfBanner> renders correctly 1`] = `
           "src": "https://images.pexels.com/photos/196652/pexels-photo-196652.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb",
         }
       }
-      className="column padded    sc-bdVaJa NDjoU"
+      className="column padded    GridColumn__StyledColumn-fwItIZ fuCGGP"
       copy={
         Object {
           "header": Object {
@@ -58,15 +58,15 @@ exports[`<HalfBanner> renders correctly 1`] = `
         className="container"
       >
         <div
-          className="copy sc-bxivhb fJchNc"
+          className="copy Copy__ContentContainer-igKQRf jRaOND"
         >
           <h6
-            className="ui tiny sub header sc-EHOje celsWL sc-htpNat eSPVaA"
+            className="ui tiny sub header Copy__ContentSubheader-shJgs gflqIt Header__StyledHeader-grPIeX fJUZqS"
           >
             Key Trends
           </h6>
           <h5
-            className="ui huge header sc-ifAKCX bDLiAJ sc-htpNat eSPVaA"
+            className="ui huge header Copy__ContentHeader-gyVhPH iHKWqe Header__StyledHeader-grPIeX fJUZqS"
           >
             We reviewed the entire process of data collection, analysis and evaluation to identify key opportunities for automation and efficient data analysis.
           </h5>

@@ -2,14 +2,14 @@
 
 exports[`<Banner> renders correctly 1`] = `
 <div
-  className="ui vertical segment spacer sc-bdVaJa cYUOLB"
+  className="ui vertical segment spacer Block__StyledBlock-kDohJM eaaVmk"
   spacer={1}
 >
   <div
-    className="ui container sc-EHOje dINdpB"
+    className="ui container Banner__BannerContainer-eOHDGR dykzdR"
   >
     <div
-      className="sc-bZQynM boMXtV"
+      className="Banner__BannerContainerInner-jjNSaH cfcPsq"
     />
   </div>
 </div>

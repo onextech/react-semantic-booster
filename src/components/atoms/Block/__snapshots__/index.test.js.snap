@@ -2,7 +2,7 @@
 
 exports[`<Block> renders correctly 1`] = `
 <div
-  className="ui vertical segment spacer sc-bdVaJa cYUOLB"
+  className="ui vertical segment spacer Block__StyledBlock-kDohJM eaaVmk"
   spacer={1}
 >
   Hello World

@@ -2,7 +2,7 @@
 
 exports[`<TriPhotoBlock> renders correctly 1`] = `
 <div
-  className="ui inverted vertical segment spacer sc-bdVaJa cOSjit"
+  className="ui inverted vertical segment spacer Block__StyledBlock-kDohJM iwhKPu"
   spacer={2}
 >
   <div
@@ -23,7 +23,7 @@ exports[`<TriPhotoBlock> renders correctly 1`] = `
         className="column"
       >
         <img
-          className="ui image sc-ifAKCX gTAWXr"
+          className="ui image TriPhotoBlock__SecondImage-hhnVen czdajy"
           src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
         />
       </div>
@@ -35,7 +35,7 @@ exports[`<TriPhotoBlock> renders correctly 1`] = `
         className="eight wide computer sixteen wide mobile eight wide tablet column"
       >
         <img
-          className="ui large right floated image sc-EHOje hzShKD"
+          className="ui large right floated image TriPhotoBlock__ThirdImage-iWisbF wnbOs"
           src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
         />
       </div>

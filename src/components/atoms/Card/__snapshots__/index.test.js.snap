@@ -2,7 +2,7 @@
 
 exports[`<Card> renders correctly 1`] = `
 <div
-  className="ui card sc-bdVaJa jrjGOD"
+  className="ui card Card__StyledCard-hKtLXx isCsom"
   href={undefined}
   onClick={[Function]}
 />
