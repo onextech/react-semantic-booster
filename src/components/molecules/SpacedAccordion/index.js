@@ -47,9 +47,11 @@ class SpacedAccordion extends Component {
                   { header }
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === key} style={{ padding: '0 4em 2em' }}>
-                  <p>
-                    { content }
-                  </p>
+                  {
+                    typeof content === 'string' ?
+                      <p>{content}</p> :
+                      content.map((contentItem, i) => <p key={i}>{contentItem}</p>)
+                  }
                 </Accordion.Content>
               </StyledDiv>
             );
@@ -63,7 +65,10 @@ class SpacedAccordion extends Component {
 SpacedAccordion.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({
     header: PropTypes.string,
-    content: PropTypes.string,
+    content: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string),
+    ]),
   })).isRequired,
 };
 
