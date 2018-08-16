@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-import { Sidebar, Dropdown, Responsive, Dimmer, Image } from 'semantic-ui-react';
+import { Sidebar, Dropdown, Responsive, Dimmer, Image, Button } from 'semantic-ui-react';
 import MenuLink from '../../atoms/MenuLink';
 import DropdownLink from '../../atoms/DropdownLink';
 import ButtonLink from '../../atoms/ButtonLink';
@@ -114,11 +114,15 @@ class SiteNav extends React.Component {
         case Boolean(button): {
           jsx = (
             <Menu.Item key={key} {...rest}>
-              <ButtonLink
-                to={to}
-                content={name}
-                {...button}
-                {...defaultMenuLinkProps} />
+              {
+                button.to ?
+                  <ButtonLink
+                    to={to}
+                    content={name}
+                    {...button}
+                    {...defaultMenuLinkProps} /> :
+                  <Button content={name} {...button} />
+              }
             </Menu.Item>
           );
           break;

@@ -34,7 +34,8 @@ export const menu = [ // eslint-disable-line import/prefer-default-export
           ],
         },
       },
-      { name: 'Contact Us', to: '/contact', button: { primary: true } },
+      { name: 'Contact Us', to: '/contact', button: { secondary: true } },
+      { name: 'Login', button: { primary: true, onClick: () => console.log('Clicked on login') } }, // eslint-disable-line no-console
     ],
   },
 ];
