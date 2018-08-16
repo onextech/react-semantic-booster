@@ -103,13 +103,18 @@ exports[`<SiteNav> renders correctly 1`] = `
       onClick={[Function]}
     >
       <button
-        className="ui secondary button"
+        className="ui secondary button ButtonLink__Wrapper-ihQwoR cIMsMl"
         disabled={undefined}
         onClick={[Function]}
         role="button"
         tabIndex={undefined}
       >
-        Contact Us
+        <a
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
       </button>
     </div>
     <div
