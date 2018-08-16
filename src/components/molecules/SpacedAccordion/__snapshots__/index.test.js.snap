@@ -107,5 +107,44 @@ exports[`<SpacedAccordion> renders correctly 1`] = `
       </p>
     </div>
   </div>
+  <div
+    className="SpacedAccordion__StyledDiv-bMoOhG gvVVzp"
+  >
+    <div
+      className="title"
+      onClick={[Function]}
+      style={
+        Object {
+          "fontSize": "1.2em",
+          "fontWeight": "bold",
+          "padding": "1.5em 3em",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+      />
+      Accordion tab with multiple paragraphs (using an array of string)
+    </div>
+    <div
+      className="content"
+      style={
+        Object {
+          "padding": "0 4em 2em",
+        }
+      }
+    >
+      <p>
+        Each story, and also this string, is an item in the array
+      </p>
+      <p>
+        The Gingerbread Man - A little old woman baked a gingerbread man and when she took him out of the oven, he ran away. The woman and her husband chased him, as well as the pig, cow and horse. No one could catch him. He came to a river and a sly fox told him he could jump on his tail and he would take him across. He did and the fox went deeper and the gingerbread man had to jump on his back and then on his nose. When he got to his nose, the fox ate him. 
+      </p>
+      <p>
+        Ugly Duckling - One duckling did not look like the others and he was sad. He decided to run away and came across a cottage. He stayed there for a while but the children scared him. He left and spent the winter in the pond. In the spring, he saw his reflection and realized he was a swan.
+      </p>
+    </div>
+  </div>
 </div>
 `;
