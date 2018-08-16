@@ -115,7 +115,7 @@ class SiteNav extends React.Component {
           jsx = (
             <Menu.Item key={key} {...rest}>
               {
-                button.to ?
+                to ?
                   <ButtonLink
                     to={to}
                     content={name}
